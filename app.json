@@ -1,9 +1,9 @@
 {
-    "name": "WhatsAsenaDuplicated",
+    "name": "WhatsAsenaDuplicated Developer Version",
     "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp.",
     "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
     "keywords": ["whatsapp", "userbot", "Asena"],
-    "repository": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated",
+    "repository": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated/tree/Beta",
     "website":   "https://t.me/phaticusthiccy",
     "success_url": "https://t.me/AsenaSupport",
     "stack": "container",
@@ -47,7 +47,7 @@
         "DEBUG": {
             "description": "Geliştiricilere özeldir.",
             "required": true,
-            "value": "false"
+            "value": "true"
         },
         "REMOVE_BG_API_KEY": {
             "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
