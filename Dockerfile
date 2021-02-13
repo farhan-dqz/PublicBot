@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/ATTKERALA/WhatsAsenaDuplicated /root/WhatsAsenaDuplicated
+RUN git clone https://github.com/kappithannemo/WhatsAsenaDuplicated /root/WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 RUN npm install deepai
