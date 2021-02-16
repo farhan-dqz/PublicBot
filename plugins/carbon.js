@@ -10,7 +10,7 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('carbon');
 
-Asena.addCommand({pattern: 'carbon ?(.*)', fromMe: true, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN}, (async (message, match) => {
+Asena.addCommand({pattern: 'carbon ?(.*)', fromMe: false, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.CARBON_NEEDWORD);
 
