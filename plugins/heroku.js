@@ -42,7 +42,7 @@ Asena.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DESC}, 
     });
 }));
 
-Asena.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'dyno', fromMe: false, desc: Lang.DYNO_DESC}, (async (message, match) => {
     heroku.get('/account').then(async (account) => {
         // have encountered some issues while calling this API via heroku-client
         // so let's do it manually
