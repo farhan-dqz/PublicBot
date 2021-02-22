@@ -113,7 +113,7 @@
             "GOODBYE_ALREADY_SETTED": "*✅ Goodbye message has been set!*\n*Message:* ```",
             "NEED_GOODBYE_TEXT": "*You must write a message to set up the goodbye message.*\n*Example:* ```.goodbye Goodbye!```",
             "GOODBYE_DELETED": "*✅ Goodbye message has been deleted successfully!*",
-            "GOODBYE_SETTED": "*✅ Goodbye message has been setted successfully!*"
+            "GOODBYE_SETTED": "*✅ Goodbye message has been set successfully!*"
         },
         "lydia": {
             "ADDLYDIA_DESC": "Activates Lydia (AI) for the user.",
@@ -162,7 +162,7 @@
         },
         "scrapers": {
             "TRANSLATE_DESC": "It translates with Google Translate. You must reply any message.",
-            "TRANSLATE_USAGE": ".trt tr it (From Turkish to Italian)",
+            "TRANSLATE_USAGE": ".trt ml en (From Malayalam to English)",
             "NEED_REPLY": "```Please reply to any message!```",
             "LANG": "Language",
             "FROM": "Translated Language",
@@ -176,8 +176,8 @@
             "SONG_DESC": "Uploads the song you wrote.",
             "NEED_TEXT_SONG": "*Please write a song!*\n*Example:* ```.song eminem - rap god```",
             "NO_RESULT": "*I could not find anything :(*",
-            "DOWNLOADING_SONG": "```waitakk...Downloading your song...```",
-            "UPLOADING_SONG": "```korch koodi wait...Uploading your song...```",
+            "DOWNLOADING_SONG": "```Downloading your song...```",
+            "UPLOADING_SONG": "```Uploading your song...```",
             "VIDEO_DESC": "Downloads video from YouTube.",
             "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
             "DOWNLOADING_VIDEO": "```Downloading your video...```",
@@ -189,12 +189,12 @@
             "SEARCHING": "* 🔎 Searching...*",
             "WIKI_DESC": "Searches query on Wikipedia.",
             "IMG_DESC": "Searches for related pics on Google.",
-            "IMG": "Uploading photo ```{}``` number ```{} `..."
+            "IMG": "Uploading photo ```{}``` number ```{} ```..."
         },
         "sticker": {
             "STICKER_DESC": "It converts your replied photo or video to sticker.",
             "NEED_REPLY": "*Reply to a photo or video!*",
-            "DOWNLOADING": "```Ippo Sheriakkitheram...Media downloading & converting to sticker...```"
+            "DOWNLOADING": "```Ippo Sheriakkitheram...```"
         },
         "system_stats": {
             "ALIVE_DESC": "Does bot work?",
@@ -212,7 +212,8 @@
             "UPDATING": "_Updating..._",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
             "UPDATED": "*✅ Successfully Updated!*",
-            "UPDATED_LOCAL": "*✅ Successfully Updated!*"
+            "UPDATED_LOCAL": "*✅ Successfully Updated!*",
+            "AFTER_UPDATE": "*💬 WhatsAsena Restating Automaticly!*"
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
@@ -367,6 +368,28 @@
         "webss": {
             "SS_DESC": "Takes a screenshot from the page in the given link.",
             "LİNK": "You must enter link!"
+        },
+        "voicy": {
+            "NEED_REPLY": "```Please reply to any message!```",
+            "ONLY_AUDIO":"```Only audio file is accepted.```",
+            "USAGE": "````It converts audio to text.```",
+            "TEXT": "*Hey! I listened secretly to this voice and heard those!:* \n\n"
+        },
+        "aiscanner": {
+            "NOT_FOUND": "Could *not* found any similar commands.",
+            "FOUND": "*Found those commands that is similar.* \n 🔎 ```",
+            "SEARCHING": "🔎 Command not found! *Searching* similar commands.."
+        },
+        "notes": {
+            "NOTES_USAGE": "Shows all your existing notes.",
+            "NO_SAVED": "You don't have any saved notes.",
+            "SAVED": "Here is your saved messages: ",
+            "SAVE_USAGE": "Reply a message and type .save or just use .save <Your note> without replying",
+            "REPLY": "Please provide a note or reply to a message.",
+            "SUCCESSFULLY_ADDED": "Successfully added new note, check your notes with .notes.",
+            "UNSUCCESSFUL": "Could not add note, please try again later or contact WhatsAsena developers.",
+            "DELETE_USAGE": "Deletes *all* your saved notes.",
+            "SUCCESSFULLY_DELETED": "Successfully deleted all your notes."
         }
     }
 }
