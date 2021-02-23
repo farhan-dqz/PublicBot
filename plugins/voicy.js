@@ -11,7 +11,7 @@ const recognizeAudio = () => {
 
     const headers = new Headers({
         'Content-Type': 'audio/wav',
-        "Authorization": `Bearer ${conf.WITAI_API}`,
+        "Authorization": `Bearer TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG`,
         'Cache-Control': 'no-cache',
         'Transfer-Encoding': 'chunked'
     })
