@@ -359,8 +359,9 @@
             "URL": "*You must enter the image URL!*\n*Example:* https://i.hizliresim.com/nrg50b.jpg"
         },
         "ttp": {
-            "TTP_DESC": "Converts text to plain painting.",
+            "TTP_DESC": "Converts text to plain picture.",
             "ATTP_DESC": "Adds rainbow effect to the text as a sticker.",
+            "STTP_DESC": "Converts text to plain picture as a sticker.",
             "NEED_WORD": "*You must enter words!*"
         },
         "wallpaper": {
