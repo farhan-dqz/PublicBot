@@ -14,9 +14,7 @@ const { errorMessage, infoMessage } = require('../helpers');
 
 Asena.addCommand({pattern: 'insta ?(.*)', fromMe: false, usage: Lang.USAGE, desc: Lang.DESC}, async (message, match) => {
 	if (match[1] === '') return await message.sendMessage(errorMessage(Lang.NEED_WORD));
-  
- await message.sendMessage(infoMessage(Lang.LOADING))
- 
+        await message.sendMessage(infoMessage(Lang.LOADING))
 	const url = `https://www.instagram.com/${match[1]}/?__a=1`;
 	try {
 		const response = await got(url);
