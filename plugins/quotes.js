@@ -18,7 +18,7 @@ Asena.addCommand({pattern: 'quotes ?(.*)', fromMe: false, desc: Lang.QUOTE_DESC}
 		const response = await got(url);
 		const json = JSON.parse(response.body);
 		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*📌 ' + Lang.QUOTE +':* ```' + json.content + '```\n\n' +
-		'*✒️' + Lang.AUTHOR +':* ```%' + json.author+ '```\n', MessageType.text);
+		'*✒️' + Lang.AUTHOR +':* ```' + json.author+ '```\n', MessageType.text);
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDA, MessageType.text);
 	}
