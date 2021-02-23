@@ -34,7 +34,7 @@ Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC },
 
 }));
 
-Asena.addCommand({ pattern: 'ttps ?(.*)', fromMe: false, desc: Lang.TTP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
