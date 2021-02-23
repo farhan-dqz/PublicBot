@@ -48,7 +48,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, usage: Lang.USAGE, des
 
     await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, { caption: msg })
 
-
+    
 
 
 }));
