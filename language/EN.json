@@ -224,7 +224,13 @@
             "HUMI": "Humidity",
             "WIND": "Wind Speed",
             "CLOUD": "Cloud",
-            "NOT_FOUND": "```I couldn't find a city with this name. 😖```"
+            "NOT_FOUND": "```I couldn't find a city with this name. 😖```",
+            "QUOTE_DESC": "Gives a random quote.",
+            "NEED_LOCATIONA": "* Invalid Request *",
+            "QUOTE": "Quote:",
+            "AUTHOR": "Author:",
+            "NOT_FOUNDA": "```Sorry,I could not find a quote. 😖```"
+            
         },
         "web": {
             "SPEEDTEST_DESC": "Measures Download and Upload speed.",
