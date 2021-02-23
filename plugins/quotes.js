@@ -11,8 +11,8 @@ const got = require('got');
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-Asena.addCommand({pattern: 'quotes ?(.*)', fromMe: false, desc: Lang.WEATHER_DESC}, async (message, match) => {
-	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATION);
+Asena.addCommand({pattern: 'quotes ?(.*)', fromMe: false, desc: Lang.QUOTE_DESC}, async (message, match) => {
+	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	const url = `https://api.quotable.io/random`;
 	try {
 		const response = await got(url);
@@ -20,7 +20,7 @@ Asena.addCommand({pattern: 'quotes ?(.*)', fromMe: false, desc: Lang.WEATHER_DES
 		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*📌 ' + Lang.QUOTE +':* ```' + json.content + '```\n\n' +
 		'*✒️' + Lang.AUTHOR +':* ```%' + json.author+ '```\n', MessageType.text);
 	} catch {
-		return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text);
+		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDA, MessageType.text);
 	}
 });
 
