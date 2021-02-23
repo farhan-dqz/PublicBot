@@ -405,7 +405,8 @@
             "FOLLOWS": "Follows",
             "ACCOUNT": "Account privacy",
             "PUBLIC": "Public",
-            "HIDDEN": "Hidden"    
+            "HIDDEN": "Hidden"
+            "PROPIC": "Profile Pic"
         }
     }
 }
