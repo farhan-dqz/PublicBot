@@ -21,7 +21,7 @@ Asena.addCommand({pattern: 'insta ?(.*)', fromMe: false, usage: Lang.USAGE, desc
 	try {
 		const response = await got(url);
 		const json = JSON.parse(response.body);
-		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*📍 ' + Lang.USERNAME +':* ```' + match[1] + '```\n\n' +
+		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*ℹ ' + Lang.USERNAME +':* ```' + match[1] + '```\n\n' +
 		'*ℹ ' + Lang.NAME +':* ```' + json.graphql.user.edge_follow.full_name + '°```\n' + 
 		'*ℹ ' + Lang.BIO +':* ```' + json.graphql.user.biography + '```\n' +
 		'*ℹ ' + Lang.FOLLOWERS +':* ```%' + json.graphql.user.edge_followed_by.count + '```\n' + 
