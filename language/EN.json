@@ -238,7 +238,20 @@
             "MODD_DESC": "Get modded app details from MODDROID.",
             "HMODD_DESC": "Get modded app details from HappyMod.",
             "NEED_APPNAME": "*Invalid Request,Provide an app name*",
-            "NOT_FOUNDMD": "```Sorry,I could not find such an app. 😖```"
+            "NOT_FOUNDMD": "```Sorry,I could not find such an app. 😖```",
+            "CM_DESC": "Get a compliment for yourself.",
+            "NOT_FOUNDAC": "*Invalid Request*",
+            "CM": "Hey,",
+            "JOKE_DESC": "Get a random joke.",
+            "JOKE": "Joke:",
+            "PUNCHLINE": "Punchline:",
+            "EVINS_DESC": "Get an evil insult.",
+            "EVINS": "...",
+            "ZODIAC_DESC": "Get the days horosope for your sunsign.",
+            "NEED_ZOD": "*Invalid Request,Provide your sunsign*",
+            "SUNSIGN": "Sun Sign",
+            "HOROSCOPE": "Horoscope"
+            
             
         },
         "web": {
