@@ -239,7 +239,7 @@
             "HMODD_DESC": "Get modded app details from HappyMod.",
             "NEED_APPNAME": "*Invalid Request,Provide an app name*",
             "NOT_FOUNDMD": "```Sorry,I could not find such an app. 😖```",
-            "CM_DESC": "Get a compliment for yourself.",
+            "CM_DESC": "Get a compliment.",
             "NOT_FOUNDAC": "*Invalid Request*",
             "CM": "Hey,",
             "JOKE_DESC": "Get a random joke.",
@@ -405,7 +405,7 @@
         "voicy": {
             "NEED_REPLY": "```Please reply to any message!```",
             "ONLY_AUDIO":"```Only audio file is accepted.```",
-            "USAGE": "````It converts audio to text.```",
+            "USAGE": "```It converts audio to text.```",
             "TEXT": "*Hey! I listened secretly to this voice and heard those!:* \n\n"
         },
         "aiscanner": {
