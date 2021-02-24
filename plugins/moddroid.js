@@ -18,10 +18,10 @@ Asena.addCommand({pattern: 'modd ?(.*)', fromMe: false, desc: Lang.MODD_DESC}, a
 		const response = await got(url);
 		const json = JSON.parse(response.body);
 		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, 
-		'*🏷️ ' + Lang.NAMEY +'* ```' + json.result[0].title + '°```\n' + 
-		'*🅿️ ' + Lang.PUBLISHER +':* ```' + json.result[0].publisher+ '```\n' +
-		'*📝 ' + Lang.MODINFO +':* ```' + json.result[0].mod_info + '```\n' + 
-		'*📦 ' + Lang.SIZE +'* ```' + json.result[0].size + '```\n' + 
+		'*🏷️ ' + Lang.NAMEY +'* ```' + json.result[0].title + '```\n\n' + 
+		'*🅿️ ' + Lang.PUBLISHER +':* ```' + json.result[0].publisher+ '```\n\n' +
+		'*📝 ' + Lang.MODINFO +':* ```' + json.result[0].mod_info + '```\n\n' + 
+		'*📦 ' + Lang.SIZE +'* ```' + json.result[0].size + '```\n\n' + 
 		'*⬇️ ' + Lang.DOWNLOAD +':* ```' + json.result[0].download + '```\n', MessageType.text);
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text);
