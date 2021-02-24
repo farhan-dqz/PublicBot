@@ -229,7 +229,12 @@
             "NEED_LOCATIONA": "* Invalid Request *",
             "QUOTE": "Quote:",
             "AUTHOR": "Author:",
-            "NOT_FOUNDA": "```Sorry,I could not find a quote. 😖```"
+            "NOT_FOUNDA": "```Sorry,I could not find a quote. 😖```",
+            "NAMEY": "Name:",
+            "PUBLISHER": "Publisher:",
+            "MODINFO": "ModInfo:",
+            "DOWNLOAD": "Download:",
+            "SIZE": "Size:"
             
         },
         "web": {
