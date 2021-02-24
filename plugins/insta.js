@@ -24,7 +24,7 @@ Asena.addCommand({pattern: 'insta ?(.*)', fromMe: false, usage: Lang.USAGE, desc
 		'*📄 ' + Lang.BIO +':* ```' + json.graphql.user.biography + '```\n' +
 		'*👣 ' + Lang.FOLLOWERS +':* ```%' + json.graphql.user.edge_followed_by.count + '```\n' + 
 		'*👥 ' + Lang.FOLLOWS +':* ```' + json.graphql.user.edge_follow.count + 'm/s```\n' + 
-		'*🖼 ' + Lang.PROFPIC +':* ```%' + json.graphql.user.profile_pic_url_hd + '```\n', MessageType.text);
+		'*🖼 ' + Lang.PROPIC +':* ```%' + json.graphql.user.profile_pic_url_hd + '```\n', MessageType.text);
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text);
 	}
