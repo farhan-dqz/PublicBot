@@ -20,6 +20,6 @@ Asena.addCommand({pattern: 'zodiac ?(.*)', fromMe: false, desc: Lang.ZODIAC_DESC
 		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*☸️ ' + Lang.SUNSIGN +':* ```' + match[1] + '```\n\n' +
 		'*🔮 ' + Lang.HOROSCOPE +':* ```' + json.horoscope + '°```\n' , MessageType.text);
 	} catch {
-		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDHOR, MessageType.text);
+		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDAC, MessageType.text);
 	}
 });
