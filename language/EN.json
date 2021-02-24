@@ -238,7 +238,7 @@
             "MODD_DESC": "Get modded app details from MODDROID.",
             "HMODD_DESC": "Get modded app details from HappyMod.",
             "NEED_APPNAME": "*Invalid Request,Provide an app name*",
-            "NOT_FOUNDMD": "```Sorry,I could not find such an app. 😖```",
+            "NOT_FOUNDMD": "```Sorry,I could not find such an app. 😖```"
             
         },
         "web": {
