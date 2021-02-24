@@ -22,7 +22,7 @@ Asena.addCommand({pattern: 'moddroid ?(.*)', fromMe: false, desc: Lang.MODD_DESC
 		'*🅿️ ' + Lang.PUBLISHER +':* ```' + json.result[0].publisher+ '```\n' +
 		'*📝 ' + Lang.MODINFO +':* ```%' + json.result[0].mod_info + '```\n' + 
 		'*📦 ' + Lang.SIZE +':* ```' + json.result[0].size + 'm/s```\n' + 
-		'*⬇️ ' + Lang.DOWNLOAD +':* ```%' + json.result[0].download + '```\n', MessageType.text);
+		'*⬇️ ' + Lang.DOWNLOAD +':* ```' + json.result[0].download + '```\n', MessageType.text);
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text);
 	}
