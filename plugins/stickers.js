@@ -37,9 +37,13 @@ Asena.addCommand({pattern: 'sticker', fromMe: false, desc: Lang.STICKER_DESC}, (
         });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: false})
     }
-
+/*(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 512x512"])*/
     ffmpeg(location)
-        .outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 512x512"])
+        .outputOptions [
+        '-y',
+        '-i', inp,
+        '-vf', 'scale=512:512:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=512:512:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1',
+        png ])
         .save('sticker.webp')
         .on('end', async () => {
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
