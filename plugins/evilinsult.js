@@ -11,7 +11,7 @@ const got = require('got');
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-Asena.addCommand({pattern: 'quote ?(.*)', fromMe: false, desc: Lang.EVINS_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'insult ?(.*)', fromMe: false, desc: Lang.EVINS_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	const url = `https://evilinsult.com/generate_insult.php?lang=en&type=json`;
 	try {
