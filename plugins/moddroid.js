@@ -11,7 +11,7 @@ const got = require('got');
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-Asena.addCommand({pattern: 'weather ?(.*)', fromMe: false, desc: Lang.WEATHER_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'moddroid ?(.*)', fromMe: false, desc: Lang.WEATHER_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_LOCATION);
 	const url = `https://tobz-api.herokuapp.com/api/moddroid?q=${match[1]}&apikey=BotWeA`;
 	try {
