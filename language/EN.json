@@ -384,7 +384,10 @@
         },
         "webss": {
             "SS_DESC": "Takes a screenshot from the page in the given link.",
-            "LİNK": "You must enter link!"
+            "LİNK": "You must enter link!",
+            "TEXT": "You must enter text!",
+            "QR_DESC": "Converts the given text into a qr code image."
+            
         },
         "voicy": {
             "NEED_REPLY": "```Please reply to any message!```",
