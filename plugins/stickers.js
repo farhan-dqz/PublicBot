@@ -39,7 +39,7 @@ Asena.addCommand({pattern: 'sticker', fromMe: false, desc: Lang.STICKER_DESC}, (
     }
 /*(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 512x512"])*/
     ffmpeg(location)
-        .outputOptions [
+        .outputOptions ([
         '-y',
         '-i', inp,
         '-vf', 'scale=512:512:flags=lanczos:force_original_aspect_ratio=decrease,format=rgba,pad=512:512:(ow-iw)/2:(oh-ih)/2:color=#00000000,setsar=1',
