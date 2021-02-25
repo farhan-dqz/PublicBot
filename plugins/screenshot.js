@@ -13,7 +13,7 @@ const got = require("got");
 const Language = require('../language');
 const Lang = Language.getString('webss');
 
-Asena.addCommand({pattern: 'ss ?(.*)', fromMe: true, desc: Lang.SS_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'ss ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
