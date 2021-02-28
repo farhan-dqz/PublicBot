@@ -435,14 +435,14 @@
             "DESC": "Fetches user informations from instagram",
             "LOADING": "Fetching user data.. please wait.",
             "USERNAME": "Username",
-            "NAME": "Name",
-            "BIO": "Biography",
-            "FOLLOWERS": "Followers",
-            "FOLLOWS": "Follows",
-            "ACCOUNT": "Account privacy",
-            "PUBLIC": "Public",
-            "HIDDEN": "Hidden",
-            "PROPIC": "Profile Pic"
+            "NAME": "🔖 Name",
+            "BIO": "📄 Biography",
+            "FOLLOWERS": "👣 Followers",
+            "FOLLOWS": "👥 Follows",
+            "ACCOUNT": "👁️ Account privacy",
+            "PUBLIC": "🔓 Public",
+            "HIDDEN": "🔒 Hidden",
+            "PROPIC": "🖼 Profile Pic"
         }
     }
 }
