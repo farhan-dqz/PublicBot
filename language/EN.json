@@ -433,7 +433,7 @@
             "NEED_WORD": "*Please enter username of any instagram account.*",
             "USAGE": ".insta <userName>",
             "DESC": "Fetches user informations from instagram",
-            "LOADING": "Fetching user data.. please wait.",
+            "LOADING": "Fetching user data.../n please wait.",
             "USERNAME": "Username",
             "NAME": "🔖 Name",
             "BIO": "📄 Biography",
