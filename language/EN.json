@@ -250,8 +250,13 @@
             "ZODIAC_DESC": "Get the days horosope for your sunsign.",
             "NEED_ZOD": "*Invalid Request,Provide your sunsign*",
             "SUNSIGN": "Sun Sign",
-            "HOROSCOPE": "Horoscope"
-            
+            "HOROSCOPE": "Horoscope",
+            "NEWS_DESC": "Get the days news, add category if you wish.",
+            "NEED_CATEGORY": "* Please write a category!*\n*Example:* ```.news sports```",
+            "CATEGORY": "Category",
+            "RMLINK": "Read More",
+            "NEWS": "News Content",
+            "NEWST": "News Title",
             
         },
         "web": {
