@@ -252,11 +252,11 @@
             "SUNSIGN": "Sun Sign",
             "HOROSCOPE": "Horoscope",
             "NEWS_DESC": "Get the days news, add category if you wish.",
-            "NEED_CATEGORY": "* Please write a category!*\n*Example:* ```.news sports```",
+            "NEED_CATEGORY": "* Please write a category!*\n*Example:* ```.news technology```",
             "CATEGORY": "Category",
             "RMLINK": "Read More",
             "NEWS": "News Content",
-            "NEWST": "News Title",
+            "NEWST": "News Title"
             
         },
         "web": {
