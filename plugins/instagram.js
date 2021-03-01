@@ -16,6 +16,7 @@
 #
 */
 
+
 const Asena = require('../events')
 const { MessageType } = require('@adiwajshing/baileys')
 const axios = require('axios')
@@ -66,3 +67,4 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
       )
   },
 )
+
