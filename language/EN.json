@@ -56,7 +56,7 @@
             "REASON": "Reason",
             "LAST_SEEN": "Last Seen",
             "IM_NOT_AFK": "```I am not AFK anymore!```",
-            "AFK_TEXT": "```Bip bop! This is a bot. My owner is not here at the moment.```",
+            "AFK_TEXT": "```Bip bop! This is a bot.\n My owner is not here at the moment.\n Type *.alive* for bot commands```",
             "AFK_TEXT_NOMD": "Bip bop! This is a bot.",
             "HOUR": "hour",
             "MINUTE": "minute",
@@ -217,7 +217,7 @@
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
-            "NEED_LOCATION": "* Please write a location!*\n*Example:* ```.weather Bakü```",
+            "NEED_LOCATION": "* Please write a location!*\n*Example:* ```.weather New Delhi```",
             "LOCATION": "Location",
             "TEMP": "Temperature",
             "DESC": "Description",
@@ -256,7 +256,8 @@
             "CATEGORY": "Category",
             "RMLINK": "Read More",
             "NEWS": "News Content",
-            "NEWST": "News Title"
+            "NEWST": "News Title",
+             "NOT_FOUND": "```oops...I couldn't find a category with this name. 😖```"
             
         },
         "web": {
@@ -433,7 +434,7 @@
             "NEED_WORD": "*Please enter username of any instagram account.*",
             "USAGE": ".insta <userName>",
             "DESC": "Fetches user informations from instagram",
-            "LOADING": "Fetching user data.../n please wait.",
+            "LOADING": "Fetching user data...\n please wait.",
             "USERNAME": "Username",
             "NAME": "🔖 Name",
             "BIO": "📄 Biography",
