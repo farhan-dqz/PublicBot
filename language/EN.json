@@ -396,7 +396,10 @@
             "TTP_DESC": "Converts text to plain picture.",
             "ATTP_DESC": "Adds rainbow effect to the text as a sticker.",
             "STTP_DESC": "Converts text to plain picture as a sticker.",
-            "NEED_WORD": "*You must enter words!*"
+            "NEED_WORD": "*You must enter words!*",
+            "ANIME_DESC": "It writes the text inside the banner the anime girl is holding",
+            "TRUMP_DESC": "Converts the text to Trump's tweet.",
+            "CHANGE_DESC": "Turns the text into the change my mind poster."
         },
         "wallpaper": {
             "WP": "It sends high resolution wallpapers."
@@ -405,7 +408,10 @@
             "SS_DESC": "Takes a screenshot from the page in the given link.",
             "LİNK": "You must enter link!",
             "TEXT": "You must enter text!",
-            "QR_DESC": "Converts the given text into a qr code image."
+            "QR_DESC": "Converts the given text into a qr code image.",
+            "ASTRO_DESC": "Gives the astronomical weather data of the given lattitude and longitude.",
+            "LAT": "You must enter the lattitude and longitude data ,seperated by *;* in order!",
+            "USAGEI": ".astro 37.629562;-116.849556",
             
         },
         "voicy": {
