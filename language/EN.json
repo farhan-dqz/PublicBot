@@ -268,6 +268,11 @@
             "JOOX_DESC": "Brings you the song details and a link for it.",
             "LYRICS_DESC": "Brings you the song Lyrics.",
             "SONGLI": "Lyrics",
+            "TIN_DESC": "Shortens the given link using tinyurl.",
+            "BITLY_DESC": "Shortens the given link using bitly.",
+            "NOT_FOUNDLI": "Lyrics not found",
+            "SLINK": "Link",
+            "NEED_LINK":"Need Link"
             
         },
         "web": {
