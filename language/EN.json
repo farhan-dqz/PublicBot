@@ -264,7 +264,8 @@
             "PUBLICATION": "Publication",
             "SONGL": "Link",
             "NEED_SONG": "Write a song name.",
-            "NOT_FOUNDS" : "No such songs found!"
+            "NOT_FOUNDS" : "No such songs found!",
+             "JOOX_DESC": "Brings you the song details and a link for it."
             
         },
         "web": {
