@@ -22,7 +22,7 @@ const recognizeAudio = () => {
         headers: headers
     }
 
-    return fetch("https://api.wit.ai/speech?v=20200219", requestBody)
+    return fetch("https://api.wit.ai/speech?v=20200513", requestBody)
         .then(response => response.json())
         .then(json => json._text)
 }
