@@ -257,7 +257,14 @@
             "RMLINK": "Read More",
             "NEWS": "News Content",
             "NEWST": "News Title",
-             "NOT_FOUND": "```oops...I couldn't find a category with this name. 😖```"
+             "NOT_FOUND": "```oops...I couldn't find a category with this name. 😖```",
+            "SONG": "Song",
+            "ALBUM": "Album",
+            "TITLE": "Title",
+            "PUBLICATION": "Publication",
+            "SONGL": "Link",
+            "NEED_SONG": "Write a song name.",
+            "NOT_FOUNDS" : "No such songs found!"
             
         },
         "web": {
