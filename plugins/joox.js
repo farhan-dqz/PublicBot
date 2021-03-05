@@ -22,6 +22,10 @@ Asena.addCommand({pattern: 'joox ?(.*)', fromMe: false, desc: Lang.JOOX_DESC}, a
 		'*🔊 ' + Lang.TITLE +':* ```' + json.result.judul + '```\n' +
 		'*🎚️ ' + Lang.PUBLICATION +':* ```' + json.result.dipublikasi + '```\n' + 
 		'*🎙️ ' + Lang.SONGL +':* ```' + json.result.mp3 + '```\n' , MessageType.text);
+		
+		var buffer = await getBuffer(json.result.mp3)
+               
+		await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDS, MessageType.text);
 	}
