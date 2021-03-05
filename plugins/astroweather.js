@@ -24,6 +24,6 @@ Asena.addCommand({pattern: 'astro ?(.*)', fromMe: false,usage: Lang.USAGEI, desc
 
     var webimage = await axios.get(`http://www.7timer.info/bin/astro.php?lon=${topText}&lat=${bottomText}&ac=0&lang=en&unit=metric&output=internal&tzshift=0`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
