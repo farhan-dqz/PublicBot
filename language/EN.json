@@ -265,7 +265,9 @@
             "SONGL": "Link",
             "NEED_SONG": "Write a song name.",
             "NOT_FOUNDS" : "No such songs found!",
-             "JOOX_DESC": "Brings you the song details and a link for it."
+            "JOOX_DESC": "Brings you the song details and a link for it.",
+            "LYRICS_DESC": "Brings you the song Lyrics.",
+            "SONGLI": "Lyrics",
             
         },
         "web": {
