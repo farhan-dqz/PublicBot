@@ -22,7 +22,7 @@ Asena.addCommand({pattern: 'joox ?(.*)', fromMe: false, desc: Lang.JOOX_DESC}, a
 		'*🔊 ' + Lang.TITLE +':* ```' + json.result.judul + '```\n' +
 		'*🎚️ ' + Lang.PUBLICATION +':* ```' + json.result.dipublikasi + '```\n' + 
 		'*🎙️ ' + Lang.SONGL +':* ```' + json.result.mp3 + '```\n' , MessageType.text);
-		 await message.sendMessage(Buffer.from(json.result.mp3), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+		 await message.sendMessage(Buffer.from(json.result.mp3), MessageType.document, {mimetype: Mimetype.mp3, ptt: true});
 		
 		
 	} catch {
