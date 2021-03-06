@@ -19,6 +19,6 @@ Asena.addCommand({pattern: 'map ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (asy
     
     var webimage = await axios.get(`https://mnazria.herokuapp.com/api/maps?search=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.gambar), MessageType.image, {mimetype: Mimetype.jpg })
+    await message.sendMessage(Buffer.from(webimage.gambar.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
