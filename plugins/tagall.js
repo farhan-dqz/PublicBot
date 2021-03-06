@@ -18,10 +18,11 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-Asena.addCommand({pattern: 'tagall', fromMe: false, desc: Lang.TAGALL_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'tagall', fromMe: true, desc: Lang.TAGALL_DESC}, (async (message, match) => {
 
    var im = await checkImAdmin(message);
-   if (!im) return await message.client.sendMessage(message.jid,Lang.ADMİN,MessageType.text);
+   if (!im) return await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+   /*message.client.sendMessage(message.jid,Lang.ADMİN,MessageType.text);*/
 
     grup = await message.client.groupMetadata(message.jid);
     var jids = [];
