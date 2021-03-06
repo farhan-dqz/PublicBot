@@ -16,14 +16,9 @@ const Lang = Language.getString('webss');
 Asena.addCommand({pattern: 'map ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.LİNK);
-
-    var webimage = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${match[1]}`, { responseType: 'arraybuffer' })
-
-    await message.sendMessage(Buffer(json.gambar), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
     
-    
-    var webimage = await axios.get(`Buffer.from(json.gambar)`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://mnazria.herokuapp.com/api/maps?search=${match[1]}`, { responseType: 'arraybuffer' })
 
-await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+    await message.sendMessage(Buffer.from(webimage.gambar), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
