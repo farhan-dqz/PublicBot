@@ -24,9 +24,6 @@ const axios = require('axios')
 const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
 const Lang = Language.getString('instagram')
-
-
-const Language = require('../language');
 const Lang = Language.getString('webss');
 
 Asena.addCommand({pattern: 'insta ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (async (message, match) => {
