@@ -23,12 +23,11 @@ const axios = require('axios')
 
 const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
-const Lang = Language.getString('instagram')
-const Lang = Language.getString('webss');
+const Lang = Language.getString('instagram') ;
 
-Asena.addCommand({pattern: 'insta ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC}, (async (message, match) => {
 
-    if (match[1] === '') return await message.sendMessage(Lang.LİNK);
+    if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
     var webimage = await axios.get(`https://screenshotapi.net/api/v1/screenshot?url=https://www.instagram.com/${match[1]}/?__a=1&output=image&full_page=true`, { responseType: 'arraybuffer' })
 
