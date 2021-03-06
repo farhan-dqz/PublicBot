@@ -28,7 +28,7 @@ Asena.addCommand({pattern: 'joox ?(.*)', fromMe: false, desc: Lang.JOOX_DESC}, a
     
 		var jooxs = await axios.get(`https://tobz-api.herokuapp.com/api/joox?q=${match[1]}&apikey=BotWeA`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(jooxs.result.mp3.data), MessageType.audio, { mimetype: Mimetype.mp4audio });
+                await message.sendMessage(Buffer.from(jooxs.data), MessageType.audio, { mimetype: Mimetype.mp4audio });
 		
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDS, MessageType.text);
