@@ -25,11 +25,11 @@ const Language = require('../language');
 const { errorMessage, infoMessage } = require('../helpers');
 const Lang = Language.getString('instagram') ;
 
-Asena.addCommand({pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'inta ?(.*)', fromMe: false, desc: Lang.DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
-    var webimage = await axios.get(`https://screenshotapi.net/api/v1/screenshot?url=https://www.instagram.com/${match[1]}/?__a=1&output=image&full_page=true`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://www.instagram.com/${match[1]}/?__a=1`, { responseType: 'arraybuffer' })
 
     await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
@@ -60,9 +60,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, usage: Lang.USAGE, des
           is_private,
         } = response.data.graphql.user
 
-        const profileBuffer = await axios.get(profile_pic_url_hd, {
-          responseType: 'arraybuffer',
-        })
+        const profileBuffer = await axios.get(profile_pic_url_hd, {responseType: 'arraybuffer'})
 
         const msg = `
         *${Lang.NAME}*: ${full_name}
