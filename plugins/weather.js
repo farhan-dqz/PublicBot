@@ -33,7 +33,7 @@ Asena.addCommand({pattern: 'weather ?(.*)', fromMe: false, desc: Lang.WEATHER_DE
 	}
 });
 
-Asena.addCommand({pattern: 'pweather ?(.*)', fromMe: true, desc: Lang.WEATHER_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'pweather ?(.*)', fromMe: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_LOCATION);
 	const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
 	try {
