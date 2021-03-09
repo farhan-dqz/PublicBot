@@ -269,7 +269,7 @@ const Lang = Language.getString('conventer');
 
 
 
-Asena.addCommand({pattern: 'tblend ?(.*)', fromMe: false, desc: Lang.T_DESC}, (async (message, match) => {    
+Asena.addCommand({pattern: 'tblend ?(.*)', fromMe: false }, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
 
