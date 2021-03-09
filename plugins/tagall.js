@@ -20,7 +20,7 @@ const Lang = Language.getString('tagall');
 
 Asena.addCommand({pattern: 'tagall', fromMe: true, desc: Lang.TAGALL_DESC}, (async (message, match) => {
 
-  /* var im = await checkImAdmin(message);
+  /*var im = await checkImAdmin(message);
    if (!im) return await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})*/
    /*message.client.sendMessage(message.jid,Lang.ADMİN,MessageType.text);*/
 
@@ -33,7 +33,5 @@ Asena.addCommand({pattern: 'tagall', fromMe: true, desc: Lang.TAGALL_DESC}, (asy
             jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
         }
     );
-     var im = await checkImAdmin(message);
-   if (!im) return await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
 }));
