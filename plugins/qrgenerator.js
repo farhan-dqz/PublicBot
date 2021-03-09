@@ -11,7 +11,7 @@ const request = require('request');
 const got = require("got");
 
 const Language = require('../language');
-const Lang = Language.getString('webss');
+const Lang = Language.getString('qrgenerator');
 
 Asena.addCommand({pattern: 'qr ?(.*)', fromMe: false, desc: Lang.QR_DESC}, (async (message, match) => {
 
