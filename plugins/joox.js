@@ -25,7 +25,7 @@ Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.JOOX_DESC}, a
 		'*🎚️ ' + Lang.PUBLICATION +':* ```' + json.result.dipublikasi + '```\n' + 
 		'*🎙️ ' + Lang.SONGL +':* ```' + json.result.mp3 + '```\n' , MessageType.text);
 		
-		return await message.sendMessage(json.result.mp3), MessageType.audio, {mimetype: Mimetype.mp4audio, ptt: true});
+		return await message.sendMessage(json.result.mp3 , MessageType.audio, {mimetype: Mimetype.mp4audio, ptt: true});
     
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDS, MessageType.text);
