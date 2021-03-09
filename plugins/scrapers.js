@@ -199,7 +199,79 @@ Asena.addCommand({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (as
         message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
     });
 }));
-Asena.addCommand({pattern: 'joox ?(.*)' , fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
+
+
+
+
+
+/*from here*/
+
+
+Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
+    if (!message.reply_message) {
+        return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
+    }
+
+    ceviri = await translatte(message.reply_message.message, {from: match[1] === '' ? 'auto' : match[1], to: match[2] === '' ? config.LANG : match[2]});
+    if ('text' in ceviri) {
+        return await message.reply('*▶️ ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
+        + '*◀️ ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
+        + '*🔎 ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
+    } else {
+        return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
+    }
+}));
+
+Asena.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true}, (async (message, match) => {
+    if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
+        return await message.client.sendMessage(message.jid,Lang.CURRENCY_ERROR,MessageType.text);
+    }
+    let opts = {
+        amount: parseFloat(match[1]).toFixed(2).replace(/\.0+$/,''),
+        from: match[2].toUpperCase(),
+        to: match[3].toUpperCase()
+    }
+    try {
+        result = await exchangeRates().latest().symbols([opts.to]).base(opts.from).fetch()
+        result = parseFloat(result).toFixed(2).replace(/\.0+$/,'')
+        await message.reply(`\`\`\`${opts.amount} ${opts.from} = ${result} ${opts.to}\`\`\``)
+    }
+    catch(err) {
+        if (err instanceof ExchangeRatesError) 
+            await message.client.sendMessage(message.jid,Lang.INVALID_CURRENCY,MessageType.text)
+        else {
+            await message.client.sendMessage(message.jid,Lang.UNKNOWN_ERROR,MessageType.text)
+            console.log(err)
+        }
+    }
+}));
+
+Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
+    if(match[1] === undefined || match[1] == "")
+        return;
+    
+    let 
+        LANG = config.LANG.toLowerCase(),
+        ttsMessage = match[1],
+        SPEED = 1.0
+
+    if(langMatch = match[1].match("\\{([a-z]{2})\\}")) {
+        LANG = langMatch[1]
+        ttsMessage = ttsMessage.replace(langMatch[0], "")
+    } 
+    if(speedMatch = match[1].match("\\{([0].[0-9]+)\\}")) {
+        SPEED = parseFloat(speedMatch[1])
+        ttsMessage = ttsMessage.replace(speedMatch[0], "")
+    }
+    
+    var buffer = await googleTTS.synthesize({
+        text: ttsMessage,
+        voice: LANG
+    });
+    await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+}));
+
+Asena.addCommand({pattern: 'song ?(.*)' , fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
     let arama = await yts(match[1]);
     arama = arama.all;
@@ -226,7 +298,75 @@ Asena.addCommand({pattern: 'joox ?(.*)' , fromMe: false, desc: Lang.SONG_DESC}, 
                 });
             writer.addTag();
 
-            reply = await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+            reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
+            await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
         });
+}));
+
+Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
+    
+    try {
+        var arama = await yts({videoId: ytdl.getURLVideoID(match[1])});
+    } catch {
+        return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
+    }
+
+    var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_VIDEO,MessageType.text);
+
+    var yt = ytdl(arama.videoId, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
+    yt.pipe(fs.createWriteStream('./' + arama.videoId + '.mp4'));
+
+    yt.on('end', async () => {
+        reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
+        await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
+    });
+}));
+
+Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
+    var reply = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text);
+
+    try {
+        var arama = await yts(match[1]);
+    } catch {
+        return await message.client.sendMessage(message.jid,Lang.NOT_FOUND,MessageType.text);
+    }
+    
+    var mesaj = '';
+    arama.all.map((video) => {
+        mesaj += '*' + video.title + '* - ' + video.url + '\n'
+    });
+
+    await message.client.sendMessage(message.jid,mesaj,MessageType.text);
+    await reply.delete();
+}));
+
+Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (async (message, match) => { 
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
+    var reply = await message.client.sendMessage(message.jid,Lang.SEARCHING,MessageType.text);
+
+    var arama = await wiki({ apiUrl: 'https://' + config.LANG + '.wikipedia.org/w/api.php' })
+        .page(match[1]);
+
+    var info = await arama.rawContent();
+    await message.client.sendMessage(message.jid, info, MessageType.text);
+    await reply.delete();
+}));
+
+Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
+    gis(match[1], async (error, result) => {
+        for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
+            var get = got(result[i].url, {https: {rejectUnauthorized: false}});
+            var stream = get.buffer();
+                
+            stream.then(async (image) => {
+                await message.client.sendMessage(message.jid,image, MessageType.image);
+            });
+        }
+
+        message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
+    });
 }));
 
