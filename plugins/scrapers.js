@@ -207,7 +207,7 @@ Asena.addCommand({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (as
 /*from here*/
 
 
-Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'ptrt(?: |$)(\\S*) ?(\\S*)', fromMe: true}, (async (message, match) => {
     if (!message.reply_message) {
         return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
     }
@@ -222,7 +222,7 @@ Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC
     }
 }));
 
-Asena.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'pcurrency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true}, (async (message, match) => {
     if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
         return await message.client.sendMessage(message.jid,Lang.CURRENCY_ERROR,MessageType.text);
     }
@@ -246,7 +246,7 @@ Asena.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*)
     }
 }));
 
-Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'ptts (.*)', fromMe: true }, (async (message, match) => {
     if(match[1] === undefined || match[1] == "")
         return;
     
@@ -271,7 +271,7 @@ Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (asyn
     await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 }));
 
-Asena.addCommand({pattern: 'song ?(.*)' , fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'psong ?(.*)' , fromMe: true }, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
     let arama = await yts(match[1]);
     arama = arama.all;
@@ -303,7 +303,7 @@ Asena.addCommand({pattern: 'song ?(.*)' , fromMe: true, desc: Lang.SONG_DESC}, (
         });
 }));
 
-Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'pvideo ?(.*)', fromMe: true}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
     
     try {
@@ -323,7 +323,7 @@ Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, 
     });
 }));
 
-Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'pyt ?(.*)', fromMe: true}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
     var reply = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text);
 
@@ -342,7 +342,7 @@ Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async
     await reply.delete();
 }));
 
-Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'pwiki ?(.*)', fromMe: true}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
     var reply = await message.client.sendMessage(message.jid,Lang.SEARCHING,MessageType.text);
 
@@ -354,7 +354,7 @@ Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (a
     await reply.delete();
 }));
 
-Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'pimg ?(.*)', fromMe: true }, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
     gis(match[1], async (error, result) => {
         for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
