@@ -24,12 +24,9 @@ Asena.addCommand({pattern: 'joox ?(.*)', fromMe: false, desc: Lang.JOOX_DESC}, a
 		'*🔊 ' + Lang.TITLE +':* ```' + json.result.judul + '```\n' +
 		'*🎚️ ' + Lang.PUBLICATION +':* ```' + json.result.dipublikasi + '```\n' + 
 		'*🎙️ ' + Lang.SONGL +':* ```' + json.result.mp3 + '```\n' , MessageType.text);
-		/* await message.sendMessage(Buffer.from(json.result.mp3), MessageType.document, {mimetype: Mimetype.mp3, ptt: true});*/
-    
-		var jooxs = await axios.get(`https://tobz-api.herokuapp.com/api/joox?q=${match[1]}&apikey=BotWeA`, { responseType: 'arraybuffer' })
-
-                await message.sendMessage(Buffer.from(jooxs.data), MessageType.audio, { mimetype: Mimetype.mp4audio });
 		
+		return await message.sendMessage(Buffer.from(json.result.mp3), MessageType.audio, {mimetype: Mimetype.mp4audio, ptt: true});
+    
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDS, MessageType.text);
 	}
