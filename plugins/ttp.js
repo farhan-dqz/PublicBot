@@ -84,7 +84,7 @@ Asena.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: false, desc: Lang.TRUMP_DE
 /*from here*/
 
 
-Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'pttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -95,7 +95,7 @@ Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (a
 
 }));
 
-Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'pattp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -106,7 +106,7 @@ Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, 
 
 }));
 
-Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: true, desc: Lang.STTP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'psttp ?(.*)', fromMe: true, desc: Lang.STTP_DESC }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -117,7 +117,7 @@ Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: true, desc: Lang.STTP_DESC }, 
 
 }));
 
- Asena.addCommand({ pattern: 'animesay ?(.*)', fromMe: true, desc: Lang.ANIME_DESC }, (async (message, match) => {
+ Asena.addCommand({ pattern: 'panimesay ?(.*)', fromMe: true, desc: Lang.ANIME_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -127,7 +127,7 @@ Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: true, desc: Lang.STTP_DESC }, 
 
     }));
 
-    Asena.addCommand({ pattern: 'changesay ?(.*)', fromMe: true, desc: Lang.CHANGE_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'pchangesay ?(.*)', fromMe: true, desc: Lang.CHANGE_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -137,7 +137,7 @@ Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: true, desc: Lang.STTP_DESC }, 
 
     }));
 
-Asena.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: true, desc: Lang.TRUMP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'ptrumpsay ?(.*)', fromMe: true, desc: Lang.TRUMP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
