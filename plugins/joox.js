@@ -13,7 +13,7 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-Asena.addCommand({pattern: 'joox ?(.*)', fromMe: false, desc: Lang.JOOX_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.JOOX_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_SONG);
 	const url = `https://tobz-api.herokuapp.com/api/joox?q=${match[1]}&apikey=BotWeA`;
 	try {
@@ -25,7 +25,7 @@ Asena.addCommand({pattern: 'joox ?(.*)', fromMe: false, desc: Lang.JOOX_DESC}, a
 		'*🎚️ ' + Lang.PUBLICATION +':* ```' + json.result.dipublikasi + '```\n' + 
 		'*🎙️ ' + Lang.SONGL +':* ```' + json.result.mp3 + '```\n' , MessageType.text);
 		
-		return await message.sendMessage(Buffer.from(json.result.mp3), MessageType.audio, {mimetype: Mimetype.mp4audio, ptt: true});
+		return await message.sendMessage(json.result.mp3), MessageType.audio, {mimetype: Mimetype.mp4audio, ptt: true});
     
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDS, MessageType.text);
