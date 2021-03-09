@@ -29,7 +29,7 @@ function speedText(speed) {
     return `${bits.toFixed(places[unit])} ${units[unit]}bps`;
 }
 
-Asena.addCommand({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'speedtest', fromMe: false, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
     var msg = await message.reply(Lang.SPEEDTESTING);
     var st = await speedTest({acceptLicense: true, acceptGdpr: true});
     
@@ -85,4 +85,18 @@ Asena.addCommand({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async 
 
         await message.client.sendMessage(message.jid,`*Original Link:* ${match[1]}\n*Short Link:* ` + res, MessageType.text)
     });
+}));
+
+Asena.addCommand({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
+    var msg = await message.reply(Lang.SPEEDTESTING);
+    var st = await speedTest({acceptLicense: true, acceptGdpr: true});
+    
+    await message.client.sendMessage(
+      message.jid,Lang.SPEEDTEST_RESULT + '\n\n' + 
+    '*ISP:* ```' + st.isp + '```\n' +
+    '*Ping:* ```' + st.ping.latency + 'ms```\n' +
+    '*' + Lang.UPLOAD + ':* ```' + speedText(st.upload.bandwidth) + '```\n' +
+    '*' + Lang.DOWNLOAD + ':* ```' + speedText(st.download.bandwidth) + '```\n',MessageType.text
+    );
+    await msg.delete();
 }));
