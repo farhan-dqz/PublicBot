@@ -238,7 +238,7 @@
             "MODD_DESC": "Get modded app details from MODDROID.",
             "HMODD_DESC": "Get modded app details from HappyMod.",
             "NEED_APPNAME": "*Invalid Request,Provide an app name*",
-            "NOT_FOUNDMD": "```Sorry,I could not find such an app. 😖```",
+            "NOT_FOUNDMD": "```Sorry,I could not find such an app.\n Try using .happymod if .modd is not working 😖```",
             "CM_DESC": "Get a compliment.",
             "NOT_FOUNDAC": "*Invalid Request*",
             "CM": "Hey,",
@@ -272,7 +272,7 @@
             "BITLY_DESC": "Shortens the given link using bitly.",
             "NOT_FOUNDLI": "Lyrics not found",
             "SLINK": "Link",
-            "NEED_LINK":"Need Link"
+            "NEED_LINK":"Please provide the link"
             
         },
         "web": {
@@ -281,7 +281,8 @@
             "SPEEDTEST_RESULT": "*Speed ​​test completed!*",
             "UPLOAD": "Upload",
             "DOWNLOAD": "Download",
-            "PING_DESC": "Measures your ping."
+             "PING_DESC": "Measures your ping.",
+            "URL": "Shorten the long link."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Converts video to sound.",
@@ -290,7 +291,10 @@
             "STİCKER_DESC": "Converts the sticker to a photo.",
             "STİCKER_NEEDREPLY": "*You Must Reply to a sticker!*",
             "STİCKER": "```Converting the sticker to a photo..```",
-            "XMEDİA_DESC": "It is a plugin with more than 25 media tools."
+            "XMEDİA_DESC": "It is a plugin with more than 25 media tools.",
+            "T_FALSE": "```❌ Incorrect Blend Effect Entered!```\n```🔎 Existing Commands:```\n\n*$dodge* - Applies a pink color filter to the video.\n*$multiply* - Applies a green color filter to the video.\n*$grainmerge* - Increases the contrast of the video.\n*$and* - Applies black lightning effect according to the speed of the video.\n*$or* - Applies a white lightning effect according to the speed of the video.\n*$burn* - Applies green contrast to video.\n*$difference* - Shows the differences by applying green relief to the video.\n*$grainextract* - Shows the differences by applying gray relief to the video.\n*$divide* - Demonstrates the differences by applying a pink relief to the video.\n*$xor* - Applies both green relief and lightning effect to video.\n*$hardmix* - Mixes the colors of the video into a yellow and red tone.\n*$negation* - Turns the dynamics of the video to pink.",
+            "T_NOT": "```💭 You Need To Enter Any Blend Effects!\n```🔎 Existing Commands:```\n\n*$dodge* - Applies a pink color filter to the video.\n*$multiply* - Applies a green color filter to the video.\n*$grainmerge* - Increases the contrast of the video.\n*$and* - Applies black lightning effect according to the speed of the video.\n*$or* - Applies a white lightning effect according to the speed of the video.\n*$burn* - Applies green contrast to video.\n*$difference* - Shows the differences by applying green relief to the video.\n*$grainextract* - Shows the differences by applying gray relief to the video.\n*$divide* - Demonstrates the differences by applying a pink relief to the video.\n*$xor* - Applies both green relief and lightning effect to video.\n*$hardmix* - Mixes the colors of the video into a yellow and red tone.\n*$negation* - Turns the dynamics of the video to pink.",
+            "T_DESC": "Applies the selected TBlend effect to videos." 
         },
         "mute": {
             "1MUTE": "*The group was silenced for 1 minute!*",
@@ -422,13 +426,17 @@
         "webss": {
             "SS_DESC": "Takes a screenshot from the page in the given link.",
             "LİNK": "You must enter link!",
-            "TEXT": "You must enter text!",
-            "QR_DESC": "Converts the given text into a qr code image.",
             "ASTRO_DESC": "Gives the astronomical weather data of the given lattitude and longitude.",
             "LAT": "You must enter the lattitude and longitude data ,seperated by *;* in order!",
             "USAGEI": ".astro 37.629562;-116.849556"
             
         },
+        "qrgenerator": {
+             "TEXT": "You must enter text!",
+            "QR_DESC": "Converts the given text into a qr code image."
+            
+        },
+        
         "voicy": {
             "NEED_REPLY": "```Please reply to any message!```",
             "ONLY_AUDIO":"```Only audio file is accepted.```",
