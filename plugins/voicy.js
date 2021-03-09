@@ -71,7 +71,7 @@ Asena.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: false }, (async (
 
 }));
 
-Asena.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'pvoicy', desc: Lang.USAGE, fromMe: true }, (async (message, match) => {
         try {
             if (message.reply_message) {
                 if (!message.reply_message.text && !message.reply_message.video && !message.reply_message.image) {
