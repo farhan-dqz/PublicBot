@@ -219,8 +219,11 @@
             "WEATHER_DESC": "Shows the weather.",
             "NEED_LOCATION": "* Please write a location!*\n*Example:* ```.weather New Delhi```",
             "LOCATION": "Location",
+            "LAT": "Lattitude",
+            "LONG": "Longitude",
             "TEMP": "Temperature",
             "DESC": "Description",
+            "FEEL": "Feels Like",
             "HUMI": "Humidity",
             "WIND": "Wind Speed",
             "CLOUD": "Cloud",
@@ -426,7 +429,7 @@
         "webss": {
             "SS_DESC": "Takes a screenshot from the page in the given link.",
             "LİNK": "You must enter link!",
-            "ASTRO_DESC": "Gives the astronomical weather data of the given lattitude and longitude.",
+            "ASTRO_DESC": "Gives the astronomical weather data of the given lattitude and longitude./n You can use .weather to find the coordinates if you donno them",
             "LAT": "You must enter the lattitude and longitude data ,seperated by *;* in order!",
             "USAGEI": ".astro 37.629562;-116.849556"
             
