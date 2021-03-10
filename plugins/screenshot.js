@@ -33,7 +33,7 @@ Asena.addCommand({pattern: 'pss ?(.*)', fromMe: true }, (async (message, match) 
 
 }));
 
-Asena.addCommand({pattern: 'vinsta ?(.*)', fromMe: false }, (async (message, match) => {
+Asena.addCommand({pattern: 'vidinsta ?(.*)', fromMe: false }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
