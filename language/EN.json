@@ -275,7 +275,18 @@
             "BITLY_DESC": "Shortens the given link using bitly.",
             "NOT_FOUNDLI": "Lyrics not found",
             "SLINK": "Link",
-            "NEED_LINK":"Please provide the link"
+            "NEED_LINK":"Please provide the link",
+            "IGTVDESC":"Download videos from IGTV link",
+            "NEED_WORDIGTV":"Please provide the IGTV link",
+            "LOADINGTV":"```Loading...```",
+             "NOT_FOUNDIG":"```Insta video not found```",
+             "USERNAME":"```Username```",
+            "CAPTION":"```Caption```",
+             "NEED_WORDIG":"```Download videos from IG link```",
+            "IGDESC":"Download videos from IG link"
+            
+            
+            
             
         },
         "web": {
