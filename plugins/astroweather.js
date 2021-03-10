@@ -46,3 +46,11 @@ Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, desc: Lang.GLITCH_DESC
 
 }));
 
+
+Asena.addCommand({pattern: 'vinsta ?(.*)', fromMe: false }, async (message, match) => {
+    
+     anu = await fetchJson(`https://alfians-api.herokuapp.com/api/ig?url=${match[1]}`, {method: 'get'})
+     insta = getBuffer(anu.result)
+    asena.sendMessage(from, insta, video, {mimtype: 'video/mp4', filename: 'instagram'.mp3, quoted: mek})
+    
+});
