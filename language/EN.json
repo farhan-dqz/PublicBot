@@ -431,8 +431,9 @@
             "LİNK": "You must enter link!",
             "ASTRO_DESC": "Gives the astronomical weather data of the given lattitude and longitude./n You can use .weather to find the coordinates if you donno them",
             "LAT": "You must enter the lattitude and longitude data ,seperated by *;* in order!",
-            "USAGEI": ".astro 37.629562;-116.849556"
-            
+            "USAGEI": ".astro 37.629562;-116.849556",
+            "GLAT": "You must enter the main text and sub text seperated by *;* in order!",
+             "GLITCH_DESC": "will give you a glitch image of the text provided",
         },
         "qrgenerator": {
              "TEXT": "You must enter text!",
