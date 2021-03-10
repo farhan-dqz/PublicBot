@@ -51,6 +51,28 @@ Asena.addCommand({pattern: 'mmap ?(.*)', fromMe: false }, async (message, match)
     
       data  = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${match[1]}`)
      hasil = await getBuffer(data.gambar)
-    await message.sendMessage(from, hasil, MessageType.image, {mimetype: Mimetype.jpg, quoted: mek})
+    await message.sendMessage(from, hasil, MessageType.documnent, {mimetype: Mimetype.jpg, quoted: mek})
     
 });
+
+
+Asena.addCommand({pattern: 'neonglow ?(.*)', fromMe: false, desc: Lang.NG_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.sendMessage(Lang.NGLAT);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/glowingneon/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
+
+
+Asena.addCommand({pattern: 'coffeecup ?(.*)', fromMe: false, desc: Lang.CC_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.sendMessage(Lang.NGLAT);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/coffeecup/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
