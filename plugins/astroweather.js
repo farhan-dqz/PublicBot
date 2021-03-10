@@ -76,3 +76,14 @@ Asena.addCommand({pattern: 'coffeecup ?(.*)', fromMe: false, desc: Lang.CC_DESC}
     await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
+
+
+Asena.addCommand({pattern: 'wood ?(.*)', fromMe: false, desc: Lang.WO_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.sendMessage(Lang.NGLAT);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/woodblock/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
