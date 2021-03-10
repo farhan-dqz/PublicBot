@@ -27,3 +27,22 @@ Asena.addCommand({pattern: 'astro ?(.*)', fromMe: false,usage: Lang.USAGEI, desc
     await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
+
+
+Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, desc: Lang.GLITCH_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.sendMessage(Lang.GLAT);
+  
+  var topText, bottomText;
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[1];
+        bottomText = split[0];
+}
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/tiktokeffect/?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
+
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
+
