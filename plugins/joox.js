@@ -13,7 +13,7 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-Asena.addCommand({pattern: 'song ?(.*)', fromMe: false}, async (message, match) => {
+/*Asena.addCommand({pattern: 'song ?(.*)', fromMe: false}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_SONG);
 	const url = `https://tobz-api.herokuapp.com/api/joox?q=${match[1]}&apikey=BotWeA`;
 	try {
@@ -50,4 +50,38 @@ Asena.addCommand({pattern: 'psong ?(.*)', fromMe: true }, async (message, match)
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDS, MessageType.text);
 	}
-});
+});*/
+
+Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: false, desc: Lang.IGTVDESC }, async (message, match) => {
+
+    const userName = match[1]
+
+    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORDIGTV))
+
+    await message.sendMessage(infoMessage(Lang.LOADINGTV))
+
+    await axios
+      .get(`https://videfikri.com/api/igtv/?url=${userName}`)
+      .then(async (response) => {
+        const {
+          video_url,
+          username,
+          caption,
+        } = response.data.result
+
+        const profileBuffer = await axios.get(video_url, {responseType: 'arraybuffer'})
+
+        const msg = `
+        *${Lang.USERNAME}*: ${username}
+        *${Lang.BIO}*: ${caption}`
+
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+          caption: msg,
+        })
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUNDIG)),
+      )
+  },
+)
+
