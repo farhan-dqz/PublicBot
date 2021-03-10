@@ -73,7 +73,7 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: false, desc: Lang.IGTVDESC }, 
 
         const msg = `
         *${Lang.USERNAME}*: ${username}
-        *${Lang.BIO}*: ${caption}`
+        *${Lang.CAPTION}*: ${caption}`
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: msg,
@@ -81,6 +81,40 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: false, desc: Lang.IGTVDESC }, 
       })
       .catch(
         async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUNDIG)),
+      )
+  },
+)
+
+
+Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: false, desc: Lang.IGDESC }, async (message, match) => {
+
+    const userName = match[1]
+
+    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
+
+    await message.sendMessage(infoMessage(Lang.LOADINGTV))
+
+    await axios
+      .get(`https://videfikri.com/api/igdl/?url=${userName}`)
+      .then(async (response) => {
+        const {
+          video,
+          username,
+          caption,
+        } = response.data.result
+
+        const profileBuffer = await axios.get(video, {responseType: 'arraybuffer'})
+
+        const msg = `
+        *${Lang.USERNAME}*: ${username}
+        *${Lang.CAPTION}*: ${caption}`
+
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+          caption: msg,
+        })
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUNDIG )),
       )
   },
 )
