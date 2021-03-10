@@ -25,16 +25,6 @@ const Language = require('../language');
 const { errorMessage, infoMessage } = require('../helpers');
 const Lang = Language.getString('instagram') ;
 
-Asena.addCommand({pattern: 'inta ?(.*)', fromMe: false, desc: Lang.DESC}, (async (message, match) => {
-
-    if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
-
-    var webimage = await axios.get(`https://www.instagram.com/${match[1]}/?__a=1`, { responseType: 'arraybuffer' })
-
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
-
-}));
-
 
 
 
