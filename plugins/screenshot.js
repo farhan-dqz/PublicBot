@@ -32,3 +32,13 @@ Asena.addCommand({pattern: 'pss ?(.*)', fromMe: true }, (async (message, match) 
     await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
 
 }));
+
+Asena.addCommand({pattern: 'vinsta ?(.*)', fromMe: false }, (async (message, match) => {
+
+    if (match[1] === '') return await message.sendMessage(Lang.LİNK);
+
+    var webimage = await axios.get(`https://videfikri.com/api/igdl/?url=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.sendMessage(Buffer.from(webimage.result.video.data), MessageType.video, {mimetype: Mimetype.mp4 })
+
+}));
