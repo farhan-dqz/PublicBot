@@ -433,7 +433,11 @@
             "LAT": "You must enter the lattitude and longitude data ,seperated by *;* in order!",
             "USAGEI": ".astro 37.629562;-116.849556",
             "GLAT": "You must enter the main text and sub text seperated by *;* in order!",
-             "GLITCH_DESC": "will give you a glitch image of the text provided"
+             "GLITCH_DESC": "will give you a glitch image of the text provided",
+             "NG_DESC": "will give you a Neon glow image of the text provided",
+             "WO_DESC": "will give you a wood carved image of the text provided",
+             "CC_DESC": "will put the text you provided in the foam within a coffee cup",
+              "NGLAT": "You must enter some text !"
         },
         "qrgenerator": {
              "TEXT": "You must enter text!",
