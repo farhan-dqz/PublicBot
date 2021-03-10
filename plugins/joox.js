@@ -90,7 +90,7 @@ Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: false, desc: Lang.IGDESC }, 
 
     const userName = match[1]
 
-    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
+    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORDIG))
 
     await message.sendMessage(infoMessage(Lang.LOADINGTV))
 
@@ -119,3 +119,33 @@ Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: false, desc: Lang.IGDESC }, 
   },
 )
 
+Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: false, desc: Lang.FBDESC }, async (message, match) => {
+
+    const userName = match[1]
+
+    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORDFB))
+
+    await message.sendMessage(infoMessage(Lang.LOADINGTV))
+
+    await axios
+      .get(`https://videfikri.com/api/fbdl/?urlfb=${userName}`)
+      .then(async (response) => {
+        const {
+          url,
+          judul,
+        } = response.data.result
+
+        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
+
+        const msg = `
+        *${Lang.CAPTION}*: ${judul}`
+
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+          caption: msg,
+        })
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUNDFB )),
+      )
+  },
+)
