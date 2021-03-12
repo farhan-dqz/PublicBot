@@ -47,7 +47,7 @@ Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, desc: Lang.GLITCH_DESC
 }));
 
 
-Asena.addCommand({pattern: 'mmap ?(.*)', fromMe: false }, async (message, match) => {
+Asena.addCommand({pattern: 'mmap ?(.*)', fromMe: false, dontAddCommandList: true}, async (message, match) => {
     
       data  = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${match[1]}`)
      hasil = await getBuffer(data.gambar)
@@ -87,3 +87,41 @@ Asena.addCommand({pattern: 'wood ?(.*)', fromMe: false, desc: Lang.WO_DESC}, (as
     await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
+
+Asena.addCommand({pattern: '8bit ?(.*)', fromMe: false}, (async (message, match) => {
+
+    if (match[1] === '') return await message.sendMessage(Lang.GLAT);
+  
+  var topText, bottomText;
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        bottomText = split[1];
+        topText = split[0];
+}
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/8bit/?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
+
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
+
+Asena.addCommand({pattern: 'shadow ?(.*)', fromMe: false}, (async (message, match) => {
+
+    if (match[1] === '') return await message.sendMessage(Lang.NGLAT);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/shadowtext/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
+
+Asena.addCommand({pattern: 'harrypotter ?(.*)', fromMe: false}, (async (message, match) => {
+
+    if (match[1] === '') return await message.sendMessage(Lang.NGLAT);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/hpotter/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
+
