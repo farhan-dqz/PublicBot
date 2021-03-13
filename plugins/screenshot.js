@@ -33,34 +33,3 @@ Asena.addCommand({pattern: 'pss ?(.*)', fromMe: true, dontAddCommandList: true }
 
 }));                 
 
-
-Asena.addCommand({ pattern: 'vidinsta ?(.*)', fromMe: false, dontAddCommandList: true}, async (message, match) => {
-
-    const userName = match[1]
-
-    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
-
-    await message.sendMessage(infoMessage(Lang.LOADING))
-
-    await axios
-      .get(`https://videfikri.com/api/igdl/?url=${userName}`)
-      .then(async (response) => {
-        const {
-          video,
-          caption,
-        } = response.data.result
-
-        const profileBuffer = await axios.get(video, {responseType: 'arraybuffer'})
-
-        const msg = `
-        *${Lang.CAPTION}*: ${caption}`
-
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-          caption: msg,
-        })
-      })
-      .catch(
-        async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND)),
-      )
-},
-
