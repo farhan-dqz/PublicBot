@@ -65,7 +65,7 @@ Asena.addCommand({pattern: 'short ?(.*)', fromMe: false, desc: Lang.URL}, (async
     });
 }));
 
-Asena.addCommand({pattern: 'pping', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'pping', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
   var start = new Date().getTime();
   var msg = await message.reply('```Ping!```');
   var end = new Date().getTime();
@@ -75,7 +75,7 @@ Asena.addCommand({pattern: 'pping', fromMe: true, deleteCommand: false, desc: La
     message.jid,'*Pong!*\n```' + (end - start) + 'ms```', MessageType.text);
 }));
 
-Asena.addCommand({pattern: 'pshort ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
+Asena.addCommand({pattern: 'pshort ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text);
 
@@ -87,7 +87,7 @@ Asena.addCommand({pattern: 'pshort ?(.*)', fromMe: true, desc: Lang.URL}, (async
     });
 }));
 
-Asena.addCommand({pattern: 'pspeedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'pspeedtest', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     var msg = await message.reply(Lang.SPEEDTESTING);
     var st = await speedTest({acceptLicense: true, acceptGdpr: true});
     
