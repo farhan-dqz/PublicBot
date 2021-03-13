@@ -23,7 +23,7 @@ Asena.addCommand({pattern: 'ss ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (asyn
 
 }));
 
-Asena.addCommand({pattern: 'pss ?(.*)', fromMe: true }, (async (message, match) => {
+Asena.addCommand({pattern: 'pss ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
@@ -33,7 +33,7 @@ Asena.addCommand({pattern: 'pss ?(.*)', fromMe: true }, (async (message, match) 
 
 }));
 
-Asena.addCommand({pattern: 'vidinsta ?(.*)', fromMe: false }, (async (message, match) => {
+Asena.addCommand({pattern: 'vidinsta ?(.*)', fromMe: false , dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
