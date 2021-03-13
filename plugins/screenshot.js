@@ -64,17 +64,3 @@ Asena.addCommand({ pattern: 'vidinsta ?(.*)', fromMe: false, dontAddCommandList:
       )
 },
 
-
-
-
-
-
-Asena.addCommand({pattern: 'vidinsta ?(.*)', fromMe: false , dontAddCommandList: true}, (async (message, match) => {
-
-    if (match[1] === '') return await message.sendMessage(Lang.LİNK);
-
-    var webimage = await axios.get(`}`, { responseType: 'arraybuffer' })
-
-    await message.sendMessage(Buffer.from(webimage.result.video.data), MessageType.video, {mimetype: Mimetype.mp4 })
-
-}));
