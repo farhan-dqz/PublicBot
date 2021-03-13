@@ -31,13 +31,49 @@ Asena.addCommand({pattern: 'pss ?(.*)', fromMe: true, dontAddCommandList: true }
 
     await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
 
-}));
+}));                 
+
+
+Asena.addCommand({ pattern: 'vidinsta ?(.*)', fromMe: false, dontAddCommandList: true}, async (message, match) => {
+
+    const userName = match[1]
+
+    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
+
+    await message.sendMessage(infoMessage(Lang.LOADING))
+
+    await axios
+      .get(`https://videfikri.com/api/igdl/?url=${userName}`)
+      .then(async (response) => {
+        const {
+          video,
+          caption,
+        } = response.data.result
+
+        const profileBuffer = await axios.get(video, {responseType: 'arraybuffer'})
+
+        const msg = `
+        *${Lang.CAPTION}*: ${caption}`
+
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+          caption: msg,
+        })
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND)),
+      )
+},
+
+
+
+
+
 
 Asena.addCommand({pattern: 'vidinsta ?(.*)', fromMe: false , dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
-    var webimage = await axios.get(`https://videfikri.com/api/igdl/?url=${match[1]}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`}`, { responseType: 'arraybuffer' })
 
     await message.sendMessage(Buffer.from(webimage.result.video.data), MessageType.video, {mimetype: Mimetype.mp4 })
 
