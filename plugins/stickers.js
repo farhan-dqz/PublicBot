@@ -33,7 +33,7 @@ Asena.addCommand({pattern: 'sticker', fromMe: false, desc: Lang.STICKER_DESC}, (
                 throw err;
             }
         
-            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker,{quoted: message.data});
         });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: false})
     }
