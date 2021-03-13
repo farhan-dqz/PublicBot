@@ -27,9 +27,9 @@ Asena.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC}, async (mes
 		'*💧 ' + Lang.HUMI +':* ```%' + json.main.humidity + '```\n' + 
                 '*🔆 ' + Lang.FEEL +':* ```' + json.main.feels_like + '°```\n' +											 
 		'*💨 ' + Lang.WIND +':* ```' + json.wind.speed + 'm/s```\n' + 
-		'*☁ ' + Lang.CLOUD +':* ```%' + json.clouds.all + '```\n', MessageType.text);
+		'*☁ ' + Lang.CLOUD +':* ```%' + json.clouds.all + '```\n', MessageType.text,{quoted: message.data});
 	} catch {
-		return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text ,{quoted: message.data});
+		return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text );
 	}
 });
 
