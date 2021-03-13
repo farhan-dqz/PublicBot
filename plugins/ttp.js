@@ -34,7 +34,7 @@ Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC },
 
 }));
 
-Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, desc: Lang.STTP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, desc: Lang.STTP_DESC, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -84,7 +84,7 @@ Asena.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: false, desc: Lang.TRUMP_DE
 /*from here*/
 
 
-Asena.addCommand({ pattern: 'pttp ?(.*)', fromMe: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'pttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -95,7 +95,7 @@ Asena.addCommand({ pattern: 'pttp ?(.*)', fromMe: true }, (async (message, match
 
 }));
 
-Asena.addCommand({ pattern: 'pattp ?(.*)', fromMe: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'pattp ?(.*)', fromMe: true , dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -106,7 +106,7 @@ Asena.addCommand({ pattern: 'pattp ?(.*)', fromMe: true }, (async (message, matc
 
 }));
 
-Asena.addCommand({ pattern: 'psttp ?(.*)', fromMe: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'psttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -117,7 +117,7 @@ Asena.addCommand({ pattern: 'psttp ?(.*)', fromMe: true }, (async (message, matc
 
 }));
 
- Asena.addCommand({ pattern: 'panimesay ?(.*)', fromMe: true }, (async (message, match) => {
+ Asena.addCommand({ pattern: 'panimesay ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -127,7 +127,7 @@ Asena.addCommand({ pattern: 'psttp ?(.*)', fromMe: true }, (async (message, matc
 
     }));
 
-    Asena.addCommand({ pattern: 'pchangesay ?(.*)', fromMe: true }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'pchangesay ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -137,7 +137,7 @@ Asena.addCommand({ pattern: 'psttp ?(.*)', fromMe: true }, (async (message, matc
 
     }));
 
-Asena.addCommand({ pattern: 'ptrumpsay ?(.*)', fromMe: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'ptrumpsay ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
