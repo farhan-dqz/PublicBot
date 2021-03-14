@@ -24,7 +24,7 @@ Asena.addCommand({pattern: 'astro ?(.*)', fromMe: false,usage: Lang.USAGEI, desc
 
     var webimage = await axios.get(`http://www.7timer.info/bin/astro.php?lon=${topText}&lat=${bottomText}&ac=0&lang=en&unit=metric&output=internal&tzshift=0`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg ,quoted: message.data})
 
 }));
 
@@ -36,13 +36,13 @@ Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, desc: Lang.GLITCH_DESC
   var topText, bottomText;
     if (match[1].includes(';')) {
         var split = match[1].split(';');
-        topText = split[1];
-        bottomText = split[0];
+        bottomText = split[1];
+        topText = split[0];
 }
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/tiktokeffect/?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg ,quoted: message.data})
 
 }));
 
@@ -51,7 +51,7 @@ Asena.addCommand({pattern: 'mmap ?(.*)', fromMe: false, dontAddCommandList: true
     
       data  = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${match[1]}`)
      hasil = await getBuffer(data.gambar)
-    await message.sendMessage(from, hasil, MessageType.documnent, {mimetype: Mimetype.jpg, quoted: mek})
+    await message.sendMessage(from, hasil, MessageType.image, {mimetype: Mimetype.jpg})
     
 });
 
