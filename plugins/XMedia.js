@@ -653,7 +653,7 @@ Asena.addCommand({pattern: 'interp ?(.*)', fromMe: false, dontAddCommandList: tr
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            vfs.readFileSync('output.mp4'), MessageType.video, {caption: `Made by WhatsAsena\n_Interpolated to ${match[1]} FPS_`});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {caption: `_Interpolated to ${match[1]} FPS_`});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
