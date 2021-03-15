@@ -757,7 +757,7 @@ Asena.addCommand({pattern: 'mp4art', fromMe: false, dontAddCommandList: true}, (
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: quoted: message.data});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg,quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
