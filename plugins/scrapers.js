@@ -222,7 +222,7 @@ Asena.addCommand({pattern: 'ptrt(?: |$)(\\S*) ?(\\S*)', fromMe: true, dontAddCom
     }
 }));
 
-Asena.addCommand({pattern: 'pcurrency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'pcurrency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
         return await message.client.sendMessage(message.jid,Lang.CURRENCY_ERROR,MessageType.text);
     }
@@ -271,7 +271,7 @@ Asena.addCommand({pattern: 'ptts (.*)', fromMe: true, dontAddCommandList: true }
     await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 }));
 
-Asena.addCommand({pattern: 'psong ?(.*)' , fromMe: true }, (async (message, match) => { 
+Asena.addCommand({pattern: 'psong ?(.*)' , fromMe: true , dontAddCommandList: true}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
     let arama = await yts(match[1]);
     arama = arama.all;
