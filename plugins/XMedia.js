@@ -35,7 +35,7 @@ Asena.addCommand({pattern: 'x4mp4', fromMe: false, dontAddCommandList: true}, (a
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {quoted:message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -56,7 +56,7 @@ Asena.addCommand({pattern: 'x2mp4', fromMe: false, dontAddCommandList: true}, (a
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena'});
+           await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -79,7 +79,7 @@ Asena.addCommand({pattern: 'mp4image', fromMe: false, dontAddCommandList: true},
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -99,7 +99,7 @@ Asena.addCommand({pattern: 'spectrum', fromMe: false, dontAddCommandList: true},
         .outputOptions(["-y", "-filter_complex", "[0:a]showspectrum=s=720x1280,format=yuv420p[v]", "-map", "[v]", "-map 0:a"])
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -119,7 +119,7 @@ Asena.addCommand({pattern: 'waves', fromMe: false, dontAddCommandList: true}, (a
         .outputOptions(["-y", "-filter_complex", "[0:a]showwaves=s=720x1280:mode=cline:rate=25,format=yuv420p[v]", "-map", "[v]", "-map 0:a"])
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -139,7 +139,7 @@ Asena.addCommand({pattern: 'frequency', fromMe: false, dontAddCommandList: true}
         .outputOptions(["-y", "-filter_complex", "[0:a]showfreqs=s=720x1280:mode=cline:fscale=log,format=yuv420p[v]", "-map", "[v]", "-map 0:a"])
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -159,7 +159,7 @@ Asena.addCommand({pattern: 'avec', fromMe: false, dontAddCommandList: true}, (as
         .outputOptions(["-y", "-filter_complex", "[0:a]avectorscope=s=720x1280:rf=5:gf=25:bf=5:draw=line,format=yuv420p[v]", "-map", "[v]", "-map 0:a"])
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg,quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -179,7 +179,7 @@ Asena.addCommand({pattern: 'volumeaudio', fromMe: false, dontAddCommandList: tru
         .outputOptions(["-y", "-filter_complex", "[0:a]showvolume=f=1:b=4:w=720:h=68,format=yuv420p[vid]", "-map", "[vid]", "-map 0:a"])
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg,quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -199,7 +199,7 @@ Asena.addCommand({pattern: 'cqtaudio', fromMe: false, dontAddCommandList: true},
         .outputOptions(["-y", "-filter_complex", "[0:a]showcqt=s=1280x720,format=yuv420p[v]", "-map", "[v]", "-map 0:a"])
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -219,7 +219,7 @@ Asena.addCommand({pattern: 'mp3eq', fromMe: false, dontAddCommandList: true}, (a
         .outputOptions(["-y", "-af", "superequalizer=1b=10:2b=10:3b=1:4b=5:5b=7:6b=5:7b=2:8b=3:9b=4:10b=5:11b=6:12b=7:13b=8:14b=8:15b=9:16b=9:17b=10:18b=10[a];[a]loudnorm=I=-16:TP=-1.5:LRA=14", "-ar 48k"])
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -239,7 +239,7 @@ Asena.addCommand({pattern: 'mp3crusher', fromMe: false, dontAddCommandList: true
         .outputOptions(["-y", "-filter_complex", "acrusher=level_in=8:level_out=18:bits=8:mode=log:aa=1"])
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -259,7 +259,7 @@ Asena.addCommand({pattern: 'mp3reverse', fromMe: false, dontAddCommandList: true
         .outputOptions(["-y", "-filter_complex", "areverse"])
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false ,quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -280,7 +280,7 @@ Asena.addCommand({pattern: 'mp4vintage', fromMe: false, dontAddCommandList: true
         .fps(22)
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -302,7 +302,7 @@ Asena.addCommand({pattern: 'mp4reverse', fromMe: false, dontAddCommandList: true
         .fps(22)
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -323,7 +323,7 @@ Asena.addCommand({pattern: 'mp4bw', fromMe: false, dontAddCommandList: true}, (a
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -343,7 +343,7 @@ Asena.addCommand({pattern: 'bwimage', fromMe: false, dontAddCommandList: true}, 
         .outputOptions(["-y", "-vf", "hue=s=0"])
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+           await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -363,7 +363,7 @@ Asena.addCommand({pattern: 'vintageimage', fromMe: false, dontAddCommandList: tr
         .outputOptions(["-y", "-vf", "curves=vintage"])
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -384,7 +384,7 @@ Asena.addCommand({pattern: 'mp4enhance', fromMe: false, dontAddCommandList: true
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -404,7 +404,7 @@ Asena.addCommand({pattern: 'blurimage', fromMe: false, dontAddCommandList: true}
         .outputOptions(["-y", "-vf", "split[original][copy];[copy]scale=ih*16/9:-1,crop=h=iw*9/16,gblur=sigma=20[blurred];[blurred][original]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2"])
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -424,7 +424,7 @@ Asena.addCommand({pattern: 'mp4blur', fromMe: false, dontAddCommandList: true}, 
         .outputOptions(["-y", "-vf", "split[original][copy];[copy]scale=ih*16/9:-1,crop=h=iw*9/16,gblur=sigma=20[blurred];[blurred][original]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2"])
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+           await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -444,7 +444,7 @@ Asena.addCommand({pattern: 'mp3pitch', fromMe: false, dontAddCommandList: true},
         .outputOptions(["-y", "-af", "asetrate=44100*1.3"])
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -465,7 +465,7 @@ Asena.addCommand({pattern: 'mp4edge', fromMe: false, dontAddCommandList: true}, 
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -485,7 +485,7 @@ Asena.addCommand({pattern: 'mp3low', fromMe: false, dontAddCommandList: true}, (
         .outputOptions(["-y", "-af", "asetrate=44100*0.9"])
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -505,7 +505,7 @@ Asena.addCommand({pattern: 'x2mp3', fromMe: false, dontAddCommandList: true}, (a
         .outputOptions(["-y", "-filter:a", "atempo=2.0", "-vn"])
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -525,7 +525,7 @@ Asena.addCommand({pattern: 'edgeimage', fromMe: false, dontAddCommandList: true}
         .outputOptions(["-y", "-filter:v", "edgedetect=low=0.9:high=0.2"])
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -545,7 +545,7 @@ Asena.addCommand({pattern: 'enhanceimage', fromMe: false, dontAddCommandList: tr
         .outputOptions(["-y", "-vf", "unsharp=3:3:1.5"])
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+           await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -565,7 +565,7 @@ Asena.addCommand({pattern: 'mp3volume', fromMe: false, dontAddCommandList: true}
         .outputOptions(["-y", "-filter:a", "volume=5.3"])
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false,quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 })); 
@@ -587,7 +587,7 @@ Asena.addCommand({pattern: 'gif', fromMe: false, dontAddCommandList: true}, (asy
         .videoBitrate(500)
         .save('output_gif.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output_gif.mp4'), MessageType.video, {mimetype: Mimetype.gif, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output_gif.mp4'), MessageType.video, {mimetype: Mimetype.gif, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -608,7 +608,7 @@ Asena.addCommand({pattern: 'agif', fromMe: false, dontAddCommandList: true}, (as
         .videoBitrate(500)
         .save('output_gif.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output_gif.mp4'), MessageType.video, {mimetype: Mimetype.gif, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output_gif.mp4'), MessageType.video, {mimetype: Mimetype.gif, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -628,7 +628,7 @@ Asena.addCommand({pattern: 'grenimage', fromMe: false, dontAddCommandList: true}
         .videoFilters('noise=alls=100:allf=t+u')
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+          await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -653,7 +653,7 @@ Asena.addCommand({pattern: 'interp ?(.*)', fromMe: false, dontAddCommandList: tr
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: `Made by WhatsAsena\n_Interpolated to ${match[1]} FPS_`});
+            vfs.readFileSync('output.mp4'), MessageType.video, {caption: `Made by WhatsAsena\n_Interpolated to ${match[1]} FPS_`});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -674,7 +674,7 @@ Asena.addCommand({pattern: 'rainbowimage', fromMe: false, dontAddCommandList: tr
         .videoFilters('eq=brightness=0.5')
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+           await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -695,7 +695,7 @@ Asena.addCommand({pattern: 'mp4rainbow', fromMe: false, dontAddCommandList: true
         .videoFilters('eq=brightness=0.5')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+           await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -715,7 +715,7 @@ Asena.addCommand({pattern: 'negativeimage', fromMe: false, dontAddCommandList: t
         .outputOptions(["-y", "-vf", "curves=color_negative"])
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -736,7 +736,7 @@ Asena.addCommand({pattern: 'mp4negative', fromMe: false, dontAddCommandList: tru
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -757,7 +757,7 @@ Asena.addCommand({pattern: 'mp4art', fromMe: false, dontAddCommandList: true}, (
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -777,7 +777,7 @@ Asena.addCommand({pattern: 'artimage', fromMe: false, dontAddCommandList: true},
         .outputOptions(["-y", "-vf", "convolution=-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2"])
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -798,7 +798,7 @@ Asena.addCommand({pattern: 'mp4stab', fromMe: false, dontAddCommandList: true}, 
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+           await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -819,7 +819,7 @@ Asena.addCommand({pattern: 'mp4color', fromMe: false, dontAddCommandList: true},
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -839,7 +839,7 @@ Asena.addCommand({pattern: 'colorimage', fromMe: false, dontAddCommandList: true
         .outputOptions(["-y", "-vf", "colorbalance=rs=-0.75:gs=-0.75:bs=-0.75:rm=-0.875:gm=-0.875:bm=-0.875:rh=-1:gh=-1:bh=-1"])
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
@@ -864,7 +864,7 @@ Asena.addCommand({pattern: 'mp4slowmo', fromMe: false, dontAddCommandList: true}
         .format('mp4')
         .save('slowmo.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('slowmo.mp4'), MessageType.video, {caption: 'True Slow-Motion by WhatsAsena'});
+           await message.client.sendMessage(message.jid,fs.readFileSync('slowmo.mp4'), MessageType.video, {caption: 'True Slow-Motion',quoted: message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
