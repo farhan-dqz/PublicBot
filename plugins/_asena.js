@@ -41,7 +41,7 @@ Asena.addCommand({pattern: 'help ?(.*)', fromMe: false, dontAddCommandList: true
         );
         
         await message.client.sendMessage(
-            message.jid, CMD_HELP, MessageType.text {quoted: message.data}
+            message.jid, CMD_HELP, MessageType.text ,{quoted: message.data}
         );    
     } else {
         var CMD_HELP = '';
@@ -72,7 +72,7 @@ Asena.addCommand({pattern: 'help ?(.*)', fromMe: false, dontAddCommandList: true
         );
         if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
         await message.client.sendMessage(
-            message.jid, CMD_HELP, MessageType.text{quoted: message.data}
+            message.jid, CMD_HELP, MessageType.text,{quoted: message.data}
         );
     }
 }));
@@ -106,7 +106,7 @@ Asena.addCommand({pattern: 'phelp ?(.*)', fromMe: false, dontAddCommandList: tru
         );
         
         await message.client.sendMessage(
-            message.jid, CMD_HELP, MessageType.text{quoted: message.data}
+            message.jid, CMD_HELP, MessageType.text,{quoted: message.data}
         );    
     } else {
         var CMD_HELP = '';
