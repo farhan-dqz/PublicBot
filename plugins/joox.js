@@ -6,12 +6,13 @@ WhatsAsena - Yusuf Usta
 
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
-const got = require('got');
-const fs = require('fs');
+/*const got = require('got');
+const fs = require('fs');*/
 const axios = require('axios');
 
 const Language = require('../language');
 const Lang = Language.getString('weather');
+const { errorMessage, infoMessage } = require('../helpers');
 
 /*Asena.addCommand({pattern: 'song ?(.*)', fromMe: false}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_SONG);
@@ -119,7 +120,7 @@ Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: false, desc: Lang.IGDESC }, 
   },
 )
 
-Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: false, desc: Lang.FBDESC }, async (message, match) => {
+Asena.addCommand({ pattern: 'vfb ?(.*)', fromMe: false, desc: Lang.FBDESC }, async (message, match) => {
 
     const userName = match[1]
 
