@@ -15,7 +15,7 @@ const {LydiaAI} = require('coffeehouse');
 const Language = require('../language');
 const Lang = Language.getString('lydia');
 
-Asena.addCommand({pattern: 'addlydia$', fromMe: true, desc: Lang.ADDLYDIA_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'addlydia$', fromMe: true, desc: Lang.ADDLYDIA_DESC, dontAddCommandList: true}, (async (message, match) => {
     if (!message.reply_message) return await message.reply(Lang.NEED_REPLY);
     if (!Config.COFFEEHOUSE_API_KEY) return await message.reply(Lang.COFFEEHOUSE);
     var unix = Date.now() / 1000 | 0;
@@ -38,7 +38,7 @@ Asena.addCommand({pattern: 'addlydia$', fromMe: true, desc: Lang.ADDLYDIA_DESC},
     return await message.reply(Lang.ENABLED_LYDIA);
 }));
 
-Asena.addCommand({pattern: 'rmlydia$', fromMe: true, desc: Lang.RMLYDIA_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'rmlydia$', fromMe: true, desc: Lang.RMLYDIA_DESC, dontAddCommandList: true}, (async (message, match) => {
     if (!message.reply_message) return await message.reply(Lang.NEED_REPLY);
     if (!Config.COFFEEHOUSE_API_KEY) return await message.reply(Lang.COFFEEHOUSE);
     var unix = Date.now() / 1000 | 0;
