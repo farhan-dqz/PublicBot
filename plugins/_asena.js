@@ -137,7 +137,7 @@ Asena.addCommand({pattern: 'phelp ?(.*)', fromMe: false, dontAddCommandList: tru
         );
         if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
         await message.client.sendMessage(
-            message.jid, CMD_HELP, MessageType.text{quoted: message.data}
+            message.jid, CMD_HELP, MessageType.text,{quoted: message.data}
         );
     }
 }));
