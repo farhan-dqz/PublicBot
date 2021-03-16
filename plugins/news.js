@@ -32,7 +32,25 @@ Asena.addCommand({pattern: 'news ?(.*)', fromMe: false, desc: Lang.NEWS_DESC}, a
 		'*🔗 ' + Lang.RMLINK +':* ```' + json.data[3].readMoreUrl + '```\n\n' + 
                 '*🗞️ ' + Lang.NEWST +':* ```' + json.data[4].title + '```\n' +                                                                         
                 '*📰 ' + Lang.NEWS +':* ```' + json.data[4].content + '```\n' + 
-		'*🔗 ' + Lang.RMLINK +':* ```' + json.data[4].readMoreUrl + '```\n\n', MessageType.text);
+		'*🔗 ' + Lang.RMLINK +':* ```' + json.data[4].readMoreUrl + '```\n\n'+ 
+		 '*🗞️ ' + Lang.NEWST +':* ```' + json.data[5].title + '```\n' +                                                                         
+                '*📰 ' + Lang.NEWS +':* ```' + json.data[5].content + '```\n' + 
+		'*🔗 ' + Lang.RMLINK +':* ```' + json.data[5].readMoreUrl + '```\n\n'+
+		 '*🗞️ ' + Lang.NEWST +':* ```' + json.data[6].title + '```\n' +                                                                         
+                '*📰 ' + Lang.NEWS +':* ```' + json.data[6].content + '```\n' + 
+		'*🔗 ' + Lang.RMLINK +':* ```' + json.data[6].readMoreUrl + '```\n\n'+									 
+		 '*🗞️ ' + Lang.NEWST +':* ```' + json.data[7].title + '```\n' +                                                                         
+                '*📰 ' + Lang.NEWS +':* ```' + json.data[7].content + '```\n' + 
+		'*🔗 ' + Lang.RMLINK +':* ```' + json.data[7].readMoreUrl + '```\n\n'+									 
+		 '*🗞️ ' + Lang.NEWST +':* ```' + json.data[8].title + '```\n' +                                                                         
+                '*📰 ' + Lang.NEWS +':* ```' + json.data[8].content + '```\n' + 
+		'*🔗 ' + Lang.RMLINK +':* ```' + json.data[8].readMoreUrl + '```\n\n'+
+		'*🗞️ ' + Lang.NEWST +':* ```' + json.data[9].title + '```\n' +                                                                         
+                '*📰 ' + Lang.NEWS +':* ```' + json.data[9].content + '```\n' + 
+		'*🔗 ' + Lang.RMLINK +':* ```' + json.data[9].readMoreUrl + '```\n\n'+
+		'*🗞️ ' + Lang.NEWST +':* ```' + json.data[10].title + '```\n' +                                                                         
+                '*📰 ' + Lang.NEWS +':* ```' + json.data[10].content + '```\n' + 
+		'*🔗 ' + Lang.RMLINK +':* ```' + json.data[10].readMoreUrl + '```\n\n', MessageType.text);
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDC, MessageType.text);
 	}
