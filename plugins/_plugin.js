@@ -26,11 +26,11 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, dontAddCommandList: true}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd')
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_URL + '.install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd')
     try {
         var url = new URL(match[1]);
     } catch {
-        return await message.sendMessage(Lang.INVALID_URL);
+        return await message.client.sendMessage(message.jid,Lang.INVALID_URL);
     }
     
     if (url.host === 'gist.github.com') {
@@ -67,7 +67,7 @@ Asena.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC, dontA
     var mesaj = Lang.INSTALLED_FROM_REMOTE;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
-        return await message.sendMessage(Lang.NO_PLUGIN);
+        return await message.client.sendMessage(message.jid,Lang.NO_PLUGIN);
     } else {
         plugins.map(
             (plugin) => {
@@ -83,7 +83,7 @@ Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
     var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });
     if (plugin.length < 1) {
-        return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text);
+        return await message.client.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text);
     } else {
         await plugin[0].destroy();
         delete require.cache[require.resolve('./' + match[1] + '.js')]
@@ -92,7 +92,7 @@ Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_
         
         await new Promise(r => setTimeout(r, 2000));
     
-        await message.sendMessage('💬 *WhatsAsena Restarting Automatically!*');
+        await message.sendMessage('💬 *Bot Restarting Automatically!*');
 
         console.log(baseURI);
         await heroku.delete(baseURI + '/dynos').catch(async (error) => {
