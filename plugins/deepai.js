@@ -47,7 +47,7 @@ Asena.addCommand({pattern: 'colorai', fromMe: false, deleteCommand: false, dontA
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg})
 
         });
 
@@ -77,7 +77,7 @@ Asena.addCommand({pattern: 'waifuai', fromMe: false, deleteCommand: false, dontA
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg})
 
         });
 
@@ -107,7 +107,7 @@ Asena.addCommand({pattern: 'superai', fromMe: false, deleteCommand: false, dontA
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg})
 
         });
 
@@ -149,7 +149,7 @@ Asena.addCommand({pattern: 'dreamai', fromMe: false, deleteCommand: false, dontA
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg})
 
         });
 
@@ -195,7 +195,7 @@ Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: false, deleteCommand: false, d
 
     var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg})
 
 }));
 
@@ -292,7 +292,7 @@ Asena.addCommand({pattern: 'ganstyle', fromMe: false, deleteCommand: false, dont
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg})
 
         });
 
