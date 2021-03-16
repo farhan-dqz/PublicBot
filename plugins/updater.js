@@ -20,7 +20,7 @@ const Language = require('../language');
 const Lang = Language.getString('updater');
 
 
-Asena.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC, dontAddCommandList: true}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -76,7 +76,7 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DE
             await message.client.sendMessage(
                 message.jid,Lang.UPDATED, MessageType.text);
 
-            await message.sendMessage('💬 *WhatsAsena Restarting Automatically!* ');
+            await message.sendMessage('💬 *BOT Restarting Automatically!* ');
             
         } else {
             git.pull((async (err, update) => {
