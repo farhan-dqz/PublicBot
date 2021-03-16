@@ -13,7 +13,7 @@ const sql = require('./sql/greetings');
 const Language = require('../language');
 const Lang = Language.getString('greetings');
 
-Asena.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC, dontAddCommandList: true}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_WELCOME,MessageType.text);
@@ -32,7 +32,7 @@ Asena.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: tru
     }
 }));
 
-Asena.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC, dontAddCommandList: true}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_GOODBYE,MessageType.text)
