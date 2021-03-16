@@ -2557,7 +2557,7 @@ Asena.addCommand({pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC, don
 
 }));
 
-Asena.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC, dontAddCommandList: true}, (async (message, match) => {
 
     await message.sendMessage(Lang.STOP_SPAM);
 
