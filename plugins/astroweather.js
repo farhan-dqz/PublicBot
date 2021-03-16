@@ -88,7 +88,7 @@ Asena.addCommand({pattern: 'wood ?(.*)', fromMe: false, desc: Lang.WO_DESC}, (as
 
 }));
 
-Asena.addCommand({pattern: '8bit ?(.*)', fromMe: false}, (async (message, match) => {
+Asena.addCommand({pattern: '8bit ?(.*)', fromMe: false,desc: Lang.EBIT_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.GLAT);
   
@@ -105,7 +105,7 @@ Asena.addCommand({pattern: '8bit ?(.*)', fromMe: false}, (async (message, match)
 
 }));
 
-Asena.addCommand({pattern: 'shadow ?(.*)', fromMe: false}, (async (message, match) => {
+Asena.addCommand({pattern: 'shadow ?(.*)', fromMe: false,desc: Lang.SHA_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
 
@@ -115,7 +115,7 @@ Asena.addCommand({pattern: 'shadow ?(.*)', fromMe: false}, (async (message, matc
 
 }));
 
-Asena.addCommand({pattern: 'harrypotter ?(.*)', fromMe: false}, (async (message, match) => {
+Asena.addCommand({pattern: 'harrypotter ?(.*)', fromMe: false,desc: Lang.HP_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
 
