@@ -13,7 +13,7 @@ const Lang = Language.getString('webss');
 
 Asena.addCommand({pattern: 'astro ?(.*)', fromMe: false,usage: Lang.USAGEI, desc: Lang.ASTRO_DESC}, (async (message, match) => {
 
-    if (match[1] === '') return await message.sendMessage(Lang.LAT);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.LAT);
   
   var topText, bottomText;
     if (match[1].includes(';')) {
@@ -24,14 +24,14 @@ Asena.addCommand({pattern: 'astro ?(.*)', fromMe: false,usage: Lang.USAGEI, desc
 
     var webimage = await axios.get(`http://www.7timer.info/bin/astro.php?lon=${topText}&lat=${bottomText}&ac=0&lang=en&unit=metric&output=internal&tzshift=0`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg ,quoted: message.data})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg ,quoted: message.data})
 
 }));
 
 
 Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, desc: Lang.GLITCH_DESC}, (async (message, match) => {
 
-    if (match[1] === '') return await message.sendMessage(Lang.GLAT);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.GLAT);
   
   var topText, bottomText;
     if (match[1].includes(';')) {
@@ -42,7 +42,7 @@ Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, desc: Lang.GLITCH_DESC
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/tiktokeffect/?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg ,quoted: message.data})
+   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg ,quoted: message.data})
 
 }));
 
@@ -51,46 +51,46 @@ Asena.addCommand({pattern: 'mmap ?(.*)', fromMe: false, dontAddCommandList: true
     
       data  = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${match[1]}`)
      hasil = await getBuffer(data.gambar)
-    await message.sendMessage(from, hasil, MessageType.image, {mimetype: Mimetype.jpg})
+    await message.client.sendMessage(message.jid,from, hasil, MessageType.image, {mimetype: Mimetype.jpg})
     
 });
 
 
 Asena.addCommand({pattern: 'neonglow ?(.*)', fromMe: false, desc: Lang.NG_DESC}, (async (message, match) => {
 
-    if (match[1] === '') return await message.sendMessage(Lang.NGLAT);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/glowingneon/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
 
 
 Asena.addCommand({pattern: 'coffeecup ?(.*)', fromMe: false, desc: Lang.CC_DESC}, (async (message, match) => {
 
-    if (match[1] === '') return await message.sendMessage(Lang.NGLAT);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/coffeecup/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
 
 
 Asena.addCommand({pattern: 'wood ?(.*)', fromMe: false, desc: Lang.WO_DESC}, (async (message, match) => {
 
-    if (match[1] === '') return await message.sendMessage(Lang.NGLAT);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/woodblock/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
 
 Asena.addCommand({pattern: '8bit ?(.*)', fromMe: false}, (async (message, match) => {
 
-    if (match[1] === '') return await message.sendMessage(Lang.GLAT);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.GLAT);
   
   var topText, bottomText;
     if (match[1].includes(';')) {
@@ -101,27 +101,27 @@ Asena.addCommand({pattern: '8bit ?(.*)', fromMe: false}, (async (message, match)
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/8bit/?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
 
 Asena.addCommand({pattern: 'shadow ?(.*)', fromMe: false}, (async (message, match) => {
 
-    if (match[1] === '') return await message.sendMessage(Lang.NGLAT);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/shadowtext/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+  await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
 
 Asena.addCommand({pattern: 'harrypotter ?(.*)', fromMe: false}, (async (message, match) => {
 
-    if (match[1] === '') return await message.sendMessage(Lang.NGLAT);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/hpotter/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
 
 }));
 
