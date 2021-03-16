@@ -127,7 +127,7 @@
             "DISABLED": "```Lydia has been disabled for this user!```"
         },
         "memes": {
-            "MEMES_DESC": "Photo memes you replied to.",
+            "MEMES_DESC": "memes the photo you replied to.",
             "NEED_REPLY": "*Reply to a photo!*",
             "DOWNLOADING": "```Downloading media & making meme...```"
         },
@@ -255,8 +255,8 @@
             "NEED_ZOD": "*Invalid Request,Provide your sunsign*",
             "SUNSIGN": "Sun Sign",
             "HOROSCOPE": "Horoscope",
-            "NEWS_DESC": "Get the days news, add category if you wish.",
-            "NEED_CATEGORY": "* Please write a category!*\n*Example:* ```.news technology```",
+            "NEWS_DESC": "Get the days news, add a category after .news .",
+            "NEED_CATEGORY": "*Please write a category!*\n*Example:* ```.news technology```",
             "CATEGORY": "Category",
             "RMLINK": "Read More",
             "NEWS": "News Content",
@@ -273,7 +273,7 @@
             "LYRICS_DESC": "Brings you the song Lyrics.",
             "SONGLI": "Lyrics",
             "TIN_DESC": "Shortens the given link using tinyurl.",
-            "BITLY_DESC": "Shortens the given link using bitly.",
+            "BIT_DESC": "Shortens the given link using bitly.",
             "NOT_FOUNDLI": "Lyrics not found",
             "SLINK": "Link",
             "NEED_LINK":"Please provide the link",
@@ -287,7 +287,10 @@
             "IGDESC":"Download videos from IG link",
             "FBDESC":"Download videos from fb link",
             "NEED_WORDFB":"```Download videos from fb link```",
-            "NOT_FOUNDFB":"```Fb video not found```"
+            "NOT_FOUNDFB":"```Fb video not found```",
+            "EBIT_DESC":"```Converts the text into an 8bit like image```",
+            "SHA_DESC":"```Converts the text into shadow themed image```",
+            "HP_DESC":"```Converts the text into a harrypotter themed image```"
             
             
         },
@@ -442,7 +445,7 @@
         "webss": {
             "SS_DESC": "Takes a screenshot from the page in the given link.",
             "LİNK": "You must enter link!",
-            "ASTRO_DESC": "Gives the astronomical weather data of the given lattitude and longitude./n You can use .weather to find the coordinates if you donno them",
+            "ASTRO_DESC": "Gives the astronomical weather data of the given lattitude and longitude.\n You can use .weather to find the coordinates if you donno them",
             "LAT": "You must enter the lattitude and longitude data ,seperated by *;* in order!",
             "USAGEI": ".astro 37.629562;-116.849556",
             "GLAT": "You must enter the main text and sub text seperated by *;* in order!",
@@ -450,7 +453,8 @@
              "NG_DESC": "will give you a Neon glow image of the text provided",
              "WO_DESC": "will give you a wood carved image of the text provided",
              "CC_DESC": "will put the text you provided in the foam within a coffee cup",
-              "NGLAT": "You must enter some text !"
+              "NGLAT": "You must enter some text !",
+            "MAP_DESC": "Gives you the map of the place you entered!"
         },
         "qrgenerator": {
              "TEXT": "You must enter text!",
@@ -461,7 +465,7 @@
         "voicy": {
             "NEED_REPLY": "```Please reply to any message!```",
             "ONLY_AUDIO":"```Only audio file is accepted.```",
-            "USAGE": "```It converts audio to text.```",
+            "USAGE": "It converts audio to text.",
             "TEXT": "*Hey! I listened secretly to this voice and heard those!:* \n\n"
         },
         "aiscanner": {
@@ -477,7 +481,7 @@
             "REPLY": "Please provide a note or reply to a message.",
             "SUCCESSFULLY_ADDED": "Successfully added new note, check your notes with .notes.",
             "UNSUCCESSFUL": "Could not add note, please try again later or contact WhatsAsena developers.",
-            "DELETE_USAGE": "Deletes *all* your saved notes.",
+            "DELETE_USAGE": "Deletes all of your saved notes.",
             "SUCCESSFULLY_DELETED": "Successfully deleted all your notes."
          },
         "instagram": {
