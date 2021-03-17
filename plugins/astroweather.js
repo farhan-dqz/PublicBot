@@ -125,3 +125,59 @@ Asena.addCommand({pattern: 'harrypotter ?(.*)', fromMe: false,desc: Lang.HP_DESC
 
 }));
 
+Asena.addCommand({pattern: 'sparkling ?(.*)', fromMe: false,desc: Lang.SPARKLING_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.GLAT);
+  
+  var topText, bottomText;
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        bottomText = split[1];
+        topText = split[0];
+}
+
+    var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/sparkling?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
+
+Asena.addCommand({pattern: 'watercolor ?(.*)', fromMe: false,desc: Lang.WATERCOLOR_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
+
+    var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/watercolor?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
+
+Asena.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: false,desc: Lang.NINJALOGO_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
+
+    var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/gaming?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
+
+Asena.addCommand({pattern: 'neonlight ?(.*)', fromMe: false,desc: Lang.NEONLIGHT_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
+
+    var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/neon_light?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
+
+Asena.addCommand({pattern: '3dtext ?(.*)', fromMe: false,desc: Lang.TD_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NGLAT);
+
+    var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/text3d?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg })
+
+}));
