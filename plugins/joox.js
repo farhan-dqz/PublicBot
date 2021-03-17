@@ -67,7 +67,7 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: false, desc: Lang.IGTVDESC }, 
         const {
           url,
           preview_url,
-        } = response.data.resource.[0]
+        } = response.data.resource[0]
 
         const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
@@ -99,7 +99,7 @@ Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: false, desc: Lang.IGDESC }, 
         const {
           url,
 	preview_url,	
-        } = response.data.resource.[0]
+        } = response.data.resource[0]
 
         const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
