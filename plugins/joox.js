@@ -62,19 +62,17 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: false, desc: Lang.IGTVDESC }, 
     await message.sendMessage(infoMessage(Lang.LOADINGTV))
 
     await axios
-      .get(`https://videfikri.com/api/igtv/?url=${userName}`)
+      .get(`https://docs-jojo.herokuapp.com/api/igtv?url=${userName}`)
       .then(async (response) => {
         const {
-          video_url,
-          username,
-          caption,
-        } = response.data.result
+          url,
+          preview_url,
+        } = response.data.resource.[0]
 
-        const profileBuffer = await axios.get(video_url, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
         const msg = `
-        *${Lang.USERNAME}*: ${username}
-        *${Lang.CAPTION}*: ${caption}`
+        *${Lang.VID}*: ${preview_url}`
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: msg,
@@ -96,19 +94,16 @@ Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: false, desc: Lang.IGDESC }, 
     await message.sendMessage(infoMessage(Lang.LOADINGTV))
 
     await axios
-      .get(`https://videfikri.com/api/igdl/?url=${userName}`)
+      .get(`https://docs-jojo.herokuapp.com/api/insta?url=${userName}`)
       .then(async (response) => {
         const {
-          video,
-          username,
-          caption,
-        } = response.data.result
+          url,
+	preview_url,	
+        } = response.data.resource.[0]
 
-        const profileBuffer = await axios.get(video, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
-        const msg = `
-        *${Lang.USERNAME}*: ${username}
-        *${Lang.CAPTION}*: ${caption}`
+        const msg = `*${Lang.VID}*: ${preview_url}`
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: msg,
@@ -138,8 +133,7 @@ Asena.addCommand({ pattern: 'vfb ?(.*)', fromMe: false, desc: Lang.FBDESC }, asy
 
         const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
-        const msg = `
-        *${Lang.CAPTION}*: ${judul}`
+        const msg = `*${Lang.CAPTION}*: ${judul}`
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: msg,
