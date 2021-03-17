@@ -30,7 +30,7 @@ Asena.addCommand({pattern: 'quote ?(.*)', fromMe: false, desc: Lang.QUOTE_DESC},
 });
 
 
-Asena.addCommand({pattern: 'quote ?(.*)', fromMe: false, desc: Lang.QUOTE_DESC, dontAddCommandList: true}, async (message, match) => {
+Asena.addCommand({pattern: 'pquote ?(.*)', fromMe: true, dontAddCommandList: true}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	const url = `https://api.quotable.io/random`;
 	try {
