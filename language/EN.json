@@ -434,7 +434,7 @@
             "TTP_DESC": "Converts text to plain picture.",
             "ATTP_DESC": "Adds rainbow effect to the text as a sticker.",
             "STTP_DESC": "Converts text to plain picture as a sticker.",
-            "NEED_WORD": "*You must enter words!*",
+            "NEED_WORD": "*You must enter some text!*",
             "ANIME_DESC": "It writes the text inside the banner the anime girl is holding",
             "TRUMP_DESC": "Converts the text to Trump's tweet.",
             "CHANGE_DESC": "Turns the text into the change my mind poster."
