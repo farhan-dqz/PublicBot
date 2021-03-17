@@ -11,8 +11,15 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('ttp');
 
+Asena.addCommand({pattern: 'admin', fromMe: false, desc: Lang.ADMINDESC}, (async (message, match) => {    
 
-Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC }, (async (message, match) => {
+    await message.sendMessage('💻Usage: *.ttp*\nℹ️Desc: Converts text to plain picture. \n\n💻Usage: *.attp*\nℹ️Desc:Adds rainbow effect to the text as a sticker. \n\n💻Usage: *.sttp*\nℹ️Desc: Makes a transparent sticker.\n\n💻Usage: *.animesay*\nℹ️Desc: It writes the text inside the banner the anime girl is holding.\n\n💻Usage: *.trumpsay*\nℹ️Desc: changes the text as if it is the tweet of Trump.\n\n💻Usage: *.changesay*\nℹ️Desc: Turns the text into the change my mind poster.\n\n💻Usage: *.plugin*\nℹ️Desc: Install external plugins.\n\n💻Usage: *.remove*\nℹ️Desc: Removes the plugin.\n\n💻Usage: *.invite*\nℹ️Desc: Provides invitation link of the group.\n\n💻Usage: *.locate*\nℹ️Desc: It will send the location of the bots device.\n\n💻Usage: *.afk*\nℹ️Desc: It makes the bot AFK - Away From Keyboard..\n\n💻Usage: *.term*\nℹ️Desc: Allows to run the command on the terminal of the server.\n\n💻Usage: *.restart*\nℹ️Desc: Restart the bot.\n\n💻Usage: *.shutdown*\nℹ️Desc: Shutdown the Bot.\n\n💻Usage: *.setvar*\nℹ️Desc: Set heroku config var.\n\n💻Usage: *.getvar*\nℹ️Desc: Get heroku config var.\n\n💻Usage: *.delvar*\nℹ️Desc: Delete heroku config var.\n\n💻Usage: *.filter*\nℹ️Desc: It adds a filter. If someone writes your filter, it send the answer. If you just write .filter, it will show your filter list.\n\n💻Usage: *.stop*\nℹ️Desc: Stops the filter you added previously.\n\n💻Usage: *.welcome*\nℹ️Desc: It sets the welcome message. If you leave it blank it shows the preset welcome message.\n\n💻Usage: *.goodbye*\nℹ️Desc: Sets the goodbye message. If you leave blank, it will show the preset goodbye message.\n\n💻Usage: *.addlydia*\nℹ️Desc: Activates Lydia (AI) for the tagged user.\n\n💻Usage: *.rmlydia*\nℹ️Desc: Makes Lydia disabled for the tagged user.\n\n💻Usage: *.kickme*\nℹ️Desc: It kicks the bot from the group where the command is given.\n\n💻Usage: *.pp*\nℹ️Desc: Makes the photo you reply the profile photo .\n\n💻Usage: *.block*\nℹ️Desc: Block tagged user..\n\n💻Usage: *.unblock*\nℹ️Desc: Unblock tagged user.\n\n💻Usage: *.jid*\nℹ️Desc: Gives the JID of the user.\n\n💻Usage *.tagall*\nℹ️Desc: Tags everyone in the group..\n\n💻Usage: *.update*\nℹ️Desc: Checks the update.\n\n💻Usage: *.update now*\nℹ️Desc: It updates the bot.\n\n💻Usage: *.deleteNotes*\nℹ️Desc: deletes all of your saved notes.\n\n💻Usage: *.save*\nℹ️Desc: To save a text as a note.\n\n💻Usage: *.spam*\nℹ️Desc: It will spam untill you stop it.\n\n💻Usage: *.killspam*\nℹ️Desc: Stops the spamming.');
+
+}));
+
+
+
+Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -23,7 +30,7 @@ Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC }, (
 
 }));
 
-Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -34,7 +41,7 @@ Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC },
 
 }));
 
-Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, desc: Lang.STTP_DESC, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -45,7 +52,7 @@ Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, desc: Lang.STTP_DESC, d
 
 }));
 
- Asena.addCommand({ pattern: 'animesay ?(.*)', fromMe: false, desc: Lang.ANIME_DESC }, (async (message, match) => {
+ Asena.addCommand({ pattern: 'animesay ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -55,7 +62,7 @@ Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, desc: Lang.STTP_DESC, d
 
     }));
 
-    Asena.addCommand({ pattern: 'changesay ?(.*)', fromMe: false, desc: Lang.CHANGE_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'changesay ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -65,7 +72,7 @@ Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, desc: Lang.STTP_DESC, d
 
     }));
 
-Asena.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: false, desc: Lang.TRUMP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
