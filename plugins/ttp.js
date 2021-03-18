@@ -11,7 +11,7 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('ttp');
 
-Asena.addCommand({pattern: 'admin', fromMe: false, desc: Lang.ADMINDESC}, (async (message, match) => {    
+Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC}, (async (message, match) => {    
 
     await message.sendMessage('💻Usage: *.ttp*\nℹ️Desc: Converts text to plain picture. \n\n💻Usage: *.attp*\nℹ️Desc:Adds rainbow effect to the text as a sticker.\n\n💻Usage: *.animesay*\nℹ️Desc: It writes the text inside the banner the anime girl is holding.\n\n💻Usage: *.trumpsay*\nℹ️Desc: Changes the text as if it is the tweet of Trump.\n\n💻Usage: *.changesay*\nℹ️Desc: Turns the text into the change my mind poster.\n\n💻Usage: *.glitch*\nℹ️Desc: Will give you a glitch style image of the text provided\nYou must enter the heading and subheading seperated by *;* in order!.\n\n💻Usage: *.neonglow*\nℹ️Desc: Will give you a Neon glow image of the text provided.\n\n💻Usage: *.wood*\nℹ️Desc: Will give you a wood carved image of the text provided.\n\n💻Usage: *.latte*\nℹ️Desc: Will put the text as latte art within a coffee cup.\n\n💻Usage: *.8bit*\nℹ️Desc: Converts the text into an 8bit style image.\n Use *;* to seperate the top and bottom texts\n\n💻Usage: *.shadow*\nℹ️Desc: Converts the text into shadow themed image.\n\n💻Usage: *.harrypotter*\nℹ️Desc: Converts the text into a harrypotter themed image.\n\n💻Usage: *.sparkling*\nℹ️Desc: Converts the text into a sparkling themed image\n\n💻Usage: *.watercolor*\nℹ️Desc: Converts the text into a watercolor themed image.\n\n💻Usage: *.ninjalogo*\nℹ️Desc: Enters the text as the caption for a ninja themed logo.\n\n💻Usage: *.neonlight*\nℹ️Desc: Converts the text into a neonlight themed image.\n\n💻Usage: *.3dtext*\nℹ️Desc: Converts the provided text into a 3D style image.');
 
@@ -230,6 +230,12 @@ Asena.addCommand({pattern: '3dtext ?(.*)', fromMe: false, dontAddCommandList: tr
 
 
 /*from here*/
+
+Asena.addCommand({pattern: 'ptxttoimg', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+
+    await message.sendMessage('💻Usage: *.ttp*\nℹ️Desc: Converts text to plain picture. \n\n💻Usage: *.attp*\nℹ️Desc:Adds rainbow effect to the text as a sticker.\n\n💻Usage: *.animesay*\nℹ️Desc: It writes the text inside the banner the anime girl is holding.\n\n💻Usage: *.trumpsay*\nℹ️Desc: Changes the text as if it is the tweet of Trump.\n\n💻Usage: *.changesay*\nℹ️Desc: Turns the text into the change my mind poster.\n\n💻Usage: *.glitch*\nℹ️Desc: Will give you a glitch style image of the text provided\nYou must enter the heading and subheading seperated by *;* in order!.\n\n💻Usage: *.neonglow*\nℹ️Desc: Will give you a Neon glow image of the text provided.\n\n💻Usage: *.wood*\nℹ️Desc: Will give you a wood carved image of the text provided.\n\n💻Usage: *.latte*\nℹ️Desc: Will put the text as latte art within a coffee cup.\n\n💻Usage: *.8bit*\nℹ️Desc: Converts the text into an 8bit style image.\n Use *;* to seperate the top and bottom texts\n\n💻Usage: *.shadow*\nℹ️Desc: Converts the text into shadow themed image.\n\n💻Usage: *.harrypotter*\nℹ️Desc: Converts the text into a harrypotter themed image.\n\n💻Usage: *.sparkling*\nℹ️Desc: Converts the text into a sparkling themed image\n\n💻Usage: *.watercolor*\nℹ️Desc: Converts the text into a watercolor themed image.\n\n💻Usage: *.ninjalogo*\nℹ️Desc: Enters the text as the caption for a ninja themed logo.\n\n💻Usage: *.neonlight*\nℹ️Desc: Converts the text into a neonlight themed image.\n\n💻Usage: *.3dtext*\nℹ️Desc: Converts the provided text into a 3D style image.');
+
+}));
 
 
 Asena.addCommand({ pattern: 'pttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
