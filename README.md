@@ -3,6 +3,7 @@
 
 - [Yusuf Usta](https://github.com/yusufusta)
 - [@fusufs](https://t.me/fusufs)
+- [@phaticusthiccy](https://github.com/phaticusthiccy)
 
 <p align="center">
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/fork">
@@ -45,7 +46,7 @@
 </p>
 
 ```
-####Based On:
+Based On:
 Asena; Asena UserBot,
 
 WhatsAsena - Asena Userbot is Open Source software open to development. 
@@ -95,9 +96,12 @@ is not responsible for the usage purpose and method of the users.
 ### Simple Method
 [![Run on Repl.it](https://repl.it/badge/github/quiec/whatsasena)](https://repl.it/@phaticusthiccy/WhatsAsena-QR)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/phaticusthiccy/WhatsAsenaDuplicated)
+Repl.it is less stable. Try Termux instead for qrcode generation.
 
-### The Hard Method
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kappithannemo/WhatsAsenaDuplicated)
+
+### The Hard Method(Not Supported for this version!!)
 ```js
 $ git clone https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git
 $ cd WhatsAsenaDuplicated
@@ -174,7 +178,7 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 
 ## Developers
 
-[![Yusuf Usta](https://github.com/yusufusta.png?size=100)](https://quiec.tech) | [![Phaticusthiccy](https://github.com/phaticusthiccy.png?size=100)](https://github.com/phaticusthiccy) | [![Alperen Ç](https://github.com/xacnio.png?size=100)](https://github.com/xacnio) | [![Justin Thoms](https://github.com/justinthoms.png?size=100)](https://github.com/justinthoms) | [![CW4RR10R](https://github.com/CW4RR10R.png?size=100)](https://github.com/CW4RR10R)
+[![Yusuf Usta](https://github.com/yusufusta.png?size=100)](https://quiec.tech) | [![Phaticusthiccy](https://github.com/phaticusthiccy.png?size=100)](https://github.com/phaticusthiccy) |![Vai838](https://github.com/Vai838.png?size=100)](https://github.com/Vai838) |  [![Alperen Ç](https://github.com/xacnio.png?size=100)](https://github.com/xacnio) | [![Justin Thoms](https://github.com/justinthoms.png?size=100)](https://github.com/justinthoms) | [![CW4RR10R](https://github.com/CW4RR10R.png?size=100)](https://github.com/CW4RR10R)
 ----|----|----|----|----
 [Yusuf Usta](https://t.me/fusufs) | [Phaticusthiccy](https://github.com/phaticusthiccy) | [Alperen Ç](https://t.me/xacnio) | [justinthoms](https://t.me/Mr_justinthomas) | [CW4RR10R](https://github.com/CW4RR10R)
 Author, Base, Bug Fixes, Modules | Author, Base, Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules, Idea | Modules
@@ -184,10 +188,12 @@ Author, Base, Bug Fixes, Modules | Author, Base, Bug Fixes, Modules | Bug Fixes,
 - [@itacirgabral](https://github.com/itacirgabral) for helps
 - `Ikarus#7808 (Discord)` for helps
 - [@Unique_hunter](https://t.me/Unique_hunter) for helps and ideas
+-  [@phaticusthiccy](https://github.com/phaticusthiccy) for the bots mainframe
 - Translators
 
 ## License
 This project is protected by `GNU General Public Licence v3.0` license.
+Assign Credit to developers.Dont edit out the copyright messages!
 
 ### Disclaimer
 `WhatsApp` name, its variations and the logo are registered trademarks of Facebook. We have nothing to do with the registered trademark
