@@ -110,7 +110,7 @@ Asena.addCommand({pattern: 'neonglow ?(.*)', fromMe: false, dontAddCommandList: 
 }));
 
 
-Asena.addCommand({pattern: 'coffeecup ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'latte ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -329,7 +329,7 @@ Asena.addCommand({pattern: 'pneonglow ?(.*)', fromMe: true, dontAddCommandList: 
 }));
 
 
-Asena.addCommand({pattern: 'pcoffeecup ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'platte ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
