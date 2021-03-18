@@ -1,6 +1,7 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
+/* Copyright (C) 2021 Vai838.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+WhatsAsenaDuplicated
 */
 
 const Asena = require('../events');
