@@ -149,9 +149,9 @@ Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .so
 
     const userName = match[1]
 
-    if (!userName) return await message.sendMessage(errorMessage("*Need a video name*"))
+    if (!userName) return await message.sendMessage(errorMessage("Need a video name"))
 
-    await message.sendMessage(infoMessage("*Loading...*"))
+    await message.sendMessage(infoMessage("Loading..."))
 
     await axios
       .get(`https://docs-jojo.herokuapp.com/api/yt-play?q=${userName}`)
