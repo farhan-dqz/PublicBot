@@ -154,7 +154,7 @@ Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .so
     await message.sendMessage(infoMessage("*Loading...*"))
 
     await axios
-      .get(`https://videfikri.com/api/ytplay/?=${userName}`)
+      .get(`https://videfikri.com/api/ytplay/?query=${userName}`)
       .then(async (response) => {
         const {
           url,
