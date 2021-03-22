@@ -178,7 +178,7 @@ Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .so
   },
 )
 
-Asena.addCommand({ pattern: 'mp4yt ?(.*)', fromMe: false , desc: "Use this if .videos is not working"}, async (message, match) => {
+Asena.addCommand({ pattern: 'mp4yt ?(.*)', fromMe: false , desc: "Use this if .videos is not working. Paste the youtube link "}, async (message, match) => {
 
     const userName = match[1]
 
@@ -187,16 +187,16 @@ Asena.addCommand({ pattern: 'mp4yt ?(.*)', fromMe: false , desc: "Use this if .v
     await message.sendMessage(infoMessage("Loading..."))
 
   await axios
-      .get(`https://videfikri.com/api/playmp4/?query=${userName}`)
+      .get(`https://docs-jojo.herokuapp.com/api/ytmp4?url=${userName}`)
       .then(async (response) => {
         const {
-          urlVideo,
-          judul,	
+          result,
+          title,	
         } = response.data.result
 
-        const profileBuffer = await axios.get(urlVideo, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(result, {responseType: 'arraybuffer'})
 
-        const msg = `*${"Title"}*: ${judul}`
+        const msg = `*${"Title"}*: ${title}`
 	    
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
