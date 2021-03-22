@@ -29,14 +29,14 @@ const Lang = Language.getString('weather');
 });*/
 
 
-Asena.addCommand({pattern: 'modd ?(.*)', fromMe: false, desc: Lang.MODD_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'mod ?(.*)', fromMe: false, desc: Lang.MODD_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	const url = `https://docs-jojo.herokuapp.com/api/apk-pure?q=${match[1]}`;
 	try {
 		const response = await got(url);
 		const json = JSON.parse(response.body);
 		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, 
-		'*🏷️ ' + Lang.NAMEY +'* ```' + json.result[0].title + '```\n\n' +
+		'*🏷️ ' + Lang.NAMEY +'* ```' + match[1] + '```\n\n' +
 		'*📝 ' + Lang.MODINFO +':* ```' + json.result[0].version + '```\n\n' + 
 		'*📦 ' + Lang.SIZE +'* ```' + json.result[0].filesize + '```\n\n' + 
 		'*⬇️ ' + Lang.DOWNLOAD +':* ```' + json.result[0].url + '```\n', MessageType.text);
