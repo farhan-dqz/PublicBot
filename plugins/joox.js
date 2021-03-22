@@ -154,22 +154,22 @@ Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .so
     await message.sendMessage(infoMessage("*Loading...*"))
 
     await axios
-      .get(`https://videfikri.com/api/ytplay/?query=${userName}`)
+      .get(`https://docs-jojo.herokuapp.com/api/yt-play?q=${userName}`)
       .then(async (response) => {
         const {
-          url,
           title,
-	  channel,
-	  duration,	
+          duration,
+	  filesize,
+	  link,	
         } = response.data.result
 
-        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(link, {responseType: 'arraybuffer'})
 
         const msg = `*${"Title"}*: ${title}\n*${"Size"}*: ${size}\n*${"Duration"}*: ${duration}`
 	    
-
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.audio, {
-          caption: msg,
+        await message.sendMessage(msg)
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.document, {
+         quoted : message.data
         })
       })
       .catch(
