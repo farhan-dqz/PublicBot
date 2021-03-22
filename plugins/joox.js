@@ -145,7 +145,7 @@ Asena.addCommand({ pattern: 'vfb ?(.*)', fromMe: false, desc: Lang.FBDESC }, asy
   },
 )
 
-Asena.addCommand({ pattern: 'ytmp3 ?(.*)', fromMe: false, desc: "Try this if .song is not giving results"}, async (message, match) => {
+Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .song is not giving results"}, async (message, match) => {
 
     const userName = match[1]
 
@@ -154,7 +154,7 @@ Asena.addCommand({ pattern: 'ytmp3 ?(.*)', fromMe: false, desc: "Try this if .so
     await message.sendMessage(infoMessage("*Loading...*"))
 
     await axios
-      .get(`https://videfikri.com/api/ytplay/?${userName}`)
+      .get(`https://videfikri.com/api/ytplay/?=${userName}`)
       .then(async (response) => {
         const {
           url,
@@ -178,7 +178,7 @@ Asena.addCommand({ pattern: 'ytmp3 ?(.*)', fromMe: false, desc: "Try this if .so
   },
 )
 
-Asena.addCommand({ pattern: 'ytmp3 ?(.*)', fromMe: false , desc: "Use this if .videos is not working"}, async (message, match) => {
+Asena.addCommand({ pattern: 'mp4yt ?(.*)', fromMe: false , desc: "Use this if .videos is not working"}, async (message, match) => {
 
     const userName = match[1]
 
