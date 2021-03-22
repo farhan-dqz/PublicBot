@@ -165,7 +165,7 @@ Asena.addCommand({ pattern: 'ytmp3 ?(.*)', fromMe: false, desc: "Try this if .so
 
         const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
-        const msg = `*${"Title"}*: ${title} \n *${"Size"}`*: ${size}  \n *${"Duration"}*: ${duration}`
+        const msg = `*${"Title"}*: ${title}\n*${"Size"}*: ${size}\n*${"Duration"}*: ${duration}`
 	    
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.audio, {
