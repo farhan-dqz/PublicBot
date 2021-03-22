@@ -149,7 +149,7 @@ Asena.addCommand({ pattern: 'ytmp3 ?(.*)', fromMe: false, desc: "Try this if .so
 
     const userName = match[1]
 
-    if (!userName) return await message.sendMessage(errorMessage(*Need a video name*))
+    if (!userName) return await message.sendMessage(errorMessage("*Need a video name*"))
 
     await message.sendMessage(infoMessage("*Loading...*"))
 
@@ -165,7 +165,7 @@ Asena.addCommand({ pattern: 'ytmp3 ?(.*)', fromMe: false, desc: "Try this if .so
 
         const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
-        const msg = `*${"Title"}*: ${title} \n *${"size"}`*: ${size}  \n *${"duration"}*: ${duration}`
+        const msg = `*${"Title"}*: ${title} \n *${"Size"}`*: ${size}  \n *${"Duration"}*: ${duration}`
 	    
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.audio, {
