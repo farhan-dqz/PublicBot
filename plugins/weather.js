@@ -14,6 +14,14 @@ const Language = require('../language');
 const Lang = Language.getString('weather');
 
 Asena.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC}, async (message, match) => {
+	
+            if (message.jid === '917306030148-1612341180@g.us') {
+
+                return;
+            }
+
+
+	
 	if (match[1] === '') return await message.reply(Lang.NEED_LOCATION);
 	const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
 	try {
