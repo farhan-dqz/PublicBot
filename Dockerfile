@@ -4,7 +4,6 @@ RUN git clone https://github.com/kappithannemo/WhatsAsenaDuplicated /root/WhatsA
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 RUN npm install deepai
-RUN npm install supervisor -g
 RUN yarn install --no-audit
 
 CMD ["node", "bot.js"]
