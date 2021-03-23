@@ -11,9 +11,9 @@ const got = require('got');
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-/*Asena.addCommand({pattern: 'modd ?(.*)', fromMe: false, desc: Lang.MODD_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'modd ?(.*)', fromMe: false, desc: Lang.MODD_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
-	const url = `https://tobz-api.herokuapp.com/api/moddroid?q=${match[1]}&apikey=BotWeA`;
+	const url = `https://tobz-api.herokuapp.com/api/moddroid?q=${match[1]}&apikey=l8E0wEcya6Hp1GfIQbkO`;
 	try {
 		const response = await got(url);
 		const json = JSON.parse(response.body);
@@ -26,10 +26,10 @@ const Lang = Language.getString('weather');
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text);
 	}
-});*/
+});
 
 
-Asena.addCommand({pattern: 'mod ?(.*)', fromMe: false, desc: Lang.MODD_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'apkp ?(.*)', fromMe: false, desc: "Mod apk from apkpure"}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	const url = `https://docs-jojo.herokuapp.com/api/apk-pure?q=${match[1]}`;
 	try {
