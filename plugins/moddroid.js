@@ -13,7 +13,7 @@ const Lang = Language.getString('weather');
 
 Asena.addCommand({pattern: 'modd ?(.*)', fromMe: false, desc: Lang.MODD_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
-	const url = `https://tobz-api.herokuapp.com/api/moddroid?q=${match[1]}&apikey=l8E0wEcya6Hp1GfIQbkO`;
+	const url = `https://tobz-api.herokuapp.com/api/moddroid?q=${match[1]}&apikey=kIKSEhfAfuMIonwfLGuY`;
 	try {
 		const response = await got(url);
 		const json = JSON.parse(response.body);
