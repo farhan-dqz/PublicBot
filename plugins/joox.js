@@ -145,30 +145,30 @@ Asena.addCommand({ pattern: 'vfb ?(.*)', fromMe: false, desc: Lang.FBDESC }, asy
   },
 )
 
-Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .song is not giving results"}, async (message, match) => {
+Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .song is not giving results.\n Works for youtube links only"}, async (message, match) => {
 
     const userName = match[1]
 
-    if (!userName) return await message.sendMessage(errorMessage("Need a video name"))
+    if (!userName) return await message.sendMessage(errorMessage("Need a yt link"))
 
     await message.sendMessage(infoMessage("Loading..."))
 
     await axios
-      .get(`https://docs-jojo.herokuapp.com/api/yt-play?q=${userName}`)
+      .get(`https://leyscoders-api.herokuapp.com/api/ytmp3?url=${userName}`)
       .then(async (response) => {
         const {
           title,
-          duration,
-	  filesize,
-	  link,	
-        } = response.data.result
+          desc,
+	  duration,
+	  url_audio,	
+        } = response.data.result[0]
 
-        const profileBuffer = await axios.get(link, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(url_audio, {responseType: 'arraybuffer'})
 
-        const msg = `*${"Title"}*: ${title}\n*${"Size"}*: ${size}\n*${"Duration"}*: ${duration}`
+        const msg = `*${"Title"}*: ${title}\n*${"Description"}*: ${desc}\n*${"Duration"}*: ${duration}`
 	    
         await message.sendMessage(msg)
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.document, {
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.audio, {
          quoted : message.data
         })
       })
@@ -178,23 +178,23 @@ Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .so
   },
 )
 
-Asena.addCommand({ pattern: 'mp4yt ?(.*)', fromMe: false , desc: "Use this if .videos is not working. Paste the youtube link "}, async (message, match) => {
+Asena.addCommand({ pattern: 'mp4yt ?(.*)', fromMe: false , desc: "Use this if .videos is not working. Provide the youtube link "}, async (message, match) => {
 
     const userName = match[1]
 
-    if (!userName) return await message.sendMessage(errorMessage("Name the video"))
+    if (!userName) return await message.sendMessage(errorMessage("Provide the video"))
 
     await message.sendMessage(infoMessage("Loading..."))
 
   await axios
-      .get(`https://docs-jojo.herokuapp.com/api/ytmp4?url=${userName}`)
+      .get(`https://leyscoders-api.herokuapp.com/api/ytmp4?url=${userName}`)
       .then(async (response) => {
         const {
-          result,
-          title,	
-        } = response.data.result
+          title,
+          url_video,	
+        } = response.data.result[0]
 
-        const profileBuffer = await axios.get(result, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(url_video, {responseType: 'arraybuffer'})
 
         const msg = `*${"Title"}*: ${title}`
 	    
