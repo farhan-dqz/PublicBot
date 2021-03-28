@@ -40,6 +40,6 @@ module.exports = {
     SUDO: process.env.SUDO === undefined ? false : process.env.SUDO,
     DEBUG: DEBUG,
     COFFEEHOUSE_API_KEY: process.env.COFFEEHOUSE_API_KEY === undefined ? false : process.env.COFFEEHOUSE_API_KEY,
-    WITAI_API: "722KEMAUNTE5CO2KU4B7KPBMZ5YGQFE7"
-    
+    WITAI_API: "722KEMAUNTE5CO2KU4B7KPBMZ5YGQFE7",
+    tobzapikey: process.env.TOBZ_API_KEY === undefined ? false : process.env.TOBZ_API_KEY
 };
