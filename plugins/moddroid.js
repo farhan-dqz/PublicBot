@@ -14,7 +14,7 @@ const Lang = Language.getString('weather');
 
 Asena.addCommand({pattern: 'modd ?(.*)', fromMe: false, desc: Lang.MODD_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
-	const url = `https://tobz-api.herokuapp.com/api/moddroid?q=${match[1]}&apikey=${Config.tobzapikey}`;
+	const url = `https://tobz-api.herokuapp.com/api/moddroid?q=${match[1]}&apikey=${Config.TOBZ_API_KEY}`;
 	try {
 		const response = await got(url);
 		const json = JSON.parse(response.body);
@@ -42,7 +42,7 @@ Asena.addCommand({pattern: 'apkp ?(.*)', fromMe: false, desc: "Mod apk from apkp
 		'*📦 ' + Lang.SIZE +'* ```' + json.result[0].filesize + '```\n\n' + 
 		'*⬇️ ' + Lang.DOWNLOAD +':* ```' + json.result[0].url + '```\n', MessageType.text);
 	} catch {
-		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text);
+		return await message.client.sendMessage(message.jid, "oops ;)", MessageType.text);
 	}
 });
 
@@ -55,7 +55,7 @@ Asena.addCommand({pattern: 'apkp ?(.*)', fromMe: false, desc: "Mod apk from apkp
 		'*🏷️ ' + Lang.NAMEY +'* ```' + match[1] + '```\n\n' +
 		'*⬇️ ' + Lang.DOWNLOAD +':* ```' + json.result[0].url + '```\n', MessageType.text);
 	} catch {
-		return await message.client.sendMessage(message.jid, "O", MessageType.text);
+		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text);
 	}
 });
 
