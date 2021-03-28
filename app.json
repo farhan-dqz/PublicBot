@@ -83,7 +83,7 @@
             "required": false,
             "value": "true"
         },
-        "tobzapikey": {
+        "TOBZ_API_KEY": {
             "description": "Generate your tobz apikey after chatting with +447418349954 in whatsapp.",
             "required": false,
             "value": "true"
