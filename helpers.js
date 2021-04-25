@@ -30,5 +30,5 @@ function infoMessage(msg) {
 module.exports = {
     successfullMessage,
     errorMessage,
-    infoMessage
+    infoMessag
 }
