@@ -108,7 +108,7 @@ Repl.it is less stable. Try Termux instead for qrcode generation.
 
 ### The Hard Method(Not Supported for this version!!)
 ```js
-$ git clone https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git
+$ git clone https://github.com/farhan-dqz/farhan-dqz.git
 $ cd WhatsAsenaDuplicated
 $ npm i
 $ nano Config.env
