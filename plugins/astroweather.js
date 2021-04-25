@@ -1,4 +1,4 @@
-/* Codded by @Vai838
+/* Codded by @farhan-dqz
 */
 
 const Asena = require('../events');
@@ -11,7 +11,7 @@ const got = require("got");
 const Language = require('../language');
 const Lang = Language.getString('webss');
 
-Asena.addCommand({pattern: 'astro ?(.*)', fromMe: false,usage: Lang.USAGEI, desc: Lang.ASTRO_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'astro ?(.*)', fromMe: true,usage: Lang.USAGEI, desc: Lang.ASTRO_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.LAT);
   
@@ -29,7 +29,7 @@ Asena.addCommand({pattern: 'astro ?(.*)', fromMe: false,usage: Lang.USAGEI, desc
 }));
 
 
-Asena.addCommand({pattern: 'mmap ?(.*)', fromMe: false, dontAddCommandList: true}, async (message, match) => {
+Asena.addCommand({pattern: 'mmap ?(.*)', fromMe: true, dontAddCommandList: true}, async (message, match) => {
     
       data  = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${match[1]}`)
      hasil = await getBuffer(data.gambar)
