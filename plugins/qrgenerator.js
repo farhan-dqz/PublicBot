@@ -1,4 +1,4 @@
-/* Copyright (C) 2021 Vai838.
+/* Copyright (C) 2021 farhan-dqz.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 WhatsAsenaDuplicated
@@ -14,7 +14,7 @@ const got = require("got");
 const Language = require('../language');
 const Lang = Language.getString('qrgenerator');
 
-Asena.addCommand({pattern: 'qr ?(.*)', fromMe: false, desc: Lang.QR_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'qr ?(.*)', fromMe: true, desc: Lang.QR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
