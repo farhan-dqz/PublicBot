@@ -20,4 +20,4 @@ class Base {
     _patch(data) { return data; }
 }
 
-module.exports = Base;
+module.exports = Bas;
