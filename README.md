@@ -1,5 +1,9 @@
 ## ITS ME FARHAN-DQZ
+
 Thank you all for using this git🦋
+
+
+
 
 ## Thanks for Everything 
 ### We will always remember you..
@@ -73,10 +77,8 @@ is not responsible for the usage purpose and method of the users.
         Reserved |
         Reserved |
         <a href="https://t.me/WHATSASENA">Telegram Channel</a> |
-        <a href="https://t.me/AsenaSupport">Telegram Group</a> |
-        <a href="https://t.me/asenaremaster">New Support Group</a> |
-        <a href="https://t.me/unofficialplugin">New Plugin Channel</a> |
-    <br>
+        <a href="https://chat.whatsapp.com/JVN7x7wptjeCsDiddpgF4c</a> |
+          <br>
 </p>
 
 ----
