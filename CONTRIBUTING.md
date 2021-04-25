@@ -1,3 +1,7 @@
+# Re-coded By Farhan-Dqz
+
+Use it only in goodway.Dont misuse its features.We are not responsible for that misuses
+
 # Contributing to Thiccy
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
