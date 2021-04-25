@@ -1,3 +1,6 @@
+## ITS ME FARHAN-DQZ
+Thank you all for using this git🦋
+
 ## Thanks for Everything 
 ### We will always remember you..
 
