@@ -146,7 +146,6 @@ If you are concerned about security, you can install it on your own computer. If
 | Heroku Plugin|✅|1.5|
 | Jid Scraper|✅|1.0|
 | Location Plugin|✅|1.0|
-| Lydia|✅|1.2|
 | Meme Maker|✅|1.0|
 | Mute & Unmute Chat|✅|1.3|
 | Nekobin Plugin|✅|1.0|
