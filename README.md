@@ -1,6 +1,6 @@
 ## ITS ME FARHAN-DQZ
 
-Thank you all for using this git🦋
+Thank you Everyone for helping to develop this one🦋
 
 
 
