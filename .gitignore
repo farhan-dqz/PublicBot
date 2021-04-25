@@ -105,5 +105,5 @@ dist
 session.asena
 *.db
 package-lock.json
-.DS_Store
+.DS_Sto
 config.env
