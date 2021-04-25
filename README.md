@@ -65,7 +65,7 @@ is not responsible for the usage purpose and method of the users.
 
 <div align="center">
   <img src="https://i.hizliresim.com/mm1NBs.jpg" width="200" height="200">
-  <h1>A modified Version of 🐺 WhatsAsena Duplicated</h1>
+  <h1> Modified version of WhatsAsena, Recoded By Farhan_Dqz🦋</h1>
 </div>
 <p align="center">
     WhatsAsena project - Makes it easy and fun to use Whatsapp. Also first userbot for Whatsapp
