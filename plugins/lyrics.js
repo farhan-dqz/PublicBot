@@ -11,7 +11,7 @@ const got = require('got');
 const Language = require('../language');
 const Lang = Language.getString('weather');          
 
-Asena.addCommand({pattern: 'lyrics ?(.*)', fromMe: false, desc: Lang.LYRICS_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'lyrics ?(.*)', fromMe: true, desc: Lang.LYRICS_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_SONG);
 	const url = `https://videfikri.com/api/liriklagu/?query=${match[1]}`;
 	try {
