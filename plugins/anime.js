@@ -15,7 +15,7 @@ const Lang = Language.getString('anime');
 
 {
 
-    Asena.addCommand({pattern: 'randanime', fromMe: false, desc: Lang.AN}, (async (message, match) => {
+    Asena.addCommand({pattern: 'anime', fromMe: false, desc: Lang.AN}, (async (message, match) => {
 
     var r_text = new Array ();
 
