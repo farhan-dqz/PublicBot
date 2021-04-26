@@ -11,7 +11,7 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('ttp');
 
-Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC}, (async (message, match) => {    
+Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, (async (message, match) => {    
 
     await message.sendMessage('💻Usage: *.ttp*\nℹ️Desc: Converts text to plain picture. \n\n💻Usage: *.attp*\nℹ️Desc:Adds rainbow effect to the text as a sticker.\n\n💻Usage: *.animesay*\nℹ️Desc: It writes the text inside the banner the anime girl is holding.\n\n💻Usage: *.trumpsay*\nℹ️Desc: Changes the text as if it is the tweet of Trump.\n\n💻Usage: *.changesay*\nℹ️Desc: Turns the text into the change my mind poster.\n\n💻Usage: *.glitch*\nℹ️Desc: Will give you a glitch style image of the text provided\nYou must enter the heading and subheading seperated by *;* in order!.\n\n💻Usage: *.neonglow*\nℹ️Desc: Will give you a Neon glow image of the text provided.\n\n💻Usage: *.wood*\nℹ️Desc: Will give you a wood carved image of the text provided.\n\n💻Usage: *.latte*\nℹ️Desc: Will put the text as latte art within a coffee cup.\n\n💻Usage: *.8bit*\nℹ️Desc: Converts the text into an 8bit style image.\n Use *;* to seperate the top and bottom texts\n\n💻Usage: *.shadow*\nℹ️Desc: Converts the text into shadow themed image.\n\n💻Usage: *.harrypotter*\nℹ️Desc: Converts the text into a harrypotter themed image.\n\n💻Usage: *.sparkling*\nℹ️Desc: Converts the text into a sparkling themed image\n\n💻Usage: *.watercolor*\nℹ️Desc: Converts the text into a watercolor themed image.\n\n💻Usage: *.ninjalogo*\nℹ️Desc: Enters the text as the caption for a ninja themed logo.\n\n💻Usage: *.neonlight*\nℹ️Desc: Converts the text into a neonlight themed image.\n\n💻Usage: *.3dtext*\nℹ️Desc: Converts the provided text into a 3D style image.');
 
@@ -19,7 +19,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
 
 
-Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -30,7 +30,7 @@ Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: false, dontAddCommandList: true
 
 }));
 
-Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -41,7 +41,7 @@ Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: false, dontAddCommandList: tru
 
 }));
 
-Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -52,7 +52,7 @@ Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, dontAddCommandList: tru
 
 }));
 
- Asena.addCommand({ pattern: 'animesay ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
+ Asena.addCommand({ pattern: 'animesay ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -62,7 +62,7 @@ Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, dontAddCommandList: tru
 
     }));
 
-    Asena.addCommand({ pattern: 'changesay ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'changesay ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -72,7 +72,7 @@ Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: false, dontAddCommandList: tru
 
     }));
 
-Asena.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -82,7 +82,7 @@ Asena.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: false, dontAddCommandList:
 
     }));
 
-Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
   
@@ -99,7 +99,7 @@ Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, dontAddCommandList: tr
 
 }));
 
-Asena.addCommand({pattern: 'neonglow ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'neonglow ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -110,7 +110,7 @@ Asena.addCommand({pattern: 'neonglow ?(.*)', fromMe: false, dontAddCommandList: 
 }));
 
 
-Asena.addCommand({pattern: 'latte ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'latte ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -121,7 +121,7 @@ Asena.addCommand({pattern: 'latte ?(.*)', fromMe: false, dontAddCommandList: tru
 }));
 
 
-Asena.addCommand({pattern: 'wood ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'wood ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -131,7 +131,7 @@ Asena.addCommand({pattern: 'wood ?(.*)', fromMe: false, dontAddCommandList: true
 
 }));
 
-Asena.addCommand({pattern: '8bit ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: '8bit ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
   
@@ -148,7 +148,7 @@ Asena.addCommand({pattern: '8bit ?(.*)', fromMe: false, dontAddCommandList: true
 
 }));
 
-Asena.addCommand({pattern: 'shadow ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'shadow ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -158,7 +158,7 @@ Asena.addCommand({pattern: 'shadow ?(.*)', fromMe: false, dontAddCommandList: tr
 
 }));
 
-Asena.addCommand({pattern: 'harrypotter ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'harrypotter ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -168,7 +168,7 @@ Asena.addCommand({pattern: 'harrypotter ?(.*)', fromMe: false, dontAddCommandLis
 
 }));
 
-Asena.addCommand({pattern: 'sparkling ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'sparkling ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
   
@@ -185,7 +185,7 @@ Asena.addCommand({pattern: 'sparkling ?(.*)', fromMe: false, dontAddCommandList:
 
 }));
 
-Asena.addCommand({pattern: 'watercolor ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'watercolor ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -195,7 +195,7 @@ Asena.addCommand({pattern: 'watercolor ?(.*)', fromMe: false, dontAddCommandList
 
 }));
 
-Asena.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -205,7 +205,7 @@ Asena.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: false, dontAddCommandList:
 
 }));
 
-Asena.addCommand({pattern: 'neonlight ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'neonlight ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -215,7 +215,7 @@ Asena.addCommand({pattern: 'neonlight ?(.*)', fromMe: false, dontAddCommandList:
 
 }));
 
-Asena.addCommand({pattern: '3dtext ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: '3dtext ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
