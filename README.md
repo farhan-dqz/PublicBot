@@ -184,17 +184,10 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 
 [![Yusuf Usta](https://github.com/yusufusta.png?size=100)](https://quiec.tech) | [![farhan-dqz](https://github.com/farhan-dqz.png?size=100)](https://github.com/farhan-dqz)
 <BR>
-[Yusuf Usta](https://t.me/fusufs) | [Phaticusthiccy](https://github.com/phaticusthiccy)
+[Yusuf Usta](https://t.me/fusufs) | [farhan-dqz](https://github.com/farhan-dqz)
 
 Author, Base, Bug Fixes, Modules | Author, Base, Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules, Idea | Modules
 
-## Thanks To
-- [@adiwajshing](https://github.com/adiwajshing) for coded [Baileys](https://github.com/adiwajshing/Baileys) 
-- [@itacirgabral](https://github.com/itacirgabral) for helps
-- `Ikarus#7808 (Discord)` for helps
-- [@Unique_hunter](https://t.me/Unique_hunter) for helps and ideas
--  [@phaticusthiccy](https://github.com/phaticusthiccy) for the bots mainframe
-- Translators
 
 ## License
 This project is protected by `GNU General Public Licence v3.0` license.
