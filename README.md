@@ -182,7 +182,7 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 
 ## Developers
 
-[![Yusuf Usta](https://github.com/yusufusta.png?size=100)](https://quiec.tech) | [![Phaticusthiccy](https://github.com/phaticusthiccy.png?size=100)](https://github.com/phaticusthiccy) | [![farhan-dqz](https://github.com/farhan-dqz.png?size=100)](https://github.com/farhan-dqz) |
+[![Yusuf Usta](https://github.com/yusufusta.png?size=100)](https://quiec.tech) | [![farhan-dqz](https://github.com/farhan-dqz.png?size=100)](https://github.com/farhan-dqz)
 ----|----|----|----|----
 [Yusuf Usta](https://t.me/fusufs) | [Phaticusthiccy](https://github.com/phaticusthiccy)
 
