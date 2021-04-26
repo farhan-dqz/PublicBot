@@ -184,7 +184,7 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 
 [![Yusuf Usta](https://github.com/yusufusta.png?size=100)](https://quiec.tech) | [![farhan-dqz](https://github.com/farhan-dqz.png?size=100)](https://github.com/farhan-dqz)
 <BR>
-[Yusuf Usta](https://t.me/fusufs) | [farhan-dqz](https://github.com/farhan-dqz)
+[Yusuf Usta](https://t.me/fusufs)    |    [farhan-dqz](https://github.com/farhan-dqz)
 
 Author, Base, Bug Fixes, Modules | Author, Base, Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules, Idea | Modules
 
