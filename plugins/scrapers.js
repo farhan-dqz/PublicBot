@@ -147,7 +147,7 @@ Asena.addCommand({pattern: 'video ?(.*)', fromMe: true , desc: Lang.VIDEO_DESC},
 
     yt.on('end', async () => {
         reply = await message.client.sendMessage(message.jid,'Uploading...',MessageType.text);
-        await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4}));
+        await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
 
 Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
