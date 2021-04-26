@@ -14,7 +14,7 @@ const Language = require('../language');
 const Lang = Language.getString('weather');
 const { errorMessage, infoMessage } = require('../helpers');
 
-/*Asena.addCommand({pattern: 'song ?(.*)', fromMe: false}, async (message, match) => {
+/*Asena.addCommand({pattern: 'song ?(.*)', fromMe: true}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_SONG);
 	const url = `https://tobz-api.herokuapp.com/api/joox?q=${match[1]}&apikey=BotWeA`;
 	try {
@@ -53,7 +53,7 @@ Asena.addCommand({pattern: 'psong ?(.*)', fromMe: true }, async (message, match)
 	}
 });*/
 
-Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: false, desc: Lang.IGTVDESC }, async (message, match) => {
+Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: Lang.IGTVDESC }, async (message, match) => {
 
     const userName = match[1]
 
@@ -85,7 +85,7 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: false, desc: Lang.IGTVDESC }, 
 )
 
 
-Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: false, desc: Lang.IGDESC }, async (message, match) => {
+Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: true, desc: Lang.IGDESC }, async (message, match) => {
 
     const userName = match[1]
 
@@ -115,7 +115,7 @@ Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: false, desc: Lang.IGDESC }, 
   },
 )
 
-Asena.addCommand({ pattern: 'vfb ?(.*)', fromMe: false, desc: Lang.FBDESC }, async (message, match) => {
+Asena.addCommand({ pattern: 'vfb ?(.*)', fromMe: true, desc: Lang.FBDESC }, async (message, match) => {
 
     const userName = match[1]
 
@@ -145,7 +145,7 @@ Asena.addCommand({ pattern: 'vfb ?(.*)', fromMe: false, desc: Lang.FBDESC }, asy
   },
 )
 
-Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .song is not giving results.\n Works for youtube links only"}, async (message, match) => {
+Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: true, desc: "Try this if .song is not giving results.\n Works for youtube links only"}, async (message, match) => {
 
     const userName = match[1]
 
