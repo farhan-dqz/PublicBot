@@ -66,7 +66,7 @@ Asena.addCommand({pattern: 'rmlydia$', fromMe: true, desc: Lang.RMLYDIA_DESC, do
     return await message.reply(Lang.DISABLED);
 }));
 
-Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {   
+Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {   
     if (Config.COFFEEHOUSE_API_KEY === false) return;
     var unix = Date.now() / 1000 | 0;
 
