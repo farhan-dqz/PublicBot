@@ -11,7 +11,7 @@ const axios = require('axios');
 const Config = require('../config');
 
 const Language = require('../language');
-const Lang = Language.getString('anime');
+const Lang = Language.getString('randanime');
 
 {
 
