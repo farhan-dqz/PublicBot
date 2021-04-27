@@ -4,7 +4,7 @@ const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
 
-    Asena.addCommand({ pattern: 'nekoanime', fromMe: false }, async (message, match) => {
+    Asena.addCommand({ pattern: 'nekoanime', fromMe: true }, async (message, match) => {
 
         if (message.jid === '905524317852-1612300121@g.us') {
 
@@ -23,7 +23,7 @@ const axios = require('axios');
             })
 
             await message.sendMessage(Buffer.from(imageBuffer.data), MessageType.image, {
-                        caption: "Made By WhatsAsenaPublic"
+                        caption: "```anime```"
             })
           })
       },
