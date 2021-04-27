@@ -46,7 +46,7 @@ const Lang = Language.getString('ttp');
 
     }));
 
-    Asena.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: true, desc: Lang.TRUMP_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: false, desc: Lang.TRUMP_DESC }, (async (message, match) => {
 
         if (message.jid === '905524317852-1612300121@g.us') {
 
