@@ -15,7 +15,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
        
 
-    await message.sendMessage('💻Usage: *.glitch*\nℹ️Desc: It Sends a glitch style image of the text provided\nYou must enter the heading and subheading seperated by */* in order!.\n\n💻Usage: *.underwater*\nℹ️Desc: It Sends a ocean image of the text provided\n\n💻Usage: *.flower*\nℹ️Desc: It Sends a flower image of the text provided\n\n💻Usage: *.burn*\nℹ️Desc: It Sends a half burned paper image of the text provided\n\n💻Usage: *.candy*\nℹ️Desc: It Sends a candy image of the text provided\n\n💻Usage: *.wood*\nℹ️Desc: It Sends a wood carved image of the text provided.\n\n💻Usage: *.latte*\nℹ️Desc: It put the text as latte art within a coffee cup.\n\n💻Usage: *.8bit*\nℹ️Desc: Converts the text into an 8bit style image.\nYou must enter the heading and subheading seperated by */* in order!\n\n💻Usage: *.shadow*\nℹ️Desc: Converts the text into shadow themed image.\n\n💻Usage: *.harrypotter*\nℹ️Desc: Converts the text into a harrypotter themed image.\n\n💻Usage: *.sparkling*\nℹ️Desc: Converts the text into a sparkling themed image\nYou must enter the heading and subheading seperated by */* in order!\n\n💻Usage: *.watercolour*\nℹ️Desc: Converts the text into a watercolour themed image.\n\n💻Usage: *.ninjalogo*\nℹ️Desc: Enters the text as the caption for a ninja themed logo.\n\n💻Usage: *.neonlight*\nℹ️Desc: Converts the text into a neonlight themed image.\n\n💻Usage: *.3dtext*\nℹ️Desc: Converts the provided text into a 3D style image.');
+    await message.sendMessage('🎀Usage: *.glitch*\n🎗️Desc: It Sends a glitch style image of the text provided\nYou must enter the heading and subheading seperated by */* in order!.\n\n🎀Usage: *.underwater*\n🎗️Desc: It Sends a ocean image of the text provided\n\n🎀Usage: *.flower*\n🎗️Desc: It Sends a flower image of the text provided\n\n🎀Usage: *.burn*\n🎗️Desc: It Sends a half burned paper image of the text provided\n\n🎀Usage: *.candy*\n🎗️Desc: It Sends a candy image of the text provided\n\n🎀Usage: *.wood*\n🎗️Desc: It Sends a wood carved image of the text provided.\n\n🎀Usage: *.latte*\n🎗️Desc: It put the text as latte art within a coffee cup.\n\n🎀Usage: *.8bit*\n🎗️Desc: Converts the text into an 8bit style image.\nYou must enter the heading and subheading seperated by */* in order!\n\n🎀Usage: *.shadow*\n🎗️Desc: Converts the text into shadow themed image.\n\n🎀Usage: *.harrypotter*\n🎗️Desc: Converts the text into a harrypotter themed image.\n\n🎀Usage: *.sparkling*\n🎗️Desc: Converts the text into a sparkling themed image\nYou must enter the heading and subheading seperated by */* in order!\n\n🎀Usage: *.watercolour*\n🎗️Desc: Converts the text into a watercolour themed image.\n\n🎀Usage: *.ninjalogo*\n🎗️Desc: Enters the text as the caption for a ninja themed logo.\n\n🎀Usage: *.neonlight*\n🎗️Desc: Converts the text into a neonlight themed image.\n\n🎀Usage: *.3dtext*\n🎗️Desc: Converts the provided text into a 3D style image.');
 
     }));
 
@@ -32,7 +32,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/tiktokeffect/?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
 
-   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Glitch Effect```'})
 
     }));
 
@@ -42,7 +42,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/coffeecup/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Coffeecup effect```'})
 
     }));
 
@@ -70,7 +70,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/8bit/?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Image```'})
 
     }));
 
@@ -80,7 +80,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/shadowtext/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-  await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+  await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Shadow effect```'})
 
     }));
 
@@ -90,7 +90,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/underwater/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Underwater```'})
 
     }));
 
@@ -100,7 +100,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/mugflower/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Flower cup```'})
 
     }));
 
@@ -110,7 +110,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/burnpaper/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Burn image```'})
 
     }));
 
@@ -120,7 +120,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/sweetcandy/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Candy Image```'})
 
     }));
 
@@ -130,7 +130,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/hpotter/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```hp title font```'})
 
     }));
 
@@ -147,7 +147,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/sparkling?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Sparkling edited```'})
 
     }));
 
@@ -157,7 +157,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/watercolor?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Water color```'})
 
     }));
 
@@ -167,7 +167,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/gaming?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```gaming logo```'})
 
     }));
 
@@ -177,7 +177,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/neon_light?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```glow Image```'})
 
     }));
 
@@ -187,7 +187,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, 
 
     var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/text3d?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Image'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '``` 3D text Image```'})
 
     }));
 
