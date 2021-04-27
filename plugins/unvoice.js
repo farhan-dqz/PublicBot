@@ -48,7 +48,7 @@ Asena.addCommand({pattern: 'unvideo', fromMe: true, dontAddCommandList: true}, (
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg,quoted:message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-});}));
+}));
 
 Asena.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage("Tag an image");
