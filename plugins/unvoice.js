@@ -28,7 +28,7 @@ Asena.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async 
         .save('output.mp3')
         .on('end', async () => {
             await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true,quoted:message.data});
-}));
+});}));
 
 Asena.addCommand({pattern: 'unvideo', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage("Tag a video!");
@@ -48,7 +48,7 @@ Asena.addCommand({pattern: 'unvideo', fromMe: true, dontAddCommandList: true}, (
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg,quoted:message.data});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-}));
+});}));
 
 Asena.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage("Tag an image");
