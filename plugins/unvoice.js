@@ -27,7 +27,7 @@ Asena.addCommand({pattern: 'a', fromMe: true, desc: Lang.UV_DESC}, (async (messa
         .format('mp3')
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true,quoted:message.data});
+            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
 Asena.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
@@ -44,7 +44,7 @@ Asena.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async 
         .format('mp3')
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true,quoted:message.data});
+            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
 Asena.addCommand({pattern: 'unvideo', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
@@ -62,7 +62,7 @@ Asena.addCommand({pattern: 'unvideo', fromMe: true, dontAddCommandList: true}, (
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg,quoted:message.data});
+            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
