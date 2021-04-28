@@ -13,7 +13,7 @@ const cwebp = require('cwebp-bin');
 const Language = require('../language');
 const Lang = Language.getString('unvoice'); // Language support
 
-Asena.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
+Asena.addCommand({pattern: ',', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage(Lang.UV_REPLY);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
