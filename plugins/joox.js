@@ -53,7 +53,7 @@ Asena.addCommand({pattern: 'psong ?(.*)', fromMe: true }, async (message, match)
 	}
 });*/
 
-Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: Lang.IGTVDESC }, async (message, match) => {
+Asena.addCommand({ pattern: 'pinsta ?(.*)', fromMe: true, desc: Lang.IGTVDESC }, async (message, match) => {
 
     const userName = match[1]
 
@@ -62,19 +62,19 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: Lang.IGTVDESC }, a
     await message.sendMessage(infoMessage(Lang.LOADINGTV))
 
     await axios
-      .get(`https://docs-jojo.herokuapp.com/api/igtv?url=${userName}`)
+      .get(`https://api-anoncybfakeplayer.herokuapp.com/igdown?url=${userName}`)
       .then(async (response) => {
         const {
           url,
-          preview_url,
-        } = response.data.resource[0]
+          type,
+        } = response.data.result[0]
 
         const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
         const msg = `
-        *${Lang.VID}*: ${preview_url}`
+        *${Lang.VID}*: ${type}`
 
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
           caption: msg,
         })
       })
@@ -94,16 +94,16 @@ Asena.addCommand({ pattern: 'vinsta ?(.*)', fromMe: true, desc: Lang.IGDESC }, a
     await message.sendMessage(infoMessage(Lang.LOADINGTV))
 
     await axios
-      .get(`https://docs-jojo.herokuapp.com/api/insta?url=${userName}`)
+      .get(`https://api-anoncybfakeplayer.herokuapp.com/igdown?url=${userName}`)
       .then(async (response) => {
         const {
           url,
-	preview_url,	
-        } = response.data.resource[0]
+	type,	
+        } = response.data.result[0]
 
         const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
-        const msg = `*${Lang.VID}*: ${preview_url}`
+        const msg = `*${Lang.VID}*: ${type}`
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: msg,
@@ -124,16 +124,16 @@ Asena.addCommand({ pattern: 'vfb ?(.*)', fromMe: true, desc: Lang.FBDESC }, asyn
     await message.sendMessage(infoMessage(Lang.LOADINGTV))
 
     await axios
-      .get(`https://videfikri.com/api/fbdl/?urlfb=${userName}`)
+      .get(`https://scrap.terhambar.com/fb?link=${userName}`)
       .then(async (response) => {
         const {
-          url,
-          judul,
+          title,
+          linkVideo.sdQuality,
         } = response.data.result
 
-        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(linkVideo.sdQuality, {responseType: 'arraybuffer'})
 
-        const msg = `*${Lang.CAPTION}*: ${judul}`
+        const msg = `*${Lang.CAPTION}*: ${title}`
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: msg,
@@ -154,18 +154,17 @@ Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: true, desc: "Try this if .son
     await message.sendMessage(infoMessage("Loading..."))
 
     await axios
-      .get(`https://leyscoders-api.herokuapp.com/api/ytmp3?url=${userName}`)
+      .get(`https://api-anoncybfakeplayer.herokuapp.com/ytmp3?url=${userName}`)
       .then(async (response) => {
         const {
-          title,
-          desc,
-	  duration,
-	  url_audio,	
+          url,
+          filesize,
+	  quality,	
         } = response.data.result[0]
 
-        const profileBuffer = await axios.get(url_audio, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
-        const msg = `*${"Title"}*: ${title}\n*${"Description"}*: ${desc}\n*${"Duration"}*: ${duration}`
+        const msg = `*${"quality"}*: ${quality}\n*${"file size"}*: ${filesize}`
 	    
         await message.sendMessage(msg)
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.audio, {
@@ -178,7 +177,7 @@ Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: true, desc: "Try this if .son
   },
 )
 
-Asena.addCommand({ pattern: 'mp4yt ?(.*)', fromMe: false , desc: "Use this if .videos is not working. Provide the youtube link "}, async (message, match) => {
+Asena.addCommand({ pattern: 'mp4yt ?(.*)', fromMe: true , desc: "Use this if .videos is not working. Provide the youtube link "}, async (message, match) => {
 
     const userName = match[1]
 
@@ -187,16 +186,16 @@ Asena.addCommand({ pattern: 'mp4yt ?(.*)', fromMe: false , desc: "Use this if .v
     await message.sendMessage(infoMessage("Loading..."))
 
   await axios
-      .get(`https://leyscoders-api.herokuapp.com/api/ytmp4?url=${userName}`)
+      .get(`https://api-anoncybfakeplayer.herokuapp.com/ytmp4?url=${userName}`)
       .then(async (response) => {
         const {
-          title,
-          url_video,	
-        } = response.data.result[0]
+          quality,
+          url,	
+        } = response.data.result[2]
 
-        const profileBuffer = await axios.get(url_video, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
-        const msg = `*${"Title"}*: ${title}`
+        const msg = `*${"Quality"}*: ${quality}`
 	    
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
