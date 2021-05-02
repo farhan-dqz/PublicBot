@@ -1,4 +1,4 @@
-/* Copyright (C) 2021 farhan-dqz.
+/* Copyright (C) 2021 Vai838.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 WhatsAsenaDuplicated
@@ -12,7 +12,7 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-Asena.addCommand({pattern: 'modd ?(.*)', fromMe: true, desc: Lang.MODD_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'modd ?(.*)', fromMe: false, desc: Lang.MODD_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	const url = `https://tobz-api.herokuapp.com/api/moddroid?q=${match[1]}&apikey=${Config.TOBZ_API_KEY}`;
 	try {
@@ -29,8 +29,8 @@ Asena.addCommand({pattern: 'modd ?(.*)', fromMe: true, desc: Lang.MODD_DESC}, as
 	}
 });
 
-
-Asena.addCommand({pattern: 'apkp ?(.*)', fromMe: true, desc: "Mod apk from apkpure"}, async (message, match) => {
+/*
+Asena.addCommand({pattern: 'apkp ?(.*)', fromMe: false, desc: "Mod apk from apkpure"}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	const url = `https://docs-jojo.herokuapp.com/api/apk-pure?q=${match[1]}`;
 	try {
@@ -46,7 +46,7 @@ Asena.addCommand({pattern: 'apkp ?(.*)', fromMe: true, desc: "Mod apk from apkpu
 	}
 });
 
-Asena.addCommand({pattern: 'apkp ?(.*)', fromMe: true, desc: "Mod apk from apkpure"}, async (message, match) => {
+Asena.addCommand({pattern: 'apkp ?(.*)', fromMe: false, desc: "Mod apk from apkpure"}, async (message, match) => {
 	const url = `https://leyscoders-api.herokuapp.com/api/apkpure?q=${match[1]}&apikey=VFCQVEWL`;
 	try {
 		const response = await got(url);
@@ -60,5 +60,4 @@ Asena.addCommand({pattern: 'apkp ?(.*)', fromMe: true, desc: "Mod apk from apkpu
 });
 
 
-
-
+*/
