@@ -22,12 +22,12 @@ Asena.addCommand({pattern: 'a ?(.*)', fromMe: true, desc: Lang.UV_DESC}, (async 
         },
         message: message.reply_message.data.quotedMessage
     });
-
+let id = match[1];
     ffmpeg(location)
         .format('mp3')
         .save('output.mp3')
         .on('end', async () => {
-            await message.client.sendMessage(match[2], fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+            await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
 Asena.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
