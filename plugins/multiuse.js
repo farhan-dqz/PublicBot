@@ -135,13 +135,13 @@ Asena.addCommand({ pattern: 'twt ?(.*)', fromMe: false, desc: "download from twi
       .get(`https://api-anoncybfakeplayer.herokuapp.com/twdown?url=${userName}`)
       .then(async (response) => {
         const {
-          filesize,
+          format,
           result,
         } = response.data
 
         const profileBuffer = await axios.get(result, {responseType: 'arraybuffer'})
 
-        const msg = `*${"Size"}*: ${filesize}`
+        const msg = `${format}`
 
 
       if (msg === 'Image/jpg or png') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
