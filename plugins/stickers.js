@@ -80,7 +80,7 @@ Asena.addCommand({pattern: 'S', fromMe: true , dontAddCommandList: true}, (async
 
 
 
-Asena.addCommand({pattern: 's', fromMe: true  , dontAddCommandList: true }, (async (message, match) => {    
+Asena.addCommand({pattern: 'st', fromMe: true  , dontAddCommandList: true }, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);
     var downloading = await message.client.sendMessage(message.jid,Lang.DOWNLOADING,MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
