@@ -47,9 +47,8 @@ Asena.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async 
             await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
-Asena.addCommand({pattern: 'unvideo', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
-    if (message.reply_message === false) return await message.sendMessage("Tag a video!");
-    var downloading = await message.client.sendMessage(message.jid,"```Downloading & Uploading...```",MessageType.text);
+Asena.addCommand({pattern: '1', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
             remoteJid: message.reply_message.jid,
@@ -63,9 +62,7 @@ Asena.addCommand({pattern: 'unvideo', fromMe: true, dontAddCommandList: true}, (
         .save('output.mp4')
         .on('end', async () => {
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
-        });
-    return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-}));
+});}));
 
 Asena.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage("Tag an image");
