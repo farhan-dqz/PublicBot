@@ -47,6 +47,23 @@ Asena.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async 
             await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
+Asena.addCommand({pattern: '1 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    if (message.reply_message === false);
+    var location = await message.client.downloadAndSaveMediaMessage({
+        key: {
+            remoteJid: message.reply_message.jid,
+            id: message.reply_message.id
+        },
+        message: message.reply_message.data.quotedMessage
+    });
+let id = match[1];
+    ffmpeg(location)
+        .format('mp4')
+        .save('output.mp4')
+        .on('end', async () => {
+            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
+});}));
+
 Asena.addCommand({pattern: '1', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
