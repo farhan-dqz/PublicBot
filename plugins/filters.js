@@ -51,6 +51,14 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, don
 
 
 Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
+const array = []
+array.map( async (a) => {
+let pattern = new RegExp (a,'gm')
+if(pattern.test(message.message)){
+        await message.client.sendMessage(message.jid, fs.readFileSync('./upload' +a + 'name.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio})
+}
+
+
     var filtreler = await FilterDb.getFilter(message.jid);
     if (!filtreler) return; 
     filtreler.map(
