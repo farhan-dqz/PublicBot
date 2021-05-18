@@ -51,11 +51,11 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, don
 
 
 Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
-const array = []
+const array = ['name' 'Helo' 'King' 'Kooi' 'Love' 'Thamasha' 'big fan' 'charlie' 'gd n8' 'kar98' 'love u' 'name' 'noob' 'perfect ok' 'power' 'saji' 'sed' 'single' 'uyir']
 array.map( async (a) => {
 let pattern = new RegExp (a,'gm')
 if(pattern.test(message.message)){
-        await message.client.sendMessage(message.jid, fs.readFileSync('./upload' +a + 'name.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio})
+        await message.client.sendMessage(message.jid, fs.readFileSync('./upload' +a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio})
 }
 });
 
