@@ -1,13 +1,13 @@
-/* Copyright (C) 2020 farhan-dqz.
+/* Copyright (C) 2020 Yusuf Usta.
 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
 WhatsAsena - Yusuf Usta
 */
-const fs = require('fs')
+
 const Asena = require('../events');
-const {MessageType, Mimetype } = require('@adiwajshing/baileys');
+const {MessageType} = require('@adiwajshing/baileys');
 const FilterDb = require('./sql/filters');
 
 const Language = require('../language');
@@ -51,17 +51,6 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, don
 
 
 Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
-        if (!!message.mention && message.mention[0] == '918921483992@s.whatsapp.net') {
-await message.client.sendMessage(message.jid, fs.readFileSync('./upload/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted : message.data, ptt: true})
-        }
-const array = ['name entha','Helo','King','Kooi','Love','Thamasha','big fan','charlie','gd n8','kar98','love u','noob','niyas paranki','perfect ok','power','saji','sed','single','uyir','thug','avastha','bgm id','moodesh','sketch','Cr7','Cr7 back','Suiii','Portugal','Haters','ayn']
-array.map( async (a) => {
-let pattern = new RegExp(`\\b${a}\\b`, 'g');
-if(pattern.test(message.message)){
-       await message.client.sendMessage(message.jid, fs.readFileSync('./upload/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: true})
-}
-});
-
     var filtreler = await FilterDb.getFilter(message.jid);
     if (!filtreler) return; 
     filtreler.map(
