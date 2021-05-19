@@ -51,11 +51,14 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, don
 
 
 Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
+        if (!!message.mention && message.mention[0] == '918921483992@s.whatsapp.net') {
+await message.client.sendMessage(message.jid, fs.readFileSync('./upload/name.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted : message.data, ptt: true})
+        }
 const array = ['name','Helo','King','Kooi','Love','Thamasha','big fan','charlie','gd n8','kar98','love u','noob','perfect ok','power','saji','sed','single','uyir']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
-       await message.client.sendMessage(message.jid, fs.readFileSync('./upload/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, ptt: true})
+       await message.client.sendMessage(message.jid, fs.readFileSync('./upload/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: true})
 }
 });
 
