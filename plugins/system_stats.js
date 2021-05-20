@@ -16,9 +16,9 @@ const chalk = require('chalk');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
-Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
     if (Config.ALIVEMSG == 'default') {
-        await message.client.sendMessage(message.jid,'```Bot is alive!```\n\n Type .help for command list \n\n *Coded By 𝕱𝖆𝖗𝖍𝖆𝖓║𝕯𝖖𝖟*\n', MessageType.text);
+        await message.client.sendMessage(message.jid,'```I Aм Aℓιvε!!!```\n\n түρε *.help* ғσя cσммαη∂s \n\n *Coded By 𝕱𝖆𝖗𝖍𝖆𝖓║𝕯𝖖𝖟*\n', MessageType.text);
     }
     else {
         await message.client.sendMessage(message.jid,Config.ALIVEMSG, MessageType.text);
