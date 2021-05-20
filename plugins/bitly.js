@@ -11,7 +11,7 @@ const got = require('got');
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-Asena.addCommand({pattern: 'bitly ?(.*)', fromMe: true, desc: Lang.BIT_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'bitly ?(.*)', fromMe: false, desc: Lang.BIT_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_LINK);
 	const url = `https://tobz-api.herokuapp.com/api/bitly?url=${match[1]}&apikey=BotWeA`;
 	try {
