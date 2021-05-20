@@ -16,7 +16,7 @@ const cwebp = require('cwebp-bin');
 const Language = require('../language');
 const Lang = Language.getString('sticker');                 
 
-Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (async (message, match) => {    
+Asena.addCommand({pattern: 'sticker', fromMe: false, desc: Lang.STICKER_DESC}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);
     var downloading = await message.client.sendMessage(message.jid,Lang.DOWNLOADING,MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
@@ -47,7 +47,7 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (a
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
 
-Asena.addCommand({pattern: 'S', fromMe: true , dontAddCommandList: true}, (async (message, match) => {    
+Asena.addCommand({pattern: 'S', fromMe: false , dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);
     var downloading = await message.client.sendMessage(message.jid,Lang.DOWNLOADING,MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
