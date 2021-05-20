@@ -17,7 +17,7 @@ Asena.addCommand({pattern: 'bot ?(.*)', fromMe: false, desc: Lang.BOT_DESC}, asy
 	try {
 		const response = await got(url);
 		const json = JSON.parse(response.body);
-	  if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n```Bot:``` ' + Lang.BOT +' ```' + json.messages[0].response + '```\n\n' , MessageType.text,{quoted: message.data});
+	  if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n```Bot🤗``` ' + Lang.BOT +' ```' + json.messages[0].response + '```\n\n' , MessageType.text,{quoted: message.data});
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDAC, MessageType.text);
 	}
