@@ -13,7 +13,7 @@ const cwebp = require('cwebp-bin');
 const Language = require('../language');
 const Lang = Language.getString('conventer');                    
 
-Asena.addCommand({pattern: 'mp3', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
+Asena.addCommand({pattern: 'mp3', fromMe: false, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage(Lang.MP4TOAUDİO_NEEDREPLY);
     var downloading = await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO,MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
@@ -33,7 +33,7 @@ Asena.addCommand({pattern: 'mp3', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (a
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
 
-Asena.addCommand({pattern: 'photo', fromMe: true, desc: Lang.STİCKER_DESC}, (async (message, match) => {    
+Asena.addCommand({pattern: 'photo', fromMe: false, desc: Lang.STİCKER_DESC}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage(Lang.STİCKER_NEEDREPLY);
     var downloading = await message.client.sendMessage(message.jid,Lang.STİCKER,MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
