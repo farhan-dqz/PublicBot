@@ -19,7 +19,7 @@ deepai.setApiKey('4ec4c7f4-63cd-457f-b244-7e12bba7ebde'); // Quickstart API Key
 const Language = require('../language'); 
 const Lang = Language.getString('deepai'); // Language Support
 
-Asena.addCommand({pattern: 'deepai', fromMe: true, deleteCommand: false, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'deepai', fromMe: false, deleteCommand: false, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
 
     await message.sendMessage('💻 Usage: *.moodai <text>*\nℹ️ Desc: It finds your mood from the article you wrote.\n\n💻 Usage: *.colorai*\nℹ️ Desc: It colorize bw photos.\n\n💻 Usage: *.superai*\nℹ️ Desc: Improves the quality of photos with Neural AI.\n\n💻 Usage: *.waifuai*\nℹ️ Desc: Combines the color palettes of photos with artificial intelligence.\n\n💻 Usage: *.dreamai*\nℹ️ Desc: Applies deepdream effect to the photo.\n\n💻 Usage: *.neuraltalkai*\nℹ️ Desc: Explain the phenomenon in the photo with artificial intelligence.\n\n💻 Usage: *.ttiai <text>*\nℹ️ Desc: Converts text to a picture. (Text-to-Image)\n\n💻 Usage: *.toonai*\nℹ️ Desc: Turns the face in the photo into a cartoon character.\n\n💻 Usage: *.textai <text>*\nℹ️ Desc: It creates an artificial story for you from your sentence.\n\n💻 Usage: *.nudityai*\nℹ️ Desc: It shows the NSFW value between 1 and 0 in the photo.\n\n💻 Usage: *.ganstyle*\nℹ️ Desc: Combines the photo you answered with the selected picture.\n\n⚠️ *All the tools here work with deep learning. The more you use it, the more information it stores.* ```Use only english characters!```');
 
