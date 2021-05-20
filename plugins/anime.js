@@ -13,7 +13,7 @@ const Config = require('../config');
 const Language = require('../language');
 
 
-    Asena.addCommand({pattern: 'anime', fromMe: true, desc: "randomanime"}, (async (message, match) => {
+    Asena.addCommand({pattern: 'anime', fromMe: false, desc: "randomanime"}, (async (message, match) => {
 
     var r_text = new Array ();
 
