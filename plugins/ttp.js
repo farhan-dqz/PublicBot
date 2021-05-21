@@ -11,7 +11,7 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('ttp');
 
-Asena.addCommand({pattern: 'txttoimg', fromMe: true, desc: Lang.TXTTOIMG_DESC}, (async (message, match) => {    
+Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC}, (async (message, match) => {    
 
        
 
