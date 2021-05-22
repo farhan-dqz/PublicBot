@@ -31,7 +31,7 @@ Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (asyn
        
         await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG + '\n\n*Recoded by ✭𝕱𝖆𝖗𝖍𝖆𝖓║𝕯𝖖𝖟*\n' })
      }
-    }));
+}));
 
 Asena.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (message, match) => {
     const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
