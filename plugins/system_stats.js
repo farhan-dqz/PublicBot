@@ -16,21 +16,13 @@ const chalk = require('chalk');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
-Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
-
-        if (Config.ALIVEMSG == 'default') {
-            
-            var image = await axios.get (Config.ALIVE_LOGO, {responseType: 'arraybuffer'})
-       
-        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: "```I AM ALIVE !!!```\n\n```Type``` *.help* ```For All Commands```\n\n```Type``` *.xmedia* ```For More Commands```\n\n```Type``` *.txttoimg* ```For More Commands```"})
-
+Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+    if (Config.ALIVEMSG == 'default') {
+        await message.client.sendMessage(message.jid,'```I AM  Alive!```\n\n ```Type``` *.help* ```for command list``` \n\n ```Coded By``` *✭𝕱𝖆𝖗𝖍𝖆𝖓║𝕯𝖖𝖟 💙*' , MessageType.text);
     }
     else {
-            
-            var image = await axios.get (Config.ALIVE_LOGO, {responseType: 'arraybuffer'})
-       
-        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG + '\n\n*Recoded by ✭𝕱𝖆𝖗𝖍𝖆𝖓║𝕯𝖖𝖟*\n' })
-     }
+        await message.client.sendMessage(message.jid,Config.ALIVEMSG, MessageType.text);
+    }
 }));
 
 Asena.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (message, match) => {
