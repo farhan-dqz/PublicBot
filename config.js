@@ -22,7 +22,7 @@ module.exports = {
     GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://i.hizliresim.com/loUtAb.jpg' : process.env.GAN_IMAGE,
     LANG: process.env.LANGUAGE === undefined ? 'TR' : process.env.LANGUAGE.toUpperCase(),
     ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
-    ALIVE_LOGO: process.env.ALIVE_LOGO === undefined ? 'ALIVE_LOGO: process.env.ALIVE_LOGO === undefined ? 'https://i.ibb.co/vxpGfqX/20210522-150443.jpg' : process.env.ALIVE_LOGO' : process.env.ALIVE_LOGO,
+    ALIVE_LOGO: process.env.ALIVE_LOGO === undefined ? 'ALIVE_LOGO: process.env.ALIVE_LOGO === undefined ? 'https://i.ibb.co/vxpGfqX/IMG-20210522-WA150443.jpg' : process.env.ALIVE_LOGO' : process.env.ALIVE_LOGO,
     MUTEMSG: process.env.MUTE_MESSAGE === undefined ? 'default' : process.env.MUTE_MESSAGE,
     UNMUTEMSG: process.env.UNMUTE_MESSAGE === undefined ? 'default' : process.env.UNMUTE_MESSAGE,
     AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
