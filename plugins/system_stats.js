@@ -1,16 +1,20 @@
-Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+        Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
-            await message.client.sendMessage(message.jid,'```I AM  Alive!```\n\n ```Type``` *.help* ```for command list``` \n\n ```Coded By``` *✭𝕱𝖆𝖗𝖍𝖆𝖓║𝕯𝖖𝖟 🧞‍♂️*\n\n', MessageType.text);
+            await message.client.sendMessage(message.jid,'```I AM  Alive!```\n\n ```Type``` *.help* ```for command list``` \n\n ```Coded By``` *✭𝕱𝖆𝖗𝖍𝖆𝖓║𝕯𝖖𝖟 \n\n💙*, MessageType.text);
         }
         else {
+            const pow = '*Public Bot*'
             const payload = Config.ALIVEMSG
             const status = await message.client.getStatus()
             const ppUrl = await message.client.getProfilePicture() 
             const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
 
             if (!payload.includes('{pp}')) {
-                await message.client.sendMessage(message.jid,payload.replace',+ '\n' });
+                await message.client.sendMessage(message.jid,payload.replace('{version}', Config.VERSION).replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL) + '\n' + pow, MessageType.text);
+            }
+            else if (payload.includes('{pp}')) {
+                await message.sendMessage(Buffer(resim.data), MessageType.image, { caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL) + '\n' + pow });
             }
         }
     }));
