@@ -79,10 +79,18 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
     Asena.addCommand({pattern: 'gta ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+  
+  var topText, bottomText;
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
+        tbottomText = split[2];
+        bottomText = split[1];
+        topText = split[0];
+}
 
-    var webimage = await axios.get(`https://videfikri.com/api/textmaker/gtavposter/?text=${match[1]}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/gtavposter/?text1=${topText}&text2=${bottomText}&text3=${tbottomText}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Gta 5```'})
+   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```gta logo```'})
 
     }));
 
@@ -102,7 +110,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/coffeecup2/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Burn image```'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```cup image```'})
 
     }));
 
@@ -112,7 +120,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/crossfirelogo/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Burn image```'})
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```fire logo```'})
 
     }));
 
