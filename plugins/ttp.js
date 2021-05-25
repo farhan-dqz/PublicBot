@@ -15,7 +15,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
        
 
-    await message.sendMessage('🎀Usage: *.glitch*\n🎗️Desc: It Sends a glitch style image of the text provided\nYou must enter the heading and subheading seperated by */* in order!.\n\n🎀Usage: *.underwater*\n🎗️Desc: It Sends a ocean image of the text provided\n\n🎀Usage: *.pornhub*\n🎗️Desc: It Sends a blackish orange coloured image of the text provided.\nYou must enter the heading and subheading seperated by */* in order!.\n\n🎀Usage: *.sandwriting*\n🎗️Desc: It Sends a sand image of the text provided.\n\n🎀Usage: *.blackpink*\n🎗️Desc: It Sends a blackish pink image of the text provided.\n\n🎀Usage: *.lovemsg*\n🎗️Desc: It Sends love message style image of the text provided.\n\n🎀Usage: *.grass*\n🎗️Desc: It Sends a grass image of the text provided.\n\n🎀Usage: *.blood*\n🎗️Desc: It Sends a blood image of the text provided.\n\n🎀Usage: *.romance*\n🎗️Desc: It Sends a green image with love shapes of the text provided.\n\n🎀Usage: *.candlemug*\n🎗️Desc: It Sends a mug image of the text provided.\n\n🎀Usage: *.snow*\n🎗️Desc: It Sends a snow image of the text provided.\n\n🎀Usage: *.cloud*\n🎗️Desc: It Sends a sky image of the text provided\n\n🎀Usage: *.flower*\n🎗️Desc: It Sends a flower image of the text provided\n\n🎀Usage: *.burn*\n🎗️Desc: It Sends a half burned paper image of the text provided\n\n🎀Usage: *.candy*\n🎗️Desc: It Sends a candy image of the text provided\n\n🎀Usage: *.wood*\n🎗️Desc: It Sends a wood carved image of the text provided.\n\n🎀Usage: *.latte*\n🎗️Desc: It put the text as latte art within a coffee cup.\n\n🎀Usage: *.8bit*\n🎗️Desc: Converts the text into an 8bit style image.\nYou must enter the heading and subheading seperated by */* in order!\n\n🎀Usage: *.shadow*\n🎗️Desc: Converts the text into shadow themed image.\n\n🎀Usage: *.harrypotter*\n🎗️Desc: Converts the text into a harrypotter themed image.\n\n🎀Usage: *.sparkling*\n🎗️Desc: Converts the text into a sparkling themed image\nYou must enter the heading and subheading seperated by */* in order!\n\n🎀Usage: *.watercolour*\n🎗️Desc: Converts the text into a watercolour themed image.\n\n🎀Usage: *.ninjalogo*\n🎗️Desc: Enters the text as the caption for a ninja themed logo.\n\n🎀Usage: *.neonlight*\n🎗️Desc: Converts the text into a neonlight themed image.\n\n🎀Usage: *.3dtext*\n🎗️Desc: Converts the provided text into a 3D style image.');
+    await message.sendMessage('🎀Usage: *.glitch*\n🎗️Desc: It Sends a glitch style image of the text provided\nYou must enter the heading and subheading seperated by */* in order!.\n\n🎀Usage: *.google*\n🎗️Desc: It Sends a google suggest\n\n🎀Usage: *.fire*\n🎗️Desc: It Sends a fire logo\n\n🎀Usage: *.banner*\n🎗️Desc: It Sends a banner text\n\n🎀Usage: *.latte2*\n🎗️Desc: It Send a coffeecup image\n\n🎀Usage: *.battle*\n🎗️Desc: It Sends a battle logo\n\n🎀Usage: *.wanted*\n🎗️Desc: It Sends a wanded logo \n\n🎀Usage: *.gta*\n🎗️Desc: It Sends a gta logo\n\n🎀Usage: *.silk*\n🎗️Desc: It Sends a silk text\n\n  🎀Usage: *.underwater*\n🎗️Desc: It Sends a ocean image of the text provided\n\n🎀Usage: *.pornhub*\n🎗️Desc: It Sends a blackish orange coloured image of the text provided.\nYou must enter the heading and subheading seperated by */* in order!.\n\n🎀Usage: *.sandwriting*\n🎗️Desc: It Sends a sand image of the text provided.\n\n🎀Usage: *.blackpink*\n🎗️Desc: It Sends a blackish pink image of the text provided.\n\n🎀Usage: *.lovemsg*\n🎗️Desc: It Sends love message style image of the text provided.\n\n🎀Usage: *.grass*\n🎗️Desc: It Sends a grass image of the text provided.\n\n🎀Usage: *.blood*\n🎗️Desc: It Sends a blood image of the text provided.\n\n🎀Usage: *.romance*\n🎗️Desc: It Sends a green image with love shapes of the text provided.\n\n🎀Usage: *.candlemug*\n🎗️Desc: It Sends a mug image of the text provided.\n\n🎀Usage: *.snow*\n🎗️Desc: It Sends a snow image of the text provided.\n\n🎀Usage: *.cloud*\n🎗️Desc: It Sends a sky image of the text provided\n\n🎀Usage: *.flower*\n🎗️Desc: It Sends a flower image of the text provided\n\n🎀Usage: *.burn*\n🎗️Desc: It Sends a half burned paper image of the text provided\n\n🎀Usage: *.candy*\n🎗️Desc: It Sends a candy image of the text provided\n\n🎀Usage: *.wood*\n🎗️Desc: It Sends a wood carved image of the text provided.\n\n🎀Usage: *.latte*\n🎗️Desc: It put the text as latte art within a coffee cup.\n\n🎀Usage: *.8bit*\n🎗️Desc: Converts the text into an 8bit style image.\nYou must enter the heading and subheading seperated by */* in order!\n\n🎀Usage: *.shadow*\n🎗️Desc: Converts the text into shadow themed image.\n\n🎀Usage: *.harrypotter*\n🎗️Desc: Converts the text into a harrypotter themed image.\n\n🎀Usage: *.sparkling*\n🎗️Desc: Converts the text into a sparkling themed image\nYou must enter the heading and subheading seperated by */* in order!\n\n🎀Usage: *.watercolour*\n🎗️Desc: Converts the text into a watercolour themed image.\n\n🎀Usage: *.ninjalogo*\n🎗️Desc: Enters the text as the caption for a ninja themed logo.\n\n🎀Usage: *.neonlight*\n🎗️Desc: Converts the text into a neonlight themed image.\n\n🎀Usage: *.3dtext*\n🎗️Desc: Converts the provided text into a 3D style image.');
 
     }));
 
@@ -43,6 +43,86 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
     var webimage = await axios.get(`https://videfikri.com/api/textmaker/coffeecup/?text=${match[1]}`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Coffeecup effect```'})
+
+    }));
+    
+    Asena.addCommand({pattern: 'google ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/gsuggest/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```logo by Dqz```'})
+
+    }));
+
+    Asena.addCommand({pattern: 'wanted ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/wanted/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Wanted poster```'})
+
+    }));
+
+    Asena.addCommand({pattern: 'silk ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/silk/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```silk text```'})
+
+    }));
+
+    Asena.addCommand({pattern: 'gta ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/gtavposter/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Gta 5```'})
+
+    }));
+
+    Asena.addCommand({pattern: 'battle ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/bf4/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Battle field logo```'})
+
+    }));
+
+    Asena.addCommand({pattern: 'latte2 ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/coffeecup2/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Burn image```'})
+
+    }));
+
+    Asena.addCommand({pattern: 'fire ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/crossfirelogo/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Burn image```'})
+
+    }));
+
+    Asena.addCommand({pattern: 'banner ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/narutobanner/?text=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```banner by Dqz```'})
 
     }));
 
