@@ -17,25 +17,10 @@ const Lang = Language.getString('system_stats');
 
 
     Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
-
-        if (Config.ALIVEMSG == 'default') {
-            await message.client.sendMessage(message.jid,'```I AM ALIVE```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Telegram Group:* https://t.me/farhan;dqz\n*Telegram Channel:* https://t.me/asenaremaster\n*Plugin Channel:* ' + Config.CHANNEL, MessageType.text);
-        }
-        else {
-            const pow = '*PublicBot🧞‍♂️*'
-            const payload = Config.ALIVEMSG
-            const status = await message.client.getStatus()
-            const ppUrl = await message.client.getProfilePicture() 
-            const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
-
-            if (!payload.includes('{pp}')) {
-                await message.client.sendMessage(message.jid,payload.replace('{version}', Config.VERSION).replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL) + '\n' + pow, MessageType.text);
-            }
-            else if (payload.includes('{pp}')) {
-                await message.sendMessage(Buffer(resim.data), MessageType.image, { caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL) + '\n' + pow });
-            }
-        }
-    }));
+            await message.client.sendMessage(message.jid, 
+'```I AM  Alive!```\n\n ```Type``` *.help* ```for command list``` \n\n ```Coded By``` *✭𝕱𝖆𝖗𝖍𝖆𝖓║𝕯𝖖𝖟* \n\n'',
+MessageType.text)
+}));
 
     Asena.addCommand({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC}, (async (message, match) => {
 
