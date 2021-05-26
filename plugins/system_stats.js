@@ -12,17 +12,15 @@ const {MessageType} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
 const Config = require('../config');
 const chalk = require('chalk');
-
+const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
 Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
-    if (Config.ALIVEMSG == 'default') {
-        await message.client.sendMessage(message.jid,'``` I am Alive!!!!```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n\n```Type``` *.help* ```for command list``` \n\n ```Coded By``` *✭𝕱𝖆𝖗𝖍𝖆𝖓║𝕯𝖖𝖟*\n' , MessageType.text);
-    }
-    else {
-        await message.client.sendMessage(message.jid,Config.ALIVEMSG, MessageType.text);
-    }
+        let caption = '```I am Alive!!!!```\n\n*Version:* ```' + Config.VERSION + '```\n*Branch:* ```' + Config.BRANCH + '```\n\n```Type``` *.help* ```for command list``` \n\n ```Coded By``` *✭𝕱𝖆𝖗𝖍𝖆𝖓║𝕯𝖖𝖟*\n'
+        let pp
+        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: caption }); });
 }));
 
 Asena.addCommand({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC}, (async (message, match) => {
