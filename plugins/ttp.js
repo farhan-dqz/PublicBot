@@ -56,10 +56,17 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
     Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+  
+  var topText, bottomText;
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
+        bottomText = split[1];
+        topText = split[0];
+}
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/marvelstudios?text=${match[1]}&APIKEY=d9f297dbf7b0bbf4`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/marvelstudios?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
 
-   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by PublicBot'})
+   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by Public Bot```'})
 
     }));
 
