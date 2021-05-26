@@ -63,16 +63,6 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     }));
     
-    Asena.addCommand({pattern: 'google ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
-
-    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
-
-    var webimage = await axios.get(`https://videfikri.com/api/textmaker/gsuggest/?text=${match[1]}`, { responseType: 'arraybuffer' })
-
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
-
-    }));
-
     Asena.addCommand({pattern: 'wanted ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
@@ -93,7 +83,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     }));
 
-    Asena.addCommand({pattern: 'gta ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'google ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -105,7 +95,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://videfikri.com/api/textmaker/gtavposter/?text1=${topText}&text2=${bottomText}&text3=${tbottomText}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://videfikri.com/api/textmaker/gsuggest/?text1=${topText}&text2=${bottomText}&text3=${tbottomText}`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made By PublicBot```'})
 
