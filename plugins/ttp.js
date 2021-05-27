@@ -40,7 +40,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/3dluxury?text=${match[1]}&APIKEY=d9f297dbf7b0bbf4`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/3dluxury?text=${match[1]}&APIKEY=f3eaf19231f6201c`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
@@ -77,7 +77,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/realisticvintage?text=${match[1]}&APIKEY=c809c9b2f07400c2`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/realisticvintage?text=${match[1]}&APIKEY=f3eaf19231f6201c`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
@@ -97,7 +97,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/metaldarkgold?text=${match[1]}&APIKEY=c809c9b2f07400c2`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/metaldarkgold?text=${match[1]}&APIKEY=f3eaf19231f6201c`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
@@ -107,7 +107,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/1917?text=${match[1]}&APIKEY=c809c9b2f07400c2`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/1917?text=${match[1]}&APIKEY=f3eaf19231f6201c`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
@@ -127,7 +127,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/deluxesilver?text=${match[1]}&APIKEY=c809c9b2f07400c2`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/deluxesilver?text=${match[1]}&APIKEY=f3eaf19231f6201c`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
@@ -181,7 +181,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/marvel?text=${topText}&text2=${bottomText}&APIKEY=d9f297dbf7b0bbf4`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/marvel?text=${topText}&text2=${bottomText}&APIKEY=f3eaf19231f6201c`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by Public Bot```'})
 
@@ -198,7 +198,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/3dmetalsilver?text=${topText}&text2=${bottomText}&APIKEY=d9f297dbf7b0bbf4`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/3dmetalsilver?text=${topText}&text2=${bottomText}&APIKEY=f3eaf19231f6201c`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by Public Bot```'})
 
@@ -218,7 +218,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/balloontext?text=${match[1]}&APIKEY=917058a2392ad776`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/balloontext?text=${match[1]}&APIKEY=d0d75df1a38b05bd`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
@@ -252,7 +252,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/3dmetalgold?text=${topText}&text2=${bottomText}&APIKEY=917058a2392ad776`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/3dmetalgold?text=${topText}&text2=${bottomText}&APIKEY=d0d75df1a38b05bd`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by Public Bot```'})
 
@@ -269,7 +269,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/lionlogomascot?text=${topText}&text2=${bottomText}&APIKEY=965fb96a335bea67`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/lionlogomascot?text=${topText}&text2=${bottomText}&APIKEY=d0d75df1a38b05bd`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by Public Bot```'})
 
@@ -286,7 +286,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/3dmetalgalaxy?text=${topText}&text2=${bottomText}&APIKEY=917058a2392ad776`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/3dmetalgalaxy?text=${topText}&text2=${bottomText}&APIKEY=d0d75df1a38b05bd`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by Public Bot```'})
 
@@ -296,7 +296,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/jokerlogo?text=${match[1]}&APIKEY=d9f297dbf7b0bbf4`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/jokerlogo?text=${match[1]}&APIKEY=7f40eb6965e90926`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
@@ -306,7 +306,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/naturalleaves?text=${match[1]}&APIKEY=d9f297dbf7b0bbf4`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/naturalleaves?text=${match[1]}&APIKEY=7f40eb6965e90926`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
@@ -326,7 +326,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/robotr2d2?text=${match[1]}&APIKEY=917058a2392ad776`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/robotr2d2?text=${match[1]}&APIKEY=7f40eb6965e90926`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
@@ -336,7 +336,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/toxic?text=${match[1]}&APIKEY=917058a2392ad776`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/toxic?text=${match[1]}&APIKEY=7f40eb6965e90926`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
@@ -356,7 +356,7 @@ Asena.addCommand({pattern: 'txttoimg', fromMe: false, desc: Lang.TXTTOIMG_DESC},
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/orangeglass?text=${match[1]}&APIKEY=917058a2392ad776`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.xteam.xyz/textpro/orangeglass?text=${match[1]}&APIKEY=7f40eb6965e90926`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '```Made by PublicBot```'})
 
