@@ -104,7 +104,7 @@ Asena.addCommand({pattern: 'song ?(.*)' , fromMe: false, desc: Lang.SONG_DESC}, 
     let arama = await yts(match[1]);
     arama = arama.all;
     if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-    var reply = await message.client.sendMessage(message.jid,'```Searching 🔍```',MessageType.text);
+    var reply = await message.client.sendMessage(message.jid,'```⏺️Searching ```',MessageType.text);
 
     let title = arama[0].title.replace(' ', '+');
     let stream = ytdl(arama[0].videoId, {
