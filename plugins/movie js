@@ -34,7 +34,7 @@ if (match[1] === '') return await message.reply(NEED_MO);
         try {
         const response = await got(url);
         const mojson = JSON.parse(response.body);
-        if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*🛑' + TITLE +'* ```' + mojson.Title + '```\n' +
+        return await message.client.sendMessage(message.jid, '*🛑' + TITLE +'* ```' + mojson.Title + '```\n' +
         '*📊' + YEAR +'* ```' + mojson.Year + '```\n' +
         '*⚜' + RELE +'* ```' + mojson.Released + '```\n' +
         '*🎦' + RUN +'* ```' + mojson.Runtime + '```\n' +
