@@ -81,7 +81,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: "Download conten
     await message.sendMessage(infoMessage("Loading"))
 
     await axios
-      .get(`https://api.zeks.xyz/api/ig?apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs&url=${userName}`)
+      .get(`https://api.zeks.xyz/api/ig?url=${userName}&apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs`)
       .then(async (response) => {
         const {
           url,
