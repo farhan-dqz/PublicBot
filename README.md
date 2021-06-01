@@ -2,7 +2,7 @@
 
 Thank you Everyone for helping to develop this one🦋
 Join Whatsapp Group 
- ʙ⭕ᴛ ᴢᴏɴᴇ | ᴘᴜʙʟɪᴄ
+# ʙ⭕ᴛ ᴢᴏɴᴇ | ᴘᴜʙʟɪᴄ
 ### https://chat.whatsapp.com/H0v1Idna7hA8dWBa88QPvw
 
 
