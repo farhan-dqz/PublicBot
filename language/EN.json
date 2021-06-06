@@ -27,12 +27,12 @@
         },
         "admin": {
             "BAN_DESC": "Ban someone in the group. Reply to message or tag a person to use command.",
-            "IM_NOT_ADMIN": "*I am not admin in this group!*",
+            "IM_NOT_ADMIN": "*njan admin allada..3g😐!*",
             "BANNED": "kicked out of the group!",
             "GIVE_ME_USER": "*Give me a user!*",
             "ADD_DESC": "Adds someone to the group.",
             "ADDED": "added to the group!",
-            "ALREADY_PROMOTED": "```How can I make someone admin who is already admin?```",
+            "ALREADY_PROMOTED": "```Avan admin anu nenba😪```",
             "PROMOTED": "```, admin role was given!```",
             "PROMOTE_DESC": "Makes any person an admin.",
             "DEMOTE_DESC": "Takes the authority of any admin.",
@@ -158,8 +158,8 @@
         "removebg": {
             "REMOVEBG_DESC": "Removes Bg.",
             "NEED_PHOTO": "*Photo thannalalle Remove cheyyan kayyu🙂!*",
-            "NO_API_KEY": "*Api key illa aliyaa.. 3g*",
-            "RBGING": "```Removing background...```"
+            "NO_API_KEY": "*Api key illa aliyaa.. 3g😣*",
+            "RBGING": "```Removing...```"
         },
         "scrapers": {
             "TRANSLATE_DESC": "It translates with Google Translate. You must reply any message.",
@@ -210,7 +210,7 @@
             "UPDATE": "*Your bot is completely up-to-date!*",
             "NEW_UPDATE": "*New update available for Bot!*\n\nChanges:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
-            "UPDATING": "```Update akkuvaan Mwonoose```",
+            "UPDATING": "```Updating...🤗```",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
             "UPDATED": "*Update Cheythu ✅*",
             "UPDATED_LOCAL": "*✅ Successfully Updated!*",
