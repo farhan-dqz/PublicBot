@@ -643,7 +643,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [Farhan-Dqz] ⚕️*' + 
                                         '\n========== ```Error Resolved!``` ==========' +
                                         '\n\n*Main Error:* _Requested Audio Params_' +
-                                        '\n*Reason:* _Using the TTS command outside the Latin alphabet._' +                                        
+                                        '\n*Reason:* _Using the TTS command outside the Latin alphabet._'                                       
                                         , MessageType.text
                                     );
                                 }
