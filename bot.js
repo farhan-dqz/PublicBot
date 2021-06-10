@@ -704,7 +704,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                 else if (error.message.includes('unescaped')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [Farhan-Dqz] ⚕️*' + 
                                         '\n========== ```Error Resolved!``` ==========' +                                      
-                                        '\n*Reason:* _Using commands such as TTP, ATTP outside the Latin alphabet._' +                                        
+                                        '\n*Reason:* _Using commands such as TTP, ATTP outside the Latin alphabet._'                                         
                                         , MessageType.text
                                     );
                                 }
