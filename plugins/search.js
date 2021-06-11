@@ -1,8 +1,7 @@
 const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
-const axios = require('axios');
 const Config = require('../config');
-const Sr = "Busca en Google."
+const Sr = "Search on Google."
 
 Asena.addCommand({pattern: 'search ?(.*)', fromMe: false, desc: Sr}, (async (message, match) => {
 
