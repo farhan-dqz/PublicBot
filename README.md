@@ -19,7 +19,7 @@ Join Whatsapp Group For Support
 Repl.it is less stable. Try Termux instead for qrcode generation.
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/farhan-dqz/PublicBot.git:/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/farhan-dqz/JulieMwol.git:/)
 
 ### The Hard Method
 ```js
