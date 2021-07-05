@@ -1,10 +1,8 @@
-## Its Me Farhan_Dqz🤗
+## DARK_NINJA_🐱‍👤
 
-Thank you Everyone for helping to develop this one🦋 <BR>
-Join Whatsapp Group For Support 
-# ʙ⭕ᴛ ᴢᴏɴᴇ | ᴘᴜʙʟɪᴄ
-### https://chat.whatsapp.com/H0v1Idna7hA8dWBa88QPvw
-
+DRAK🌑
+ 
+# NINJA_🐱‍👤_DARK_🔱
 ## Thanks for Everything 
 ### We will always remember you..
 
@@ -19,7 +17,7 @@ Join Whatsapp Group For Support
 Repl.it is less stable. Try Termux instead for qrcode generation.
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/farhan-dqz/JulieMwol.git:/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shahmal/Ninja.git:/)
 
 ### The Hard Method
 ```js
@@ -27,16 +25,16 @@ GET QR
 $ apt update
 $ apt install nodejs --fix-missing
 $ pkg install git
-$ git clone https://github.com/farhan-dqz/PublicBot
-$ cd PublicBot
+$ git clone https://github.com/shahmal/Ninja
+$ cd Ninja
 $ chmod +x *
 $ npm install @adiwajshing/baileys
 $ npm install chalk
 $ node qr.js
 
 SETUP
-$ git clone https://github.com/farhan-dqz/PublicBot
-$ cd PublicBot
+$ git clone https://github.com/shahmal/Ninja
+$ cd Ninja
 $ chmod +x *
 $ npm i
 $ node qr.js
