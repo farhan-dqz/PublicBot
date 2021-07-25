@@ -17,6 +17,14 @@ Project created by <a href="https://github.com/farhan-dqz">Farhan-dqz</a> to mak
 </p>
 
 ----
+<p align="center">
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=xxirfanx&show_icons=true&theme=dark&locale=en&layout=compact" alt="xxirfanx" /></p>
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=xxirfanx&show_icons=true&theme=dark&locale=en" alt="xxirfanx" /></p>
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=xxirfanx&theme=dark" alt="xxirfanx" /></p>
+</p>
+
 
   <p align="center">
   <a href="httsp://github.com/farhan-dqz/JulieMwol">
